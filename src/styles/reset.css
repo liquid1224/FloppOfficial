@@ -1,0 +1,18 @@
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0px;
+  color: #969595;
+  letter-spacing: 0.1rem;
+}
+
+#defaultCanvas0 {
+  position: fixed;
+  top: 0;
+}
