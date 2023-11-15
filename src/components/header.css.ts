@@ -88,28 +88,95 @@ export const Trans3 = style({
   transition: `transform ${globalParams.time}`,
 });
 
+//Toggle Switch
+export const ToggleSwitch = style({
+  //alignment
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  //position
+  margin: `10px`,
+  //padding: "1px 6px",
+  zIndex: "1000",
+  //transition
+  transition: `top ${globalParams.time}, box-shadow ${globalParams.time}`,
+});
+
+export const ToggleSwitchInput = style({
+  display: "none",
+});
+
+export const ToggleSwitchLabel = style({
+  vars: {
+    "--ToggleSwitchWidth": "2.7rem",
+    "--ToggleSwitchHeight": "1.5rem",
+    "--ToggleSwitchPadding": "0.2rem",
+    "--ToggleSwitchCircle": "1.1rem",
+  },
+  display: "inline-block",
+  cursor: "pointer",
+  position: "relative",
+  width: "var(--ToggleSwitchWidth)",
+  height: "var(--ToggleSwitchHeight)",
+  borderRadius: "var(--ToggleSwitchHeight)",
+  background: globalParams.textColorLight,
+  transition: `background ${globalParams.time}, box-shadow ${globalParams.time}`,
+  ":hover": {
+    boxShadow: globalParams.shadowLight332,
+  },
+  ":after": {
+    cursor: "pointer",
+    content: "''",
+    position: "absolute",
+    left: "var(--ToggleSwitchPadding)",
+    top: "0",
+    bottom: "0",
+    margin: "auto",
+    width: "var(--ToggleSwitchCircle)",
+    height: "var(--ToggleSwitchCircle)",
+    borderRadius: "50%",
+    boxShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
+    background: globalParams.backgroundLight,
+    transition: `left ${globalParams.time}`,
+  },
+});
+
+export const ToggleSwitchLabelChecked = style({
+  background: globalParams.accentColor1,
+  ":hover": {
+    boxShadow: globalParams.shadowDark332,
+  },
+  ":after": {
+    left: "calc( var(--ToggleSwitchWidth) - var(--ToggleSwitchCircle) - var(--ToggleSwitchPadding))",
+    borderRadius: "50%",
+    background: globalParams.textColorLight,
+  },
+});
+
 //Header
 export const Header = style({
   //style
   backgroundColor: globalParams.backgroundLight, //beta
-  padding: `24px`,
+  padding: `24px 24px`,
+  boxSizing: `border-box`,
   //position
   position: `sticky`,
   top: `0`,
   width: `100%`,
-  height: `36px`,
+  height: `84px`,
   zIndex: `500`,
   //alignment
   display: `flex`,
   alignItems: "center",
   justifyContent: "center",
   //transition
-  transition: `padding ${globalParams.time}, border-radius ${globalParams.time}, box-shadow ${globalParams.time}`,
+  transition: `height ${globalParams.time}, padding ${globalParams.time}, border-radius ${globalParams.time}, box-shadow ${globalParams.time}`,
 });
 
 export const Scrolled = style({
   //change size
-  padding: `12px`,
+  height: `60px`,
+  padding: `12px 24px`,
   //change radius
   borderRadius: `0 0 ${globalParams.borderRadius} ${globalParams.borderRadius}`,
   boxShadow: globalParams.shadowLight332,

@@ -2,9 +2,10 @@
 import React from "react";
 import { Link } from "gatsby";
 //Author Components
+import { useIsDarkModeContext, useSetIsDarkModeContext } from "../templates/layout";
 import Logo from "../images/logo";
-import * as Vanilla from "./header.css";
 import { Navigation } from "./navigation";
+import * as Vanilla from "./header.css";
 
 //Burger button
 type BurgerProps = {
@@ -28,6 +29,23 @@ const Burger = ({ isOpen, onClick }: BurgerProps) => {
 };
 
 //Toggle switch
+const ToggleSwitch = () => {
+  const isDarkMode = useIsDarkModeContext();
+  const setIsDarkMode = useSetIsDarkModeContext();
+
+  const handleClick = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const classToggleSwitchLabel = `${Vanilla.ToggleSwitchLabel} ${isDarkMode ? Vanilla.ToggleSwitchLabelChecked : ""}`;
+
+  return (
+    <div className={Vanilla.ToggleSwitch}>
+      <input id="toggle" type="checkbox" checked={isDarkMode} onChange={handleClick} className={Vanilla.ToggleSwitchInput} />
+      <label htmlFor="toggle" className={classToggleSwitchLabel} />
+    </div>
+  );
+};
 
 //Header
 export const Header = () => {
@@ -57,6 +75,7 @@ export const Header = () => {
       <Link to="/" className={Vanilla.LogoWrapper}>
         <Logo />
       </Link>
+      <ToggleSwitch />
     </header>
   );
 };

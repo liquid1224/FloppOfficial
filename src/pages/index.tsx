@@ -92,4 +92,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <Seo title="index"></Seo>;
+export const Head: HeadFC = () => <Seo title="TOP"></Seo>;
