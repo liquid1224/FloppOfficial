@@ -2,12 +2,11 @@
 import React from "react";
 import { Link } from "gatsby";
 //Author Components
-import { useIsDarkModeContext, useSetIsDarkModeContext } from "../templates/layout";
 import Logo from "../images/logo";
 import { Navigation } from "./navigation";
 import * as Vanilla from "./header.css";
 
-//Burger button
+//Burger Button
 type BurgerProps = {
   isOpen: boolean;
   onClick: React.MouseEventHandler;
@@ -28,15 +27,18 @@ const Burger = ({ isOpen, onClick }: BurgerProps) => {
   );
 };
 
-//Toggle switch
-const ToggleSwitch = () => {
-  const isDarkMode = useIsDarkModeContext();
-  const setIsDarkMode = useSetIsDarkModeContext();
-
+//Toggle Switch
+type ToggleSwitchProps = {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
+const ToggleSwitch = ({ isDarkMode, setIsDarkMode }: ToggleSwitchProps) => {
+  //Click Handler
   const handleClick = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+  //Class
   const classToggleSwitchLabel = `${Vanilla.ToggleSwitchLabel} ${isDarkMode ? Vanilla.ToggleSwitchLabelChecked : ""}`;
 
   return (
@@ -48,7 +50,11 @@ const ToggleSwitch = () => {
 };
 
 //Header
-export const Header = () => {
+type HeaderProps = {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
+export const Header = ({ isDarkMode, setIsDarkMode }: HeaderProps) => {
   //Scroll Detection
   const [isScrolled, setIsScrolled] = React.useState(false);
   const toggleStyleScrolled = () => {
@@ -59,7 +65,7 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", toggleStyleScrolled);
   }, []);
 
-  //Burger state
+  //Burger State
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -69,14 +75,18 @@ export const Header = () => {
   const classHeader = `${Vanilla.Header} ${isScrolled ? Vanilla.Scrolled : ""}`;
 
   return (
-    <header className={classHeader}>
-      <Burger isOpen={isOpen} onClick={toggleOpen} />
+    <>
+      <header className={classHeader}>
+        <Burger isOpen={isOpen} onClick={toggleOpen} />
+        <div className={Vanilla.LogoWrapper}>
+          <Link to="/" className={Vanilla.LogoLink}>
+            <Logo />
+          </Link>
+        </div>
+        <ToggleSwitch isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      </header>
       <Navigation isOpen={isOpen} />
-      <Link to="/" className={Vanilla.LogoWrapper}>
-        <Logo />
-      </Link>
-      <ToggleSwitch />
-    </header>
+    </>
   );
 };
 

@@ -30,10 +30,10 @@ export const Navigation = ({ isOpen }: NavigationProps) => {
   return (
     <nav className={classNavigation}>
       <ul className={Vanilla.LinkElementsWrapper}>
-        <LinkElement title="About" link="./about" />
-        <LinkElement title="Works" link="./works" />
-        <LinkElement title="Links" link="./links" />
-        <LinkElement title="Contact" link="./contact" />
+        <LinkElement title="About" link="/about" />
+        <LinkElement title="Works" link="/works" />
+        <LinkElement title="Links" link="/links" />
+        <LinkElement title="Contact" link="/contact" />
       </ul>
     </nav>
   );

@@ -3,25 +3,24 @@ import { globalParams } from "../styles/global";
 
 //Burger Button
 export const BurgerWrapper = style({
-  //position
-  zIndex: "1000",
   //style
-  margin: "10px",
   borderRadius: globalParams.borderRadius,
   ":hover": {
-    boxShadow: globalParams.shadowLight332,
+    boxShadow: globalParams.shadowLight,
   },
   ":active": {
-    boxShadow: globalParams.shadowLight332i,
+    boxShadow: globalParams.shadowLightIn,
   },
+  //position
+  margin: `0 15px`,
   //transition
   transition: `top ${globalParams.time}, box-shadow ${globalParams.time}`,
 });
 
 export const Burger = style({
   //position
-  width: "50px",
-  height: "50px",
+  width: "30px",
+  height: "30px",
   //alignment
   display: "flex",
   flexDirection: "column",
@@ -35,17 +34,17 @@ export const Burger = style({
 
 export const Line1 = style({
   display: "inline-block",
-  width: "24px",
-  height: "2px",
-  transform: "translate(0, -10px)",
+  width: "20px",
+  height: "1px",
+  transform: "translate(0, -5px)",
   backgroundColor: "currentcolor",
   transition: `transform ${globalParams.time}`,
 });
 
 export const Line2 = style({
   display: "inline-block",
-  width: "24px",
-  height: "2px",
+  width: "20px",
+  height: "1px",
   transform: "none",
   backgroundColor: "currentcolor",
   transition: `transform ${globalParams.time}, opacity ${globalParams.time}`,
@@ -53,26 +52,26 @@ export const Line2 = style({
 
 export const Line3 = style({
   display: "inline-block",
-  width: "24px",
-  height: "2px",
-  transform: "translate(0, 10px)",
+  width: "20px",
+  height: "1px",
+  transform: "translate(0, 5px)",
   backgroundColor: "currentcolor",
   transition: `transform ${globalParams.time}`,
 });
 
 export const Trans1 = style({
   display: "inline-block",
-  width: "24px",
-  height: "2px",
-  transform: "translate(0,2px) rotate(-45deg)",
+  width: "20px",
+  height: "1px",
+  transform: "translate(0,1px) rotate(-45deg)",
   backgroundColor: "currentcolor",
   transition: `transform ${globalParams.time}`,
 });
 
 export const Trans2 = style({
   display: "inline-block",
-  width: "24px",
-  height: "2px",
+  width: "20px",
+  height: "1px",
   transform: "none",
   opacity: "0%",
   backgroundColor: "currentcolor",
@@ -81,9 +80,9 @@ export const Trans2 = style({
 
 export const Trans3 = style({
   display: "inline-block",
-  width: "24px",
-  height: "2px",
-  transform: "translate(0,-2px) rotate(45deg)",
+  width: "20px",
+  height: "1px",
+  transform: "translate(0,-1px) rotate(45deg)",
   backgroundColor: "currentcolor",
   transition: `transform ${globalParams.time}`,
 });
@@ -95,9 +94,8 @@ export const ToggleSwitch = style({
   justifyContent: "center",
   alignItems: "center",
   //position
-  margin: `10px`,
-  //padding: "1px 6px",
-  zIndex: "1000",
+  width: `60px`,
+  height: `20px`,
   //transition
   transition: `top ${globalParams.time}, box-shadow ${globalParams.time}`,
 });
@@ -109,9 +107,9 @@ export const ToggleSwitchInput = style({
 export const ToggleSwitchLabel = style({
   vars: {
     "--ToggleSwitchWidth": "2.7rem",
-    "--ToggleSwitchHeight": "1.5rem",
+    "--ToggleSwitchHeight": "1.3rem",
     "--ToggleSwitchPadding": "0.2rem",
-    "--ToggleSwitchCircle": "1.1rem",
+    "--ToggleSwitchCircle": "1.0rem",
   },
   display: "inline-block",
   cursor: "pointer",
@@ -121,9 +119,6 @@ export const ToggleSwitchLabel = style({
   borderRadius: "var(--ToggleSwitchHeight)",
   background: globalParams.textColorLight,
   transition: `background ${globalParams.time}, box-shadow ${globalParams.time}`,
-  ":hover": {
-    boxShadow: globalParams.shadowLight332,
-  },
   ":after": {
     cursor: "pointer",
     content: "''",
@@ -143,9 +138,6 @@ export const ToggleSwitchLabel = style({
 
 export const ToggleSwitchLabelChecked = style({
   background: globalParams.accentColor1,
-  ":hover": {
-    boxShadow: globalParams.shadowDark332,
-  },
   ":after": {
     left: "calc( var(--ToggleSwitchWidth) - var(--ToggleSwitchCircle) - var(--ToggleSwitchPadding))",
     borderRadius: "50%",
@@ -157,14 +149,14 @@ export const ToggleSwitchLabelChecked = style({
 export const Header = style({
   //style
   backgroundColor: globalParams.backgroundLight, //beta
-  padding: `24px 24px`,
+  padding: `8px 5vw`,
   boxSizing: `border-box`,
   //position
   position: `sticky`,
   top: `0`,
   width: `100%`,
-  height: `84px`,
-  zIndex: `500`,
+  height: `60px`,
+  zIndex: `1000`,
   //alignment
   display: `flex`,
   alignItems: "center",
@@ -175,17 +167,37 @@ export const Header = style({
 
 export const Scrolled = style({
   //change size
-  height: `60px`,
-  padding: `12px 24px`,
+  height: `50px`,
+  padding: `8px 5vw`,
   //change radius
   borderRadius: `0 0 ${globalParams.borderRadius} ${globalParams.borderRadius}`,
-  boxShadow: globalParams.shadowLight332,
+  boxShadow: globalParams.shadowLight,
 });
 
 export const LogoWrapper = style({
   //style
   margin: "0 auto",
+  //alignment
+  display: `flex`,
+  justifyContent: `center`,
+  alignItems: `center`,
   //position
   zIndex: `1000`,
+  flex: `1`,
+  height: `30px`,
+});
+
+export const LogoLink = style({
+  //style
+  padding: `5px`,
   height: `100%`,
+  borderRadius: globalParams.borderRadius,
+  ":hover": {
+    boxShadow: globalParams.shadowLight,
+  },
+  ":active": {
+    boxShadow: globalParams.shadowLightIn,
+  },
+  //transition
+  transition: `box-shadow ${globalParams.time}`,
 });

@@ -16,6 +16,7 @@ export const Navigation = style({
   right: "0",
   left: "0",
   height: "100vh",
+  zIndex: `750`,
   //open
   opacity: "1",
   visibility: "visible",
@@ -59,10 +60,10 @@ export const LinkWrapper = style({
   //style
   borderRadius: globalParams.borderRadius,
   ":hover": {
-    boxShadow: globalParams.shadowLight332,
+    boxShadow: globalParams.shadowLight,
   },
   ":active": {
-    boxShadow: globalParams.shadowLight332i,
+    boxShadow: globalParams.shadowLightIn,
   },
   //transition
   transition: `box-shadow ${globalParams.time}`,

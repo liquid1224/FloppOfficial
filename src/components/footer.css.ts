@@ -4,8 +4,6 @@ import { globalParams } from "../styles/global";
 export const Footer = style({
   //style
   backgroundColor: globalParams.backgroundLight,
-  borderRadius: `${globalParams.borderRadius} ${globalParams.borderRadius} 0 0`,
-  boxShadow: globalParams.shadowLight332,
   //position
   width: "100%",
   height: "150px",
