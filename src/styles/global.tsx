@@ -4,19 +4,18 @@ export const globalParams = {
   backgroundDark: "#333333",
   //アクセントカラー
   accentColor1: "#a93838", //ロゴの赤色
-  accentColor2: "#e04a4a", //"#852c2c", //濃い赤色
-  accentColor3: "#ff5454", //"#ec9d9b", //薄い赤色
   //テキストカラー
   textColorLight: "#969595",
   //影
-  shadowLight: "5px 5px 10px #cecece, -5px -5px 10px #f2f2f2",
-  shadowLightIn: "inset 5px 5px 10px #cecece, inset -5px -5px 10px #f2f2f2",
+  shadowLight: "10px 10px 8px #a4a4a4, -10px -10px 8px #ffffff",
+  shadowLightIn: "inset 10px 10px 8px #a4a4a4, inset -10px -10px 8px #ffffff",
+  shadowLightSmall: "10px 10px 20px #a4a4a4, -10px -10px 20px #ffffff",
   //アイコン関係
   iconSize: "35px",
   iconAndPaddingSize: "calc( 35px + 16px * 2 )",
   //その他定数
   time: "0.2s",
-  gap: "2.5rem",
+  gap: "18px",
   borderRadius: "10px",
-  boxHeight: "200px",
+  float: "translateY(-4px)",
 };

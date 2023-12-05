@@ -32,7 +32,7 @@ export const HeroInfo = style({
   alignItems: `end`,
   //style
   width: `45%`,
-  gap: `10px`,
+  gap: globalParams.gap,
 });
 
 export const HeroPoem = style({
@@ -57,20 +57,31 @@ export const HeroWorks = style({
   display: `grid`,
   gridTemplateColumns: `repeat(2, 1fr)`,
   gridTemplateRows: `repeat(2, 1fr)`,
-  gridGap: `10px`,
+  gridGap: globalParams.gap,
 });
 
 export const HeroWorkImg = style({
+  //position
   width: `100%`,
+  //style
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
-  boxShadow: globalParams.shadowLight,
+  ":hover": {
+    boxShadow: globalParams.shadowLight,
+    transform: globalParams.float,
+  },
+  ":active": {
+    boxShadow: globalParams.shadowLightIn,
+    transform: `none`,
+  },
+  //transition
+  transition: `box-shadow ${globalParams.time}, transform ${globalParams.time} `,
 });
 
 export const HeroScrollWrapper = style({
   //position
   width: `100%`,
-  height: `90px`,
+  height: `60px`,
   //alignment
   display: `flex`,
   justifyContent: `center`,
@@ -78,8 +89,8 @@ export const HeroScrollWrapper = style({
 });
 
 export const ArrowsWrapper = style({
-  width: `60px`,
-  height: `72px`,
+  width: `40px`,
+  height: `60px`,
 });
 
 const ArrowsAnimation = keyframes({

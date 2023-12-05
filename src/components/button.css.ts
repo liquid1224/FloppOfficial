@@ -13,14 +13,16 @@ export const Button = style({
   borderRadius: globalParams.borderRadius,
   ":hover": {
     boxShadow: globalParams.shadowLight,
+    transform: globalParams.float,
   },
   ":active": {
     boxShadow: globalParams.shadowLightIn,
+    transform: `none`,
   },
   color: `inherit`,
   textDecorationLine: "none",
   //transition
-  transition: `box-shadow ${globalParams.time}`,
+  transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });
 
 export const Title = style({

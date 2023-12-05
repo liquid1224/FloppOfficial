@@ -46,7 +46,8 @@ const IndexPage = ({ data }: IndexPageProps) => {
           Engineer
         </h1>
         <p className={Vanilla.HeroPoemSentence}>
-          華力発電所は，liquid1224による音楽関連プロジェクトです． シンフォニックで壮大なオーケストレーションと，プログレッシブな楽曲展開により，独自の音楽世界を展開しています．
+          華力発電所は，liquid1224による音楽関連プロジェクトです．
+          シンフォニックで壮大なオーケストレーションとテクノポップの融合，プログレッシブな楽曲展開，ハードウェア製作から始まるステージパフォーマンスなどにより，独自の音楽世界を展開しています．
         </p>
       </div>
     );
@@ -62,9 +63,9 @@ const IndexPage = ({ data }: IndexPageProps) => {
           </div>
           <div className={Vanilla.HeroScrollWrapper}>
             <svg className={Vanilla.ArrowsWrapper}>
-              <path className={Vanilla.Path1} d="M0 0 L30 32 L60 0"></path>
-              <path className={Vanilla.Path2} d="M0 20 L30 52 L60 20"></path>
-              <path className={Vanilla.Path3} d="M0 40 L30 72 L60 40"></path>
+              <path className={Vanilla.Path1} d="M0 0 L20 21 L40 0"></path>
+              <path className={Vanilla.Path2} d="M0 15 L20 36 L40 15"></path>
+              <path className={Vanilla.Path3} d="M0 30 L20 51 L40 30"></path>
             </svg>
           </div>
         </div>

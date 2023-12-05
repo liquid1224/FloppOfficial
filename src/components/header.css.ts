@@ -7,14 +7,16 @@ export const BurgerWrapper = style({
   borderRadius: globalParams.borderRadius,
   ":hover": {
     boxShadow: globalParams.shadowLight,
+    transform: globalParams.float,
   },
   ":active": {
     boxShadow: globalParams.shadowLightIn,
+    transform: `none`,
   },
   //position
   margin: `0 15px`,
   //transition
-  transition: `top ${globalParams.time}, box-shadow ${globalParams.time}`,
+  transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });
 
 export const Burger = style({
@@ -194,10 +196,12 @@ export const LogoLink = style({
   borderRadius: globalParams.borderRadius,
   ":hover": {
     boxShadow: globalParams.shadowLight,
+    transform: globalParams.float,
   },
   ":active": {
     boxShadow: globalParams.shadowLightIn,
+    transform: `none`,
   },
   //transition
-  transition: `box-shadow ${globalParams.time}`,
+  transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });
