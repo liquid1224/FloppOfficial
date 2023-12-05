@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "gatsby";
 //Author Components
+import { Button } from "./button";
 import * as Vanilla from "./navigation.css";
 
 type NavigationProps = {
@@ -16,10 +17,8 @@ export const Navigation = ({ isOpen }: NavigationProps) => {
   };
   const LinkElement = ({ title, link }: LinkElementProps) => {
     return (
-      <li className={Vanilla.LinkWrapper}>
-        <Link to={link} className={Vanilla.Link}>
-          {title}
-        </Link>
+      <li>
+        <Button link={link} title={title} />
       </li>
     );
   };

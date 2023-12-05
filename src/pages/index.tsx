@@ -5,47 +5,68 @@ import { Seo } from "../templates/seo";
 import { graphql, type HeadFC, PageProps, Link } from "gatsby";
 import { ImageDataLike, getImage } from "gatsby-plugin-image";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import { Button } from "../components/button";
+import MediaQuery from "react-responsive";
 
 type IndexPageProps = {
   data: Queries.HeroInfoQuery;
 };
 const IndexPage = ({ data }: IndexPageProps) => {
+  const HeroInfo = ({ data }: IndexPageProps) => {
+    return (
+      <div className={Vanilla.HeroInfo}>
+        <div className={Vanilla.HeroWorks}>
+          {data.allMarkdownRemark.edges.map((node, index) => {
+            if (node.node.frontmatter?.jacket !== null) {
+              const image = getImage(node.node.frontmatter?.jacket as ImageDataLike);
+              const link = `${node.node.frontmatter?.slug as string}`;
+              const title = node.node.frontmatter?.title as string;
+              return (
+                <Link to={link} key={index}>
+                  <div className={Vanilla.HeroWorkImg}>
+                    <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" />
+                  </div>
+                </Link>
+              );
+            }
+          })}
+        </div>
+        <Button link="works" title="more works →" />
+      </div>
+    );
+  };
+  const HeroPoem = () => {
+    return (
+      <div className={Vanilla.HeroPoem}>
+        <h1>
+          Progressive
+          <br />
+          Synthpop
+          <br />
+          Engineer
+        </h1>
+        <p className={Vanilla.HeroPoemSentence}>
+          華力発電所は，liquid1224による音楽関連プロジェクトです． シンフォニックで壮大なオーケストレーションと，プログレッシブな楽曲展開により，独自の音楽世界を展開しています．
+        </p>
+      </div>
+    );
+  };
   return (
     <Layout>
       <>
         <div className={Vanilla.HeroWrapper}>
           <div className={Vanilla.HeroContents}>
-            <div className={Vanilla.HeroInfo}>
-              {data.allMarkdownRemark.edges.map((node, index) => {
-                if (node.node.frontmatter?.jacket !== null) {
-                  const image = getImage(node.node.frontmatter?.jacket as ImageDataLike);
-                  const link = `${node.node.frontmatter?.slug as string}`;
-                  const title = node.node.frontmatter?.title as string;
-                  return (
-                    <Link to={link} key={index}>
-                      <div className={Vanilla.HeroInfoImg}>
-                        <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" />
-                      </div>
-                    </Link>
-                  );
-                }
-              })}
-            </div>
+            <HeroInfo data={data} />
             <div className={Vanilla.Separator}></div>
-            <div className={Vanilla.HeroPoem}>
-              <h1>
-                Progressive
-                <br />
-                Synthpop
-                <br />
-                Engineer
-              </h1>
-              <p className={Vanilla.HeroPoemSentence}>
-                華力発電所は，liquid1224による音楽関連プロジェクトです． シンフォニックで壮大なオーケストレーションと，プログレッシブな楽曲展開により，独自の音楽世界を展開しています．
-              </p>
-            </div>
+            <HeroPoem />
           </div>
-          <div className={Vanilla.HeroScrollWrapper}></div>
+          <div className={Vanilla.HeroScrollWrapper}>
+            <svg className={Vanilla.ArrowsWrapper}>
+              <path className={Vanilla.Path1} d="M0 0 L30 32 L60 0"></path>
+              <path className={Vanilla.Path2} d="M0 20 L30 52 L60 20"></path>
+              <path className={Vanilla.Path3} d="M0 40 L30 72 L60 40"></path>
+            </svg>
+          </div>
         </div>
       </>
     </Layout>

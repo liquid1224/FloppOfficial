@@ -1,4 +1,4 @@
-import { style } from "@vanilla-extract/css";
+import { style, keyframes } from "@vanilla-extract/css";
 import { globalParams } from "../styles/global";
 
 export const HeroWrapper = style({
@@ -24,6 +24,17 @@ export const HeroContents = style({
   height: `100%`,
 });
 
+export const HeroInfo = style({
+  //alignment
+  display: `flex`,
+  flexDirection: `column`,
+  justifyContent: `center`,
+  alignItems: `end`,
+  //style
+  width: `45%`,
+  gap: `10px`,
+});
+
 export const HeroPoem = style({
   width: `45%`,
 });
@@ -39,9 +50,9 @@ export const Separator = style({
   backgroundColor: globalParams.textColorLight,
 });
 
-export const HeroInfo = style({
+export const HeroWorks = style({
   //style
-  width: `45%`,
+  width: `100%`,
   //alignment
   display: `grid`,
   gridTemplateColumns: `repeat(2, 1fr)`,
@@ -49,7 +60,7 @@ export const HeroInfo = style({
   gridGap: `10px`,
 });
 
-export const HeroInfoImg = style({
+export const HeroWorkImg = style({
   width: `100%`,
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
@@ -57,6 +68,47 @@ export const HeroInfoImg = style({
 });
 
 export const HeroScrollWrapper = style({
-  height: `90px`,
+  //position
   width: `100%`,
+  height: `90px`,
+  //alignment
+  display: `flex`,
+  justifyContent: `center`,
+  alignItems: `center`,
+});
+
+export const ArrowsWrapper = style({
+  width: `60px`,
+  height: `72px`,
+});
+
+const ArrowsAnimation = keyframes({
+  "0%": { opacity: `0` },
+  "40%": { opacity: `1` },
+  "80%": { opacity: `0` },
+  "100%": { opacity: `0` },
+});
+
+export const Path1 = style({
+  stroke: globalParams.accentColor1,
+  fill: `transparent`,
+  strokeWidth: `1px`,
+  animation: `${ArrowsAnimation} 2s infinite`,
+  animationDelay: `-1s`,
+});
+
+export const Path2 = style({
+  stroke: globalParams.accentColor1,
+  fill: `transparent`,
+  strokeWidth: `1px`,
+  animation: `${ArrowsAnimation} 2s infinite`,
+  animationDelay: `-0.5s`,
+});
+
+export const Path3 = style({
+  stroke: globalParams.accentColor1,
+  fill: `transparent`,
+  strokeWidth: `1px`,
+  animation: `${ArrowsAnimation} 2s infinite`,
+  animationDelay: `0s`,
 });

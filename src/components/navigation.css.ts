@@ -48,36 +48,3 @@ export const LinkElementsWrapper = style({
   maxWidth: "100%",
   padding: "0",
 });
-
-export const LinkWrapper = style({
-  //alignment
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  //position
-  width: "150px",
-  height: "3.0rem",
-  //style
-  borderRadius: globalParams.borderRadius,
-  ":hover": {
-    boxShadow: globalParams.shadowLight,
-  },
-  ":active": {
-    boxShadow: globalParams.shadowLightIn,
-  },
-  //transition
-  transition: `box-shadow ${globalParams.time}`,
-});
-
-export const Link = style({
-  //alignment
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  //position
-  width: "100%",
-  height: "100%",
-  //style
-  color: "inherit",
-  textDecorationLine: "none",
-});
