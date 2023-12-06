@@ -18,4 +18,5 @@ linkAppleMusic: "https://music.apple.com/jp/album/telefield/1661080254"
 linkAmazonMusic: "https://music.amazon.co.jp/albums/B0BQVVLJHR?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_OWzh9Cd7QcMWsJ4u4I3zwVUCW"
 idYouTube: "Qyekd1MwthU"
 linkSpecial: "https://telefield.liquid1224.net"
+headerSpecial: ""
 ---

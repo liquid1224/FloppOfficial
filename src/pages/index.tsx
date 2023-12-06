@@ -6,12 +6,13 @@ import { graphql, type HeadFC, PageProps, Link } from "gatsby";
 import { ImageDataLike, getImage } from "gatsby-plugin-image";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { Button } from "../components/button";
-import MediaQuery from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 
 type IndexPageProps = {
   data: Queries.HeroInfoQuery;
 };
 const IndexPage = ({ data }: IndexPageProps) => {
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   const HeroInfo = ({ data }: IndexPageProps) => {
     return (
       <div className={Vanilla.HeroInfo}>
@@ -49,6 +50,9 @@ const IndexPage = ({ data }: IndexPageProps) => {
           華力発電所は，liquid1224による音楽関連プロジェクトです．
           シンフォニックで壮大なオーケストレーションとテクノポップの融合，プログレッシブな楽曲展開，ハードウェア製作から始まるステージパフォーマンスなどにより，独自の音楽世界を展開しています．
         </p>
+        <div className={Vanilla.HeroPoemLink}>
+          <Button link="about" title="about me →" />
+        </div>
       </div>
     );
   };
@@ -58,15 +62,108 @@ const IndexPage = ({ data }: IndexPageProps) => {
         <div className={Vanilla.HeroWrapper}>
           <div className={Vanilla.HeroContents}>
             <HeroInfo data={data} />
-            <div className={Vanilla.Separator}></div>
+            <div className={Vanilla.Separator} />
             <HeroPoem />
           </div>
-          <div className={Vanilla.HeroScrollWrapper}>
-            <svg className={Vanilla.ArrowsWrapper}>
-              <path className={Vanilla.Path1} d="M0 0 L20 21 L40 0"></path>
-              <path className={Vanilla.Path2} d="M0 15 L20 36 L40 15"></path>
-              <path className={Vanilla.Path3} d="M0 30 L20 51 L40 30"></path>
-            </svg>
+          {isDesktop && (
+            <div className={Vanilla.HeroScrollWrapper}>
+              <svg className={Vanilla.ArrowsWrapper}>
+                <path className={Vanilla.Path1} d="M0 0 L20 21 L40 0"></path>
+                <path className={Vanilla.Path2} d="M0 15 L20 36 L40 15"></path>
+                <path className={Vanilla.Path3} d="M0 30 L20 51 L40 30"></path>
+              </svg>
+            </div>
+          )}
+        </div>
+        <div className={Vanilla.Section}>
+          <div className={Vanilla.MusicMoviesWrapper}>
+            <div className={Vanilla.YouTubeWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className={Vanilla.YouTube}
+              />
+            </div>
+          </div>
+          <div className={Vanilla.MusicTextWrapper}>
+            <h2>Musics</h2>
+            <div className={Vanilla.MusicDescriptionsWrapper}>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className={Vanilla.SectionSeparator} />
+        <div className={Vanilla.Section}>
+          <div className={Vanilla.MusicTextWrapper}>
+            <h2>Hardwares</h2>
+            <div className={Vanilla.MusicDescriptionsWrapper}>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+            </div>
+          </div>
+          <div className={Vanilla.MusicMoviesWrapper}>
+            <div className={Vanilla.YouTubeWrapper}>
+              <iframe
+                loading="lazy"
+                src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className={Vanilla.YouTube}
+              />
+            </div>
+          </div>
+        </div>
+        <div className={Vanilla.SectionSeparator} />
+        <div className={Vanilla.Section}>
+          <div className={Vanilla.MusicMoviesWrapper}>
+            <div className={Vanilla.YouTubeWrapper}>
+              <iframe
+                loading="lazy"
+                src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className={Vanilla.YouTube}
+              />
+            </div>
+          </div>
+          <div className={Vanilla.MusicTextWrapper}>
+            <h2>VST Plugins</h2>
+            <div className={Vanilla.MusicDescriptionsWrapper}>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+              <p className={Vanilla.MusicDescription}>
+                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+              </p>
+            </div>
           </div>
         </div>
       </>

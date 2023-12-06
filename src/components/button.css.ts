@@ -11,13 +11,17 @@ export const Button = style({
   height: "3.0rem",
   //style
   borderRadius: globalParams.borderRadius,
-  ":hover": {
-    boxShadow: globalParams.shadowLight,
-    transform: globalParams.float,
-  },
-  ":active": {
-    boxShadow: globalParams.shadowLightIn,
-    transform: `none`,
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowLight,
+        transform: globalParams.float,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowLightIn,
+        transform: `none`,
+      },
+    },
   },
   color: `inherit`,
   textDecorationLine: "none",
