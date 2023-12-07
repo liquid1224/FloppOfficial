@@ -227,7 +227,13 @@ export const Section = style({
   boxSizing: `border-box`,
   //alignment
   display: `flex`,
+  flexDirection: `column`,
   gap: `5%`,
+  "@media": {
+    "screen and (min-width: 768px)": {
+      flexDirection: `row`,
+    },
+  },
 });
 
 export const SectionSeparator = style({

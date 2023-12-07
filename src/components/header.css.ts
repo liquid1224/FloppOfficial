@@ -25,8 +25,8 @@ export const BurgerWrapper = style({
 
 export const Burger = style({
   //position
-  width: "30px",
-  height: "30px",
+  width: "35px",
+  height: "35px",
   //alignment
   display: "flex",
   flexDirection: "column",
