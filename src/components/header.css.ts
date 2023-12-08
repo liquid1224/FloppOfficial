@@ -8,11 +8,11 @@ export const BurgerWrapper = style({
   "@media": {
     "(hover: hover)": {
       ":hover": {
-        boxShadow: globalParams.shadowLight,
+        boxShadow: globalParams.shadowLightSmall,
         transform: globalParams.float,
       },
       ":active": {
-        boxShadow: globalParams.shadowLightIn,
+        boxShadow: globalParams.shadowLightSmallIn,
         transform: `none`,
       },
     },
@@ -201,11 +201,11 @@ export const LogoLink = style({
   "@media": {
     "(hover: hover)": {
       ":hover": {
-        boxShadow: globalParams.shadowLight,
+        boxShadow: globalParams.shadowLightSmall,
         transform: globalParams.float,
       },
       ":active": {
-        boxShadow: globalParams.shadowLightIn,
+        boxShadow: globalParams.shadowLightSmallIn,
         transform: `none`,
       },
     },
