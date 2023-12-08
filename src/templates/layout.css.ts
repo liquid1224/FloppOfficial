@@ -8,3 +8,16 @@ export const Layout = style({
   flexFlow: "column",
   minHeight: "100vh",
 });
+
+export const PageHeader = style({
+  //display
+  width: `100%`,
+  height: `150px`,
+  padding: `0 5vw`,
+  boxSizing: `border-box`,
+  backgroundColor: `purple`, //beta
+  //alignment
+  display: `flex`,
+  flexDirection: `column`,
+  justifyContent: `end`,
+});

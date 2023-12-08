@@ -1,12 +1,14 @@
-import * as React from "react";
-import * as Vanilla from "./index.css";
-import { Layout } from "../templates/layout";
-import { Seo } from "../templates/seo";
+//Default Components
+import React from "react";
 import { graphql, type HeadFC, PageProps, Link } from "gatsby";
 import { ImageDataLike, getImage } from "gatsby-plugin-image";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
-import { Button } from "../components/button";
 import { useMediaQuery } from "react-responsive";
+//Author Components
+import * as Vanilla from "./index.css";
+import { Layout } from "../templates/layout";
+import { Seo } from "../templates/seo";
+import { Button } from "../components/button";
 
 type IndexPageProps = {
   data: Queries.HeroInfoQuery;

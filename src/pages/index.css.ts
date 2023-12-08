@@ -87,7 +87,7 @@ export const Separator = style({
   //Desktop
   "@media": {
     [`${globalParams.pc}`]: {
-      width: `2px`,
+      width: `1px`,
       height: `95%`,
     },
   },

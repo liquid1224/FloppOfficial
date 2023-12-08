@@ -11,6 +11,7 @@ export const globalParams = {
   shadowLightIn: "inset 10px 10px 8px #a4a4a4, inset -10px -10px 8px #ffffff",
   shadowLightSmall: "5px 5px 8px #a4a4a4, -5px -5px 8px #ffffff",
   shadowLightSmallIn: "inset 5px 5px 8px #a4a4a4, inset -5px -5px 8px #ffffff",
+  shadowLightSmallInDeep: "inset 8px 8px 16px #a4a4a4, inset -8px -8px 16px #ffffff",
   //アイコン関係
   iconSize: "35px",
   iconAndPaddingSize: "calc( 35px + 16px * 2 )",
@@ -19,6 +20,7 @@ export const globalParams = {
   gap: "18px",
   borderRadius: "10px",
   float: "translateY(-4px)",
+  sink: "translateY(3px)",
   //query
   pc: "screen and (min-width: 768px)",
 };
