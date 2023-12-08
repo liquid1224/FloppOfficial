@@ -18,4 +18,6 @@ export const globalParams = {
   gap: "18px",
   borderRadius: "10px",
   float: "translateY(-4px)",
+  //query
+  pc: "screen and (min-width: 768px)",
 };

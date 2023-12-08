@@ -13,7 +13,7 @@ export const HeroWrapper = style({
   alignItems: `center`,
   //Desktop
   "@media": {
-    "screen and (min-width: 768px)": {
+    [`${globalParams.pc}`]: {
       height: `calc(100vh - 60px)`,
     },
   },
@@ -30,7 +30,7 @@ export const HeroContents = style({
   gap: `0.5rem`,
   //Desktop
   "@media": {
-    "screen and (min-width: 768px)": {
+    [`${globalParams.pc}`]: {
       flexDirection: `row`,
       justifyContent: `space-between`,
       gap: `unset`,
@@ -49,7 +49,7 @@ export const HeroInfo = style({
   gap: globalParams.gap,
   //Desktop
   "@media": {
-    "screen and (min-width: 768px)": {
+    [`${globalParams.pc}`]: {
       width: `45%`,
     },
   },
@@ -59,7 +59,7 @@ export const HeroPoem = style({
   width: `100%`,
   //Desktop
   "@media": {
-    "screen and (min-width: 768px)": {
+    [`${globalParams.pc}`]: {
       width: `45%`,
     },
   },
@@ -86,7 +86,7 @@ export const Separator = style({
   backgroundColor: globalParams.textColorLight,
   //Desktop
   "@media": {
-    "screen and (min-width:768px)": {
+    [`${globalParams.pc}`]: {
       width: `2px`,
       height: `95%`,
     },
@@ -167,15 +167,20 @@ export const Path3 = style({
   animationDelay: `0s`,
 });
 
-export const MusicMoviesWrapper = style({
+export const MoviesWrapper = style({
   //display
-  width: `37%`,
+  width: `100%`,
   //alignment
   display: `flex`,
   flexDirection: `column`,
   justifyContent: `center`,
   alignItems: `center`,
   gap: `10px`,
+  "@media": {
+    [`${globalParams.pc}`]: {
+      width: `37%`,
+    },
+  },
 });
 
 export const YouTubeWrapper = style({
@@ -204,9 +209,14 @@ export const YouTube = style({
 });
 
 export const MusicTextWrapper = style({
-  width: `58%`,
+  width: `100%`,
   display: `flex`,
   flexDirection: `column`,
+  "@media": {
+    [`${globalParams.pc}`]: {
+      width: `58%`,
+    },
+  },
 });
 
 export const MusicDescriptionsWrapper = style({
@@ -230,10 +240,14 @@ export const Section = style({
   flexDirection: `column`,
   gap: `5%`,
   "@media": {
-    "screen and (min-width: 768px)": {
+    [`${globalParams.pc}`]: {
       flexDirection: `row`,
     },
   },
+});
+
+export const SectionElementsInversion = style({
+  flexDirection: `column-reverse`,
 });
 
 export const SectionSeparator = style({

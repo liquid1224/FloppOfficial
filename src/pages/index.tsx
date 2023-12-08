@@ -75,8 +75,8 @@ const IndexPage = ({ data }: IndexPageProps) => {
             </div>
           )}
         </div>
-        <div className={Vanilla.Section}>
-          <div className={Vanilla.MusicMoviesWrapper}>
+        <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
+          <div className={Vanilla.MoviesWrapper}>
             <div className={Vanilla.YouTubeWrapper}>
               <iframe
                 src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js"
@@ -123,7 +123,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
               </p>
             </div>
           </div>
-          <div className={Vanilla.MusicMoviesWrapper}>
+          <div className={Vanilla.MoviesWrapper}>
             <div className={Vanilla.YouTubeWrapper}>
               <iframe
                 loading="lazy"
@@ -136,8 +136,8 @@ const IndexPage = ({ data }: IndexPageProps) => {
           </div>
         </div>
         <div className={Vanilla.SectionSeparator} />
-        <div className={Vanilla.Section}>
-          <div className={Vanilla.MusicMoviesWrapper}>
+        <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
+          <div className={Vanilla.MoviesWrapper}>
             <div className={Vanilla.YouTubeWrapper}>
               <iframe
                 loading="lazy"

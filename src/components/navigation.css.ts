@@ -26,7 +26,7 @@ export const Navigation = style({
   transition: `opacity ${globalParams.time}, visibility 0s ease ${globalParams.time}`,
   transitionDelay: `0s`,
   "@media": {
-    "screen and (min-width:768px)": {
+    [`${globalParams.pc}`]: {
       padding: "5rem 10vw",
     },
   },
@@ -49,7 +49,7 @@ export const NavigationSectionsWrapper = style({
   gridTemplateColumns: `repeat(2, minmax(100px, 1fr))`,
   gap: globalParams.gap,
   "@media": {
-    "screen and (min-width: 768px)": {
+    [`${globalParams.pc}`]: {
       gridTemplateColumns: `repeat(2, minmax(250px, 1fr))`,
     },
   },

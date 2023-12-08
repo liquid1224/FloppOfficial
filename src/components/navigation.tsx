@@ -39,7 +39,7 @@ export const NavigationContents = () => {
         <h3 className={Vanilla.h3}>Listen</h3>
         <div className={Vanilla.NavigationMenusWrapper}>
           <Link to="" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
-            Subscriptions
+            Streams
           </Link>
           <Link to="" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             Stores
