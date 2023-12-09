@@ -19,6 +19,14 @@ type WorksListProps = {
   data: Queries.WorksDataQuery;
 };
 const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompilation, isOtherProject, data }: WorksListProps) => {
+  const album = `${isAlbum ? "album" : ""}`;
+  const single = `${isSingle ? "single" : ""}`;
+  const otherFormat = `${isOtherFormat ? "other-format" : ""}`;
+  const flopp = `${isFlopp ? "flopp" : ""}`;
+  const uma = `${isUma ? "uma" : ""}`;
+  const compilation = `${isCompilation ? "compilation" : ""}`;
+  const otherProject = `${isOtherProject ? "other-project" : ""}`;
+
   const [hover, setHover] = useState(-1);
   const handleMouseEnter = (index: number) => {
     setHover(index);
@@ -30,7 +38,11 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
   return (
     <div className={Vanilla.WorksWrapper}>
       {data.allMarkdownRemark.edges.map((node, index) => {
-        if (node.node.frontmatter?.jacket !== null) {
+        if (
+          node.node.frontmatter?.jacket !== null &&
+          (node.node.frontmatter?.format === album || node.node.frontmatter?.format === single || node.node.frontmatter?.format === otherFormat) &&
+          (node.node.frontmatter.project === flopp || node.node.frontmatter.project === uma || node.node.frontmatter.project === compilation || node.node.frontmatter.project === otherProject)
+        ) {
           const image = getImage(node.node.frontmatter?.jacket as ImageDataLike);
           return (
             <Link className={Vanilla.Link} to={node.node.frontmatter?.slug as string} key={index}>
@@ -110,6 +122,7 @@ export const query = graphql`
             }
             slug
             format
+            project
             date
             compilationTitle
             description
