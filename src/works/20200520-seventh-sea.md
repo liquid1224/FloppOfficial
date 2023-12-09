@@ -2,6 +2,7 @@
 slug: "/works/seaventh-sea"
 title: "七つ目の海 feat.kokone"
 compilationTitle: ""
+description: "華力発電所 1st Single"
 jacket: "./20200520-seventh-sea.jpg"
 format: "single"
 project: "flopp"
