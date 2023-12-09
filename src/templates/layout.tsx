@@ -6,6 +6,7 @@ import { DarkModeProvider } from "../styles/context";
 import * as Vanilla from "./layout.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import headerImage from "../images/headerImage.jpg";
 
 //Layout
 type layoutProps = {
@@ -19,8 +20,8 @@ export const Layout = ({ children, title }: layoutProps) => {
       <div className={Vanilla.Layout}>
         <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         {title !== undefined && (
-          <div className={Vanilla.PageHeader}>
-            <h1>{title}</h1>
+          <div className={Vanilla.PageHeader} style={{ backgroundImage: `url("${headerImage}")` }}>
+            <h1 className={Vanilla.h1}>{title}</h1>
           </div>
         )}
         {children}

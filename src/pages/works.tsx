@@ -21,11 +21,11 @@ type WorksListProps = {
 const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompilation, isOtherProject, data }: WorksListProps) => {
   const album = `${isAlbum ? "album" : ""}`;
   const single = `${isSingle ? "single" : ""}`;
-  const otherFormat = `${isOtherFormat ? "other-format" : ""}`;
+  const otherFormat = `${isOtherFormat ? "other" : ""}`;
   const flopp = `${isFlopp ? "flopp" : ""}`;
   const uma = `${isUma ? "uma" : ""}`;
   const compilation = `${isCompilation ? "compilation" : ""}`;
-  const otherProject = `${isOtherProject ? "other-project" : ""}`;
+  const otherProject = `${isOtherProject ? "other" : ""}`;
 
   const [hover, setHover] = useState(-1);
   const handleMouseEnter = (index: number) => {

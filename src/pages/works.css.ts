@@ -100,8 +100,8 @@ export const WorkBoxHover = style({
 
 export const Image = style({
   //display
-  width: `100%`,
-  height: `100%`,
+  width: `101%`,
+  height: `101%`,
   position: `absolute`,
   top: `50%`,
   left: `50%`,
@@ -114,8 +114,8 @@ export const Link = style({
 
 export const WorkBoxDescription = style({
   //display
-  width: `100%`,
-  height: `100%`,
+  width: `101%`,
+  height: `101%`,
   position: `absolute`,
   top: `50%`,
   left: `50%`,

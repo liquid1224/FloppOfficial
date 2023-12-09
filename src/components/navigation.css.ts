@@ -58,9 +58,13 @@ export const NavigationSectionsWrapper = style({
 export const NavigationSection = style({
   //style
   borderRadius: globalParams.borderRadius,
-  ":hover": {
-    boxShadow: globalParams.shadowLight,
-    transform: `translate(0, -5px)`,
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowLight,
+        transform: `translate(0, -5px)`,
+      },
+    },
   },
   //display
   width: `100%`,
