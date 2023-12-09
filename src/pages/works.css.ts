@@ -33,7 +33,7 @@ export const ButtonsSection = style({
 
 export const ButtonsSectionTitle = style({
   //display
-  width: `125px`,
+  width: `80px`,
   //alignment
   display: `flex`,
   justifyContent: `center`,

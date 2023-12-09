@@ -45,7 +45,7 @@ export const ButtonPushIn = style({
   justifyContent: "center",
   alignItems: "center",
   //position
-  width: "150px",
+  width: "130px",
   height: "3.0rem",
   //style
   border: `none`,
