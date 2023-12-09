@@ -1,14 +1,56 @@
 //Default Components
 import React, { useState } from "react";
-import { HeadFC, graphql } from "gatsby";
+import { HeadFC, Link, graphql } from "gatsby";
+import { ImageDataLike, getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 //Author Components
 import { Layout } from "../templates/layout";
 import { Seo } from "../templates/seo";
 import { ButtonPushIn } from "../components/button";
 import * as Vanilla from "./works.css";
 
+type WorksListProps = {
+  isAlbum: boolean;
+  isSingle: boolean;
+  isOtherFormat: boolean;
+  isFlopp: boolean;
+  isUma: boolean;
+  isCompilation: boolean;
+  isOtherProject: boolean;
+  data: Queries.WorksDataQuery;
+};
+const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompilation, isOtherProject, data }: WorksListProps) => {
+  const [hover, setHover] = useState(-1);
+  const handleMouseEnter = (index: number) => {
+    setHover(index);
+  };
+  const handleMouseLeave = () => {
+    setHover(-1);
+  };
+
+  return (
+    <div className={Vanilla.WorksWrapper}>
+      {data.allMarkdownRemark.edges.map((node, index) => {
+        if (node.node.frontmatter?.jacket !== null) {
+          const image = getImage(node.node.frontmatter?.jacket as ImageDataLike);
+          return (
+            <Link className={Vanilla.Link} to={node.node.frontmatter?.slug as string} key={index}>
+              <div className={`${Vanilla.WorkBox} ${index == hover ? Vanilla.WorkBoxHover : ""}`}>
+                <GatsbyImage className={Vanilla.Image} image={image as IGatsbyImageData} alt={node.node.frontmatter?.title as string} />
+                <div className={Vanilla.WorkBoxDescription} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave}>
+                  <h3 className={`${Vanilla.ResetH} ${Vanilla.h3}`}>{!node.node.frontmatter?.compilationTitle ? null : `${node.node.frontmatter.compilationTitle}収録`}</h3>
+                  <h2 className={Vanilla.ResetH}>{node.node.frontmatter?.title}</h2>
+                </div>
+              </div>
+            </Link>
+          );
+        }
+      })}
+    </div>
+  );
+};
+
 type WorksPageProps = {
-  data: Queries.HeroInfoQuery;
+  data: Queries.WorksDataQuery;
 };
 const WorksPage = ({ data }: WorksPageProps) => {
   // State for format of works (Single, Album...)
@@ -43,6 +85,9 @@ const WorksPage = ({ data }: WorksPageProps) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={Vanilla.WorksListWrapper}>
+        <WorksList isAlbum={isAlbum} isSingle={isSingle} isOtherFormat={isOtherFormat} isFlopp={isFlopp} isUma={isUma} isCompilation={isCompilation} isOtherProject={isOtherProject} data={data} />
       </div>
     </Layout>
   );

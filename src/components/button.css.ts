@@ -65,6 +65,7 @@ export const ButtonPushIn = style({
   color: `inherit`,
   backgroundColor: globalParams.backgroundLight,
   textDecorationLine: "none",
+  cursor: `pointer`,
   //transition
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });

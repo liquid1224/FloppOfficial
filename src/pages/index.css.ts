@@ -109,13 +109,17 @@ export const HeroWorkImg = style({
   //style
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
-  ":hover": {
-    boxShadow: globalParams.shadowLight,
-    transform: globalParams.float,
-  },
-  ":active": {
-    boxShadow: globalParams.shadowLightIn,
-    transform: `none`,
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowLight,
+        transform: globalParams.float,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowLightIn,
+        transform: `none`,
+      },
+    },
   },
   //transition
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time} `,

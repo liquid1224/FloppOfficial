@@ -36,6 +36,7 @@ export const Burger = style({
   color: globalParams.textColorLight,
   backgroundColor: "rgb(0,0,0,0)",
   borderColor: "rgb(0,0,0,0)",
+  cursor: `pointer`,
 });
 
 export const Line1 = style({
