@@ -79,13 +79,13 @@ export const Header = ({ isDarkMode, setIsDarkMode }: HeaderProps) => {
       <header className={classHeader}>
         <Burger isOpen={isOpen} onClick={toggleOpen} />
         <div className={Vanilla.LogoWrapper}>
-          <Link to="/" className={Vanilla.LogoLink}>
+          <Link to="/" className={Vanilla.LogoLink} onClick={isOpen ? () => setIsOpen(!isOpen) : () => {}}>
             <Logo />
           </Link>
         </div>
         <ToggleSwitch isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       </header>
-      <Navigation isOpen={isOpen} />
+      <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 };
