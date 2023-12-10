@@ -68,7 +68,7 @@ export const WorksWrapper = style({
   width: `100%`,
   //alignment
   display: `grid`,
-  gridTemplateColumns: `repeat(auto-fill, minmax(200px, 1fr))`,
+  gridTemplateColumns: `repeat(auto-fill, minmax(250px, 1fr))`,
   gap: `30px`,
 });
 

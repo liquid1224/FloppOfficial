@@ -7,7 +7,10 @@ jacket: "./20210323-semi-infinite-tramway.jpg"
 format: "album"
 project: "compilation"
 date: "2021/03/23"
-copy: ""
+copy: "Welcome to Tokyo Tech!!\n
+新入生の皆様、東工大へのご入学おめでとうございます！\n
+今年もTech-nation Recordsでは歓迎の意を込めてフリーコンピレーションを制作しました。\n
+是非ともダウンロードしてお聞きください！"
 linkBoothCD: ""
 linkBoothDL: ""
 linkBandcamp: ""
