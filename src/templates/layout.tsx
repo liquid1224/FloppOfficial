@@ -1,6 +1,7 @@
 //Default Components
 import React from "react";
 import { createContext, useContext, useState } from "react";
+import { IconContext } from "react-icons/lib";
 //Author Components
 import { DarkModeProvider } from "../styles/context";
 import * as Vanilla from "./layout.css";
@@ -23,17 +24,19 @@ export const Layout = ({ children, title }: layoutProps) => {
   const randomIndex = Math.floor(Math.random() * headerImageArray.length);
   const headerImage = headerImageArray[randomIndex];
   return (
-    <DarkModeProvider isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}>
-      <div className={Vanilla.Layout}>
-        <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-        {title !== undefined && (
-          <div className={Vanilla.PageHeader} style={{ backgroundImage: `url("${headerImage}")`, backgroundPosition: `center`, backgroundRepeat: `no-repeat`, backgroundSize: `cover` }}>
-            <h1 className={Vanilla.h1}>{title}</h1>
-          </div>
-        )}
-        {children}
-        <Footer />
-      </div>
-    </DarkModeProvider>
+    <IconContext.Provider value={{ size: `40px` }}>
+      <DarkModeProvider isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}>
+        <div className={Vanilla.Layout}>
+          <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+          {title !== undefined && (
+            <div className={Vanilla.PageHeader} style={{ backgroundImage: `url("${headerImage}")`, backgroundPosition: `center`, backgroundRepeat: `no-repeat`, backgroundSize: `cover` }}>
+              <h1 className={Vanilla.h1}>{title}</h1>
+            </div>
+          )}
+          {children}
+          <Footer />
+        </div>
+      </DarkModeProvider>
+    </IconContext.Provider>
   );
 };

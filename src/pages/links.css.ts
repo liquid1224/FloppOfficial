@@ -60,17 +60,9 @@ export const LinksSection = style({
   //alignment
   display: `flex`,
   flexDirection: `column`,
+  gap: `30px`,
   //style
   borderRadius: globalParams.borderRadius,
-  //transition
-  "@media": {
-    "(hover: hover)": {
-      ":hover": {
-        boxShadow: globalParams.shadowLight,
-        transform: globalParams.float,
-      },
-    },
-  },
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });
 
@@ -105,6 +97,75 @@ export const LinkBox = style({
   //alignment
   display: `flex`,
   alignItems: `center`,
+  //style
+  color: globalParams.textColorLight,
+  textDecoration: `none`,
+  borderRadius: globalParams.borderRadius,
+  overflow: `hidden`,
+  boxShadow: globalParams.shadowLight,
+  //transition
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        transform: globalParams.float,
+        boxShadow: globalParams.shadowLightFloat,
+      },
+      ":active": {
+        transform: globalParams.sink,
+        boxShadow: globalParams.shadowLight,
+      },
+    },
+  },
+  transition: `transform ${globalParams.time}, box-shadow ${globalParams.time} `,
+});
+
+export const LinkIconWrapper = style({
+  //display
+  width: `100px`,
+  height: `100px`,
+  //alignment
+  display: `flex`,
+  justifyContent: `center`,
+  alignItems: `center`,
+  //style
+  color: `white`,
+});
+
+export const LinkIcon = style({
+  //display
+  width: `100%`,
+});
+
+export const Spotify = style({
+  backgroundColor: `#1db26b`,
+});
+
+export const AppleMusic = style({
+  backgroundColor: `#ef5667`,
+});
+
+export const AmazonMusic = style({
+  backgroundColor: `#25d1da`,
+});
+
+export const YouTubeMusic = style({
+  backgroundColor: `#ff0000`,
+});
+
+export const LineMusic = style({
+  backgroundColor: `#0be071`,
+});
+
+export const LinkText = style({
+  //alignment
+  display: `flex`,
+  flexDirection: `column`,
+  justifyContent: `center`,
+  //display
+  width: `calc(100% - 100px)`,
+  height: `100%`,
+  padding: `0 0.5rem`,
+  boxSizing: `border-box`,
 });
 
 export const Separator = style({

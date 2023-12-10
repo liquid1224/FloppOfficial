@@ -26,9 +26,50 @@ const LinksPage = () => {
           <div className={Vanilla.LinksSection} id="music">
             <h2 className={Vanilla.LinkSectionH2}>Music</h2>
             <div className={Vanilla.LinksWrapper}>
-              <a className={Vanilla.LinkBox}>
-                <div className="LinkIcon"></div>
-                <div className="LinkText"></div>
+              {/*Spotify*/}
+              <a href="https://open.spotify.com/artist/2wVvlJxWx3jiwaTFQqybSV" className={Vanilla.LinkBox}>
+                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Spotify}`}>
+                  <Icons.icons.spotify />
+                </div>
+                <div className={Vanilla.LinkText}>
+                  <h3>Spotify</h3>
+                </div>
+              </a>
+              {/*Apple Music*/}
+              <a href="https://music.apple.com/jp/artist/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89/1510273690" className={Vanilla.LinkBox}>
+                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.AppleMusic}`}>
+                  <Icons.icons.appleMusic />
+                </div>
+                <div className={Vanilla.LinkText}>
+                  <h3>Apple Music</h3>
+                </div>
+              </a>
+              {/*Amazon Music*/}
+              <a href="https://music.amazon.co.jp/artists/B087PXQRXP/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89" className={Vanilla.LinkBox}>
+                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.AmazonMusic}`}>
+                  <Icons.icons.amazon />
+                </div>
+                <div className={Vanilla.LinkText}>
+                  <h3>Amazon Music</h3>
+                </div>
+              </a>
+              {/*YouTube Music*/}
+              <a href="https://music.amazon.co.jp/artists/B087PXQRXP/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89" className={Vanilla.LinkBox}>
+                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.YouTubeMusic}`}>
+                  <Icons.icons.youtubeMusic />
+                </div>
+                <div className={Vanilla.LinkText}>
+                  <h3>YouTube Music</h3>
+                </div>
+              </a>
+              {/*Line Music*/}
+              <a href="https://lin.ee/u48MUFL" className={Vanilla.LinkBox}>
+                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.LineMusic}`}>
+                  <Icons.icons.lineMusic />
+                </div>
+                <div className={Vanilla.LinkText}>
+                  <h3>YouTube Music</h3>
+                </div>
               </a>
             </div>
           </div>

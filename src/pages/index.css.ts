@@ -100,7 +100,7 @@ export const HeroWorks = style({
   display: `grid`,
   gridTemplateColumns: `repeat(2, 1fr)`,
   gridTemplateRows: `repeat(2, 1fr)`,
-  gridGap: globalParams.gap,
+  gridGap: `30px`,
 });
 
 export const HeroWorkImg = style({
@@ -109,11 +109,12 @@ export const HeroWorkImg = style({
   //style
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
+  boxShadow: globalParams.shadowLight,
   "@media": {
     "(hover: hover)": {
       ":hover": {
-        boxShadow: globalParams.shadowLight,
         transform: globalParams.float,
+        boxShadow: globalParams.shadowLightFloat,
       },
       ":active": {
         boxShadow: globalParams.shadowLightIn,

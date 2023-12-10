@@ -5,16 +5,16 @@ import { FaTwitter, FaInstagram, FaYoutube, FaBandcamp, FaMailBulk, FaSpotify, F
 import { FaBilibili } from "react-icons/fa6";
 import { GiMusicalScore, GiGuitarHead } from "react-icons/gi";
 import { PiMicrophoneStageFill } from "react-icons/pi";
-import { SiApplemusic, SiJuce, SiProcessingfoundation, SiNiconico } from "react-icons/si";
+import { SiApplemusic, SiJuce, SiProcessingfoundation, SiNiconico, SiYoutubemusic } from "react-icons/si";
 
 interface LIconTypeProps {
-  className: any;
+  className?: any;
 }
 export type LIconType = React.FC<LIconTypeProps>;
 
 const LaBooth: LIconType = ({ className }: LIconTypeProps) => {
   return (
-    <svg width="35" height="35" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <svg width="40" height="40" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" className={className}>
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -25,11 +25,24 @@ const LaBooth: LIconType = ({ className }: LIconTypeProps) => {
   );
 };
 
+const LaLineMusic: LIconType = ({ className }: LIconTypeProps) => {
+  return (
+    <svg width="40" height="40" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="currentcolor"
+        d="M849.172,206.975L382.319,313.157C373.332,315.209 366.797,324.994 366.797,336.42L366.797,643.412L309.664,643.412C223.098,643.412 152.607,728.716 152.535,833.539C152.474,903.045 182.287,966.934 234.331,1002.71C255.917,1017.55 280.6,1024 305.232,1024L305.376,1024C389.48,1023.91 457.909,936.066 457.909,828.153L457.909,411.452L780.353,338.202L780.353,564.352L723.22,564.352C636.654,564.352 566.163,649.657 566.091,754.492C566.04,805.275 581.952,853.108 610.842,889.131C639.711,925.153 678.06,944.979 718.932,944.979C803.036,944.864 871.465,857.02 871.465,749.158L871.465,230.225C871.465,215.477 860.775,204.333 849.172,206.975ZM243.647,833.693C243.647,791.4 271.274,756.98 305.232,756.98L366.797,756.98L366.797,833.693C366.797,876.012 339.19,910.444 305.232,910.444C271.274,910.444 243.647,876.012 243.647,833.693ZM657.203,754.672C657.203,712.379 684.841,677.946 718.788,677.946L780.353,677.946L780.353,754.672C780.353,796.965 752.746,831.385 718.788,831.385C684.841,831.385 657.203,796.965 657.203,754.672ZM855.961,114.734L389.119,221.66C377.496,224.314 366.795,213.17 366.795,198.41L366.795,130.571C366.795,119.158 373.32,109.373 382.297,107.309L849.149,0.396C860.763,-2.272 871.463,8.885 871.463,23.645L871.463,91.484C871.463,102.897 864.938,112.682 855.961,114.734Z"
+      />
+    </svg>
+  );
+};
+
 const LaSuzuri: LIconType = ({ className }: LIconTypeProps) => {
   return (
     <svg
-      width="35"
-      height="35"
+      width="40"
+      height="40"
       viewBox="0 0 1024 1024"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentcolor"
@@ -55,6 +68,7 @@ export const icons = {
   guitar: GiGuitarHead,
   instagram: FaInstagram,
   juce: SiJuce,
+  lineMusic: LaLineMusic,
   mail: FaMailBulk,
   mastodon: FaMastodon,
   mic: PiMicrophoneStageFill,
@@ -68,4 +82,5 @@ export const icons = {
   suzuri: LaSuzuri,
   twitter: FaTwitter,
   youtube: FaYoutube,
+  youtubeMusic: SiYoutubemusic,
 };
