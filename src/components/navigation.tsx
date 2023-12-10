@@ -59,7 +59,7 @@ export const Navigation = ({ isOpen, setIsOpen }: NavigationProps) => {
           <h3 className={Vanilla.h3}>Connect</h3>
           <div className={Vanilla.NavigationMenusWrapper}>
             <a href="https://twitter.com/liquid1224" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
-              Twitter
+              Twitter(X)
             </a>
             <a href="https://www.instagram.com/liquid1224.flopp/" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
               Instagram
