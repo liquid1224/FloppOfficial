@@ -56,6 +56,8 @@ export const LinksSection = style({
   //display
   width: `100%`,
   padding: `0.5rem`,
+  paddingTop: `60px`,
+  marginTop: `-60px`,
   boxSizing: `border-box`,
   //alignment
   display: `flex`,

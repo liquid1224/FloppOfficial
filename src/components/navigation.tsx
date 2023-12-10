@@ -44,10 +44,10 @@ export const NavigationContents = () => {
           <Link to="" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             Streams
           </Link>
-          <Link to="" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+          <Link to="/links#store" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             Stores
           </Link>
-          <Link to="" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+          <Link to="https://youtube.com/@liquid1224" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             YouTube
           </Link>
         </div>
@@ -55,23 +55,23 @@ export const NavigationContents = () => {
       <div className={Vanilla.NavigationSection}>
         <h3 className={Vanilla.h3}>Read</h3>
         <div className={Vanilla.NavigationMenusWrapper}>
-          <Link to="" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+          <Link to="/blog" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             Blog
           </Link>
-          <Link to="" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+          <a href="https://trap.jp/author/liquid1224/" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             traP
-          </Link>
+          </a>
         </div>
       </div>
       <div className={Vanilla.NavigationSection}>
         <h3 className={Vanilla.h3}>Connect</h3>
         <div className={Vanilla.NavigationMenusWrapper}>
-          <Link to="" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+          <a href="https://twitter.com/liquid1224" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             Twitter
-          </Link>
-          <Link to="" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+          </a>
+          <a href="https://www.instagram.com/liquid1224.flopp/" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             Instagram
-          </Link>
+          </a>
           <Link to="/contact" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             Contact
           </Link>
