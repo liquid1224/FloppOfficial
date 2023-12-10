@@ -4,11 +4,14 @@ import { globalParams } from "../styles/global";
 export const MenuWrapper = style({
   //display
   width: `100%`,
-  padding: `1.0rem 5vw 0 5vw`,
+  padding: `1.0rem 5vw 0.5rem 5vw`,
+  boxSizing: `border-box`,
   //alignment
-  display: `flex`,
+  display: `grid`,
+  gridTemplateColumns: `repeat(auto-fit, minmax(65px, 1fr))`,
   gap: `10px`,
   justifyContent: `center`,
+  justifyItems: `center`,
   alignItems: `center`,
 });
 
@@ -41,22 +44,27 @@ export const Menu = style({
   },
 });
 
+export const Separator = style({
+  width: `90vw`,
+  height: `1px`,
+  backgroundColor: globalParams.textColorLight,
+});
+
 export const LinksSectionsWrapper = style({
   //display
   width: `100%`,
-  padding: `0 5vw 1.0rem 5vw`,
+  padding: `60px 5vw 1.0rem 5vw`,
   boxSizing: `border-box`,
   //alignment
   display: `flex`,
   flexDirection: `column`,
-  gap: `20px`,
+  gap: `60px`,
 });
 
 export const LinksSection = style({
   //display
   width: `100%`,
-  padding: `0.5rem`,
-  paddingTop: `60px`,
+  padding: `60px 0.5rem 0.5rem 0.5rem`,
   marginTop: `-60px`,
   boxSizing: `border-box`,
   //alignment

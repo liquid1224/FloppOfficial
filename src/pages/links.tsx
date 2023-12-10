@@ -9,22 +9,23 @@ const LinksPage = () => {
     <Layout title="Links">
       <>
         <div className={Vanilla.MenuWrapper}>
-          <AnchorLink href="#music" offset="80" className={Vanilla.Menu}>
+          <AnchorLink href="#music" offset="20" className={Vanilla.Menu}>
             Music
           </AnchorLink>
-          <AnchorLink href="#store" offset="80" className={Vanilla.Menu}>
+          <AnchorLink href="#store" offset="20" className={Vanilla.Menu}>
             Store
           </AnchorLink>
-          <AnchorLink href="#sns" offset="80" className={Vanilla.Menu}>
+          <AnchorLink href="#sns" offset="20" className={Vanilla.Menu}>
             SNS
           </AnchorLink>
-          <AnchorLink href="#media" offset="80" className={Vanilla.Menu}>
+          <AnchorLink href="#media" offset="20" className={Vanilla.Menu}>
             Media
           </AnchorLink>
-          <AnchorLink href="#contact" offset="80" className={Vanilla.Menu}>
+          <AnchorLink href="#contact" offset="20" className={Vanilla.Menu}>
             Contact
           </AnchorLink>
         </div>
+        <div className={Vanilla.Separator} />
         <div className={Vanilla.LinksSectionsWrapper}>
           <div className={Vanilla.LinksSection} id="music">
             <h2 className={Vanilla.LinkSectionH2}>Music</h2>
@@ -132,7 +133,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Instagram*/}
-              <a href="https://twitter.com/liquid1224" className={Vanilla.LinkBox}>
+              <a href="https://www.instagram.com/liquid1224.flopp/" className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Instagram}`}>
                   <Icons.icons.instagram />
                 </div>
