@@ -33,6 +33,9 @@ export const NavigationContents = () => {
           <Link to="/works" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             Works
           </Link>
+          <Link to="/links" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+            Links
+          </Link>
         </div>
       </div>
       <div className={Vanilla.NavigationSection}>

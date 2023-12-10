@@ -78,7 +78,19 @@ export const NavigationSection = style({
 });
 
 export const h3 = style({
+  //alignment
+  display: `flex`,
+  flexDirection: `column`,
+  //style
   margin: `0.5rem 0`,
+  selectors: {
+    [`&::after`]: {
+      content: ``,
+      width: `100%`,
+      height: `2px`,
+      backgroundColor: globalParams.textColorLight,
+    },
+  },
 });
 
 export const NavigationMenusWrapper = style({

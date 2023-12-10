@@ -1,6 +1,5 @@
 import { style } from "@vanilla-extract/css";
 import { globalParams } from "../styles/global";
-import headerBackgroundImage from "../images/headerImage.jpg";
 
 export const Layout = style({
   backgroundColor: globalParams.backgroundLight,
