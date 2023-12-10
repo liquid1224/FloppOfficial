@@ -14,7 +14,7 @@ export const MenuWrapper = style({
 
 export const Menu = style({
   //dispaly
-  width: `55px`,
+  width: `65px`,
   //style
   textDecoration: `none`,
   color: globalParams.textColorLight,
@@ -44,7 +44,7 @@ export const Menu = style({
 export const LinksSectionsWrapper = style({
   //display
   width: `100%`,
-  padding: `1.0rem 5vw`,
+  padding: `0 5vw 1.0rem 5vw`,
   boxSizing: `border-box`,
   //alignment
   display: `flex`,
@@ -87,7 +87,7 @@ export const LinksWrapper = style({
   width: `100%`,
   //alignment
   display: `grid`,
-  gridTemplateColumns: `repeat(2, minmax(250px, 1fr))`,
+  gridTemplateColumns: `repeat(auto-fill, minmax(250px, 1fr))`,
   gap: `30px`,
 });
 
@@ -148,12 +148,56 @@ export const AmazonMusic = style({
   backgroundColor: `#25d1da`,
 });
 
-export const YouTubeMusic = style({
+export const YouTube = style({
   backgroundColor: `#ff0000`,
 });
 
 export const LineMusic = style({
   backgroundColor: `#0be071`,
+});
+
+export const Bandcamp = style({
+  backgroundColor: `#1ca0c3`,
+});
+
+export const Booth = style({
+  backgroundColor: `#fc4d50`,
+});
+
+export const Suzuri = style({
+  backgroundColor: `#027bbb`,
+});
+
+export const Twitter = style({
+  backgroundColor: `#000000`,
+});
+
+export const Instagram = style({
+  background: "linear-gradient(to top left, #ff0089, rgb(255, 0, 118, 0), #6c11ff), linear-gradient(to top right, #ffc600, rgb(255, 0, 118, 0), magenta) rgba(255, 153, 150, 1)",
+});
+
+export const Mastodon = style({
+  backgroundColor: `#6364ff`,
+});
+
+export const Niconico = style({
+  backgroundColor: `#252525`,
+});
+
+export const Bilibili = style({
+  backgroundColor: `#09adeb`,
+});
+
+export const SoundCloud = style({
+  backgroundColor: `#ff5600`,
+});
+
+export const Skeb = style({
+  backgroundColor: `#32aa8f`,
+});
+
+export const Mail = style({
+  backgroundColor: globalParams.accentColor1,
 });
 
 export const LinkText = style({
@@ -166,10 +210,4 @@ export const LinkText = style({
   height: `100%`,
   padding: `0 0.5rem`,
   boxSizing: `border-box`,
-});
-
-export const Separator = style({
-  width: `100%`,
-  height: `2px`,
-  backgroundColor: globalParams.textColorLight,
 });

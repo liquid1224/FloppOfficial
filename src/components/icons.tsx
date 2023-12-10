@@ -1,8 +1,8 @@
 import React from "react";
 import { BiSolidCameraMovie } from "react-icons/bi";
 import { BsSpeakerFill, BsFillPatchQuestionFill } from "react-icons/bs";
-import { FaTwitter, FaInstagram, FaYoutube, FaBandcamp, FaMailBulk, FaSpotify, FaAmazon, FaMastodon } from "react-icons/fa";
-import { FaBilibili } from "react-icons/fa6";
+import { FaInstagram, FaYoutube, FaBandcamp, FaMailBulk, FaSpotify, FaAmazon, FaMastodon, FaSoundcloud } from "react-icons/fa";
+import { FaBilibili, FaXTwitter } from "react-icons/fa6";
 import { GiMusicalScore, GiGuitarHead } from "react-icons/gi";
 import { PiMicrophoneStageFill } from "react-icons/pi";
 import { SiApplemusic, SiJuce, SiProcessingfoundation, SiNiconico, SiYoutubemusic } from "react-icons/si";
@@ -59,6 +59,27 @@ const LaSuzuri: LIconType = ({ className }: LIconTypeProps) => {
   );
 };
 
+const LaSkeb: LIconType = ({ className }: LIconTypeProps) => {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 1024 1024"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentcolor"
+      fillRule="evenodd"
+      clipRule="evenodd"
+      strokeLinejoin="round"
+      strokeMiterlimit="2"
+      className={className}
+    >
+      <g transform="matrix(29.2319,0,0,29.2319,-50.852,-65.187)">
+        <path d="M5.784,30.658C3.553,27.689 2.23,23.998 2.23,20C2.23,10.192 10.192,2.23 20,2.23C27.272,2.23 33.53,6.608 36.279,12.87L36.27,12.87L22.94,8.31L13.33,36.47C14.122,36.792 14.934,37.056 15.761,37.26C12.82,36.54 10.166,35.086 8.002,33.104L8.52,31.59L5.784,30.658ZM36.263,27.167C34.391,31.405 30.911,34.775 26.598,36.503C30.896,34.767 34.383,31.39 36.263,27.167ZM15.5,7.09L18,8L16.31,13L13.78,12.13L12.91,14.67L15.44,15.54L13.71,20.6L11.18,19.73L10.31,22.27L12.84,23.14L11.11,28.2L8.58,27.33L7.72,29.9L10.25,30.77L9.13,34C9.859,34.569 10.631,35.081 11.44,35.53L18.79,14L18.85,13.84L20.62,8.65L21,7.55L15.94,5.82L15.5,7.09ZM7.347,22.686L6.481,25.223L10.286,26.521L11.152,23.985L7.347,22.686ZM9.942,15.09L9.076,17.626L12.88,18.925L13.746,16.388L9.942,15.09ZM12.539,7.484L11.673,10.02L15.478,11.319L16.344,8.782L12.539,7.484Z" />
+      </g>
+    </svg>
+  );
+};
+
 export const icons = {
   amazon: FaAmazon,
   appleMusic: SiApplemusic,
@@ -77,10 +98,12 @@ export const icons = {
   processing: SiProcessingfoundation,
   question: BsFillPatchQuestionFill,
   score: GiMusicalScore,
+  skeb: LaSkeb,
+  soundcloud: FaSoundcloud,
   speaker: BsSpeakerFill,
   spotify: FaSpotify,
   suzuri: LaSuzuri,
-  twitter: FaTwitter,
+  twitter: FaXTwitter,
   youtube: FaYoutube,
   youtubeMusic: SiYoutubemusic,
 };

@@ -190,7 +190,7 @@ export const MoviesWrapper = style({
 
 export const YouTubeWrapper = style({
   //display
-  width: `100%`,
+  width: `101%`,
   aspectRatio: `16/9`,
   //styles
   borderRadius: globalParams.borderRadius,
