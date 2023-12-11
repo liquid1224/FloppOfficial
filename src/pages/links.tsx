@@ -1,6 +1,7 @@
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Layout } from "../templates/layout";
+import { globalLinks } from "../styles/global";
 import * as Icons from "../components/icons";
 import * as Vanilla from "./links.css";
 
@@ -31,7 +32,7 @@ const LinksPage = () => {
             <h2 className={Vanilla.LinkSectionH2}>Music</h2>
             <div className={Vanilla.LinksWrapper}>
               {/*Spotify*/}
-              <a href="https://open.spotify.com/artist/2wVvlJxWx3jiwaTFQqybSV" className={Vanilla.LinkBox}>
+              <a href={globalLinks.spotify} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Spotify}`}>
                   <Icons.icons.spotify />
                 </div>
@@ -40,7 +41,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Apple Music*/}
-              <a href="https://music.apple.com/jp/artist/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89/1510273690" className={Vanilla.LinkBox}>
+              <a href={globalLinks.appleMusic} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.AppleMusic}`}>
                   <Icons.icons.appleMusic />
                 </div>
@@ -49,7 +50,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Amazon Music*/}
-              <a href="https://music.amazon.co.jp/artists/B087PXQRXP/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89" className={Vanilla.LinkBox}>
+              <a href={globalLinks.amazonMusic} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.AmazonMusic}`}>
                   <Icons.icons.amazon />
                 </div>
@@ -58,7 +59,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*YouTube Music*/}
-              <a href="https://music.youtube.com/channel/UCMDI-BKLHiOPnqZobsD22HA" className={Vanilla.LinkBox}>
+              <a href={globalLinks.youtubeMusic} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.YouTube}`}>
                   <Icons.icons.youtubeMusic />
                 </div>
@@ -66,8 +67,8 @@ const LinksPage = () => {
                   <h3>YouTube Music</h3>
                 </div>
               </a>
-              {/*YouTube */}
-              <a href="https://www.youtube.com/channel/UCMDI-BKLHiOPnqZobsD22HA" className={Vanilla.LinkBox}>
+              {/*YouTube Topic*/}
+              <a href={globalLinks.youtubeTopic} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.YouTube}`}>
                   <Icons.icons.youtube />
                 </div>
@@ -76,7 +77,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Line Music*/}
-              <a href="https://lin.ee/u48MUFL" className={Vanilla.LinkBox}>
+              <a href={globalLinks.lineMusic} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.LineMusic}`}>
                   <Icons.icons.lineMusic />
                 </div>
@@ -91,7 +92,7 @@ const LinksPage = () => {
             <h2 className={Vanilla.LinkSectionH2}>Store</h2>
             <div className={Vanilla.LinksWrapper}>
               {/*Bandcamp*/}
-              <a href="https://liquid1224.bandcamp.com" className={Vanilla.LinkBox}>
+              <a href={globalLinks.bandcamp} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Bandcamp}`}>
                   <Icons.icons.bandcamp />
                 </div>
@@ -100,7 +101,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Booth*/}
-              <a href="https://liquid1224.booth.pm" className={Vanilla.LinkBox}>
+              <a href={globalLinks.booth} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Booth}`}>
                   <Icons.icons.booth />
                 </div>
@@ -109,7 +110,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Suzuri*/}
-              <a href="https://suzuri.jp/liquid1224/home" className={Vanilla.LinkBox}>
+              <a href={globalLinks.suzuri} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Suzuri}`}>
                   <Icons.icons.suzuri />
                 </div>
@@ -124,7 +125,7 @@ const LinksPage = () => {
             <h2 className={Vanilla.LinkSectionH2}>SNS</h2>
             <div className={Vanilla.LinksWrapper}>
               {/*Twitter*/}
-              <a href="https://twitter.com/liquid1224" className={Vanilla.LinkBox}>
+              <a href={globalLinks.twitter} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Twitter}`}>
                   <Icons.icons.twitter />
                 </div>
@@ -133,7 +134,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Instagram*/}
-              <a href="https://www.instagram.com/liquid1224.flopp/" className={Vanilla.LinkBox}>
+              <a href={globalLinks.instagram} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Instagram}`}>
                   <Icons.icons.instagram />
                 </div>
@@ -142,7 +143,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Mastodon*/}
-              <a href="https://otoya.space/@liquid1224" className={Vanilla.LinkBox}>
+              <a href={globalLinks.mastodon} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Mastodon}`}>
                   <Icons.icons.mastodon />
                 </div>
@@ -156,8 +157,8 @@ const LinksPage = () => {
           <div className={Vanilla.LinksSection} id="media">
             <h2 className={Vanilla.LinkSectionH2}>Media</h2>
             <div className={Vanilla.LinksWrapper}>
-              {/*YouTube*/}
-              <a href="https://www.youtube.com/@liquid1224" className={Vanilla.LinkBox}>
+              {/*YouTube Channel*/}
+              <a href={globalLinks.youtubeChannel} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.YouTube}`}>
                   <Icons.icons.youtube />
                 </div>
@@ -166,7 +167,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Niconico*/}
-              <a href="https://www.nicovideo.jp/user/28635327/video" className={Vanilla.LinkBox}>
+              <a href={globalLinks.niconico} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Niconico}`}>
                   <Icons.icons.niconico />
                 </div>
@@ -175,7 +176,7 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Bilibili*/}
-              <a href="https://www.nicovideo.jp/user/28635327/video" className={Vanilla.LinkBox}>
+              <a href={globalLinks.bilibili} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Bilibili}`}>
                   <Icons.icons.bilibili />
                 </div>
@@ -184,8 +185,8 @@ const LinksPage = () => {
                 </div>
               </a>
               {/*Soundcloud*/}
-              <a href="https://soundcloud.com/liquid1224" className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.SoundCloud}`}>
+              <a href={globalLinks.soundcloud} className={Vanilla.LinkBox}>
+                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Soundcloud}`}>
                   <Icons.icons.soundcloud />
                 </div>
                 <div className={Vanilla.LinkText}>
@@ -199,7 +200,7 @@ const LinksPage = () => {
             <h2 className={Vanilla.LinkSectionH2}>Contact</h2>
             <div className={Vanilla.LinksWrapper}>
               {/*Skeb*/}
-              <a href="https://skeb.jp/@liquid1224" className={Vanilla.LinkBox}>
+              <a href={globalLinks.skeb} className={Vanilla.LinkBox}>
                 <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Skeb}`}>
                   <Icons.icons.skeb />
                 </div>

@@ -198,7 +198,7 @@ export const Bilibili = style({
   backgroundColor: `#09adeb`,
 });
 
-export const SoundCloud = style({
+export const Soundcloud = style({
   backgroundColor: `#ff5600`,
 });
 

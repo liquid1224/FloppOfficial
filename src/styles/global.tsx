@@ -26,3 +26,24 @@ export const globalParams = {
   //query
   pc: "screen and (min-width: 768px)",
 };
+
+export const globalLinks = {
+  amazonMusic: "https://music.amazon.co.jp/artists/B087PXQRXP/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89",
+  appleMusic: "https://music.apple.com/jp/artist/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89/1510273690",
+  bandcamp: "https://liquid1224.bandcamp.com",
+  bilibili: "https://www.nicovideo.jp/user/28635327/video",
+  booth: "https://liquid1224.booth.pm",
+  instagram: "https://www.instagram.com/liquid1224.flopp/",
+  lineMusic: "https://lin.ee/u48MUFL",
+  mastodon: "https://otoya.space/@liquid1224",
+  niconico: "https://www.nicovideo.jp/user/28635327/video",
+  skeb: "https://skeb.jp/@liquid1224",
+  soundcloud: "https://soundcloud.com/liquid1224",
+  spotify: "https://open.spotify.com/artist/2wVvlJxWx3jiwaTFQqybSV",
+  suzuri: "https://suzuri.jp/liquid1224/home",
+  trap: "https://trap.jp/author/liquid1224/",
+  twitter: "https://twitter.com/liquid1224",
+  youtubeChannel: "https://www.youtube.com/@liquid1224",
+  youtubeMusic: "https://music.youtube.com/channel/UCMDI-BKLHiOPnqZobsD22HA",
+  youtubeTopic: "https://www.youtube.com/channel/UCMDI-BKLHiOPnqZobsD22HA",
+};

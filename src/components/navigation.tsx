@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "./button";
 import * as Vanilla from "./navigation.css";
 import { Link } from "gatsby";
+import { globalLinks } from "../styles/global";
 
 type NavigationProps = {
   isOpen: boolean;
@@ -39,9 +40,9 @@ export const Navigation = ({ isOpen, setIsOpen }: NavigationProps) => {
             <Link to="/links#store" className={`${Vanilla.Link} ${Vanilla.HoverFX}`} onClick={() => setIsOpen(!isOpen)}>
               Stores
             </Link>
-            <Link to="https://youtube.com/@liquid1224" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+            <a href={globalLinks.youtubeChannel} className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
               YouTube
-            </Link>
+            </a>
           </div>
         </div>
         <div className={Vanilla.NavigationSection}>
@@ -50,7 +51,7 @@ export const Navigation = ({ isOpen, setIsOpen }: NavigationProps) => {
             <Link to="/blog" className={`${Vanilla.Link} ${Vanilla.HoverFX}`} onClick={() => setIsOpen(!isOpen)}>
               Blog
             </Link>
-            <a href="https://trap.jp/author/liquid1224/" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+            <a href={globalLinks.trap} className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
               traP
             </a>
           </div>
@@ -58,10 +59,10 @@ export const Navigation = ({ isOpen, setIsOpen }: NavigationProps) => {
         <div className={Vanilla.NavigationSection}>
           <h3 className={Vanilla.h3}>Connect</h3>
           <div className={Vanilla.NavigationMenusWrapper}>
-            <a href="https://twitter.com/liquid1224" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+            <a href={globalLinks.twitter} className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
               Twitter(X)
             </a>
-            <a href="https://www.instagram.com/liquid1224.flopp/" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+            <a href={globalLinks.instagram} className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
               Instagram
             </a>
             <Link to="/contact" className={`${Vanilla.Link} ${Vanilla.HoverFX}`} onClick={() => setIsOpen(!isOpen)}>
