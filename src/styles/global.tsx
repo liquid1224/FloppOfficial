@@ -9,7 +9,6 @@ export const globalParams = {
   //影
   shadowLight: "10px 10px 8px #a4a4a4, -10px -10px 8px #ffffff",
   shadowLightFloat: "14px 14px 8px #a4a4a4, -6px -6px 8px #ffffff",
-  shadowLightIn: "inset 10px 10px 8px #a4a4a4, inset -10px -10px 8px #ffffff",
   shadowLightSmall: "5px 5px 8px #a4a4a4, -5px -5px 8px #ffffff",
   shadowLightSmallFloat: "7px 7px 8px #a4a4a4, -3px -3px 8px #ffffff",
   shadowLightSmallIn: "inset 5px 5px 8px #a4a4a4, inset -5px -5px 8px #ffffff",

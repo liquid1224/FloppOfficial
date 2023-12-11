@@ -74,10 +74,3 @@ export const Navigation = ({ isOpen, setIsOpen }: NavigationProps) => {
     </nav>
   );
 };
-
-/*<ul className={Vanilla.LinkElementsWrapper}>
-      <LinkElement title="About" link="/about" />
-      <LinkElement title="Works" link="/works" />
-      <LinkElement title="Links" link="/links" />
-      <LinkElement title="Contact" link="/contact" />
-  </ul>*/
