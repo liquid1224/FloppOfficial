@@ -4,7 +4,7 @@ import { globalParams } from "../styles/global";
 export const HeroWrapper = style({
   //style
   width: `100%`,
-  padding: `0.5rem 5vw 0 5vw`,
+  padding: `30px 5vw 0 5vw`,
   boxSizing: `border-box`,
   //alignment
   display: `flex`,

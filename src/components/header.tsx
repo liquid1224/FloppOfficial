@@ -72,7 +72,7 @@ export const Header = ({ isDarkMode, setIsDarkMode }: HeaderProps) => {
   };
 
   //Class
-  const classHeader = `${Vanilla.Header} ${isScrolled ? Vanilla.Scrolled : ""}`;
+  const classHeader = `${Vanilla.Header} ${isScrolled ? Vanilla.Scrolled : ""} ${isOpen ? Vanilla.MenuOn : ""} `;
 
   return (
     <>

@@ -181,6 +181,10 @@ export const Scrolled = style({
   boxShadow: globalParams.shadowLight,
 });
 
+export const MenuOn = style({
+  boxShadow: `none`,
+});
+
 export const LogoWrapper = style({
   //style
   margin: "0 auto",
