@@ -46,7 +46,7 @@ export const HeroInfo = style({
   alignItems: `end`,
   //style
   width: `100%`,
-  gap: globalParams.gap,
+  gap: `30px`,
   //Desktop
   "@media": {
     [`${globalParams.pc}`]: {
@@ -117,7 +117,7 @@ export const HeroWorkImg = style({
         boxShadow: globalParams.shadowLightFloat,
       },
       ":active": {
-        boxShadow: globalParams.shadowLightIn,
+        boxShadow: globalParams.shadowLight,
         transform: `none`,
       },
     },

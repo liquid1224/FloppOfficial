@@ -14,11 +14,11 @@ export const Button = style({
   "@media": {
     "(hover: hover)": {
       ":hover": {
-        boxShadow: globalParams.shadowLightSmall,
+        boxShadow: globalParams.shadowLightSmallFloat,
         transform: globalParams.float,
       },
       ":active": {
-        boxShadow: globalParams.shadowLightSmallIn,
+        boxShadow: globalParams.shadowLightSmall,
         transform: `none`,
       },
     },
