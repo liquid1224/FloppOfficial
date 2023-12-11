@@ -80,7 +80,7 @@ const LaSkeb: LIconType = ({ className }: LIconTypeProps) => {
   );
 };
 
-export const icons = {
+export const Icons = {
   amazon: FaAmazon,
   appleMusic: SiApplemusic,
   bandcamp: FaBandcamp,

@@ -1,9 +1,13 @@
+//Default Components
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+//Author Components
 import { Layout } from "../templates/layout";
 import { globalLinks } from "../styles/global";
-import * as Icons from "../components/icons";
+import { LinkBox } from "../components/linkBox";
+import { Icons } from "../components/icons";
 import * as Vanilla from "./links.css";
+import { Link } from "gatsby";
 
 const LinksPage = () => {
   return (
@@ -32,59 +36,17 @@ const LinksPage = () => {
             <h2 className={Vanilla.LinkSectionH2}>Music</h2>
             <div className={Vanilla.LinksWrapper}>
               {/*Spotify*/}
-              <a href={globalLinks.spotify} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Spotify}`}>
-                  <Icons.icons.spotify />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Spotify</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.spotify} text="Spotify" link={globalLinks.spotify} style={Vanilla.Spotify} />
               {/*Apple Music*/}
-              <a href={globalLinks.appleMusic} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.AppleMusic}`}>
-                  <Icons.icons.appleMusic />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Apple Music</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.appleMusic} text="Apple Music" link={globalLinks.appleMusic} style={Vanilla.AppleMusic} />
               {/*Amazon Music*/}
-              <a href={globalLinks.amazonMusic} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.AmazonMusic}`}>
-                  <Icons.icons.amazon />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Amazon Music</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.amazon} text="Amazon Music" link={globalLinks.amazonMusic} style={Vanilla.AmazonMusic} />
               {/*YouTube Music*/}
-              <a href={globalLinks.youtubeMusic} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.YouTube}`}>
-                  <Icons.icons.youtubeMusic />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>YouTube Music</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.youtubeMusic} text="YouTube Music" link={globalLinks.youtubeMusic} style={Vanilla.YouTube} />
               {/*YouTube Topic*/}
-              <a href={globalLinks.youtubeTopic} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.YouTube}`}>
-                  <Icons.icons.youtube />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>YouTube Topic</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.youtube} text="YouTube Topic" link={globalLinks.youtubeTopic} style={Vanilla.YouTube} />
               {/*Line Music*/}
-              <a href={globalLinks.lineMusic} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.LineMusic}`}>
-                  <Icons.icons.lineMusic />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Line Music</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.lineMusic} text="Line Music" link={globalLinks.lineMusic} style={Vanilla.LineMusic} />
             </div>
           </div>
 
@@ -92,32 +54,11 @@ const LinksPage = () => {
             <h2 className={Vanilla.LinkSectionH2}>Store</h2>
             <div className={Vanilla.LinksWrapper}>
               {/*Bandcamp*/}
-              <a href={globalLinks.bandcamp} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Bandcamp}`}>
-                  <Icons.icons.bandcamp />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Bandcamp</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.bandcamp} text="Bandcamp" link={globalLinks.bandcamp} style={Vanilla.Bandcamp} />
               {/*Booth*/}
-              <a href={globalLinks.booth} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Booth}`}>
-                  <Icons.icons.booth />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Booth</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.booth} text="Booth" link={globalLinks.booth} style={Vanilla.Booth} />
               {/*Suzuri*/}
-              <a href={globalLinks.suzuri} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Suzuri}`}>
-                  <Icons.icons.suzuri />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Suzuri</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.suzuri} text="Suzuri" link={globalLinks.suzuri} style={Vanilla.Suzuri} />
             </div>
           </div>
 
@@ -125,32 +66,11 @@ const LinksPage = () => {
             <h2 className={Vanilla.LinkSectionH2}>SNS</h2>
             <div className={Vanilla.LinksWrapper}>
               {/*Twitter*/}
-              <a href={globalLinks.twitter} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Twitter}`}>
-                  <Icons.icons.twitter />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Twitter(X)</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.twitter} text="Twitter(X)" link={globalLinks.twitter} style={Vanilla.Twitter} />
               {/*Instagram*/}
-              <a href={globalLinks.instagram} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Instagram}`}>
-                  <Icons.icons.instagram />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Instagram</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.instagram} text="Instagram" link={globalLinks.instagram} style={Vanilla.Instagram} />
               {/*Mastodon*/}
-              <a href={globalLinks.mastodon} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Mastodon}`}>
-                  <Icons.icons.mastodon />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Mastodon</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.mastodon} text="Mastodon" link={globalLinks.mastodon} style={Vanilla.Mastodon} />
             </div>
           </div>
 
@@ -158,41 +78,13 @@ const LinksPage = () => {
             <h2 className={Vanilla.LinkSectionH2}>Media</h2>
             <div className={Vanilla.LinksWrapper}>
               {/*YouTube Channel*/}
-              <a href={globalLinks.youtubeChannel} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.YouTube}`}>
-                  <Icons.icons.youtube />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>YouTube Channel</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.youtube} text="YouTube Channel" link={globalLinks.youtubeChannel} style={Vanilla.YouTube} />
               {/*Niconico*/}
-              <a href={globalLinks.niconico} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Niconico}`}>
-                  <Icons.icons.niconico />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Niconico</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.niconico} text="Niconico" link={globalLinks.niconico} style={Vanilla.Niconico} />
               {/*Bilibili*/}
-              <a href={globalLinks.bilibili} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Bilibili}`}>
-                  <Icons.icons.bilibili />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Bilibili</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.bilibili} text="Bilibili" link={globalLinks.bilibili} style={Vanilla.Bilibili} />
               {/*Soundcloud*/}
-              <a href={globalLinks.soundcloud} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Soundcloud}`}>
-                  <Icons.icons.soundcloud />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Soundcloud</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.soundcloud} text="Soundcloud" link={globalLinks.soundcloud} style={Vanilla.Soundcloud} />
             </div>
           </div>
 
@@ -200,23 +92,9 @@ const LinksPage = () => {
             <h2 className={Vanilla.LinkSectionH2}>Contact</h2>
             <div className={Vanilla.LinksWrapper}>
               {/*Skeb*/}
-              <a href={globalLinks.skeb} className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Skeb}`}>
-                  <Icons.icons.skeb />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Skeb</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.skeb} text="Skeb" link={globalLinks.skeb} style={Vanilla.Skeb} />
               {/*Mail*/}
-              <a href="/contact" className={Vanilla.LinkBox}>
-                <div className={`${Vanilla.LinkIconWrapper} ${Vanilla.Mail}`}>
-                  <Icons.icons.mail />
-                </div>
-                <div className={Vanilla.LinkText}>
-                  <h3>Mail</h3>
-                </div>
-              </a>
+              <LinkBox icon={Icons.mail} text="Mail" link="" style={Vanilla.Mail} />
             </div>
           </div>
         </div>
