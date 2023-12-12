@@ -29,6 +29,7 @@ export const ButtonsSection = style({
   //alignment
   display: `flex`,
   justifyContent: `center`,
+  gap: `20px`,
 });
 
 export const ButtonsSectionTitle = style({
@@ -47,7 +48,7 @@ export const ButtonsWrapper = style({
   display: `grid`,
   gridTemplateColumns: `repeat(auto-fill, minmax(150px, 1fr))`,
   justifyItems: `center`,
-  gap: `10px`,
+  gap: `30px`,
 });
 
 export const ButtonsSectionsSeparator = style({

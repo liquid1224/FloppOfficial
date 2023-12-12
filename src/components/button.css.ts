@@ -22,6 +22,13 @@ export const Button = style({
         transform: `none`,
       },
     },
+    "(hover: none)": {
+      boxShadow: globalParams.shadowLightSmallFloat,
+      ":active": {
+        boxShadow: globalParams.shadowLightSmall,
+        transform: globalParams.sink,
+      },
+    },
   },
   color: `inherit`,
   textDecorationLine: "none",
@@ -50,6 +57,7 @@ export const ButtonPushIn = style({
   //style
   border: `none`,
   borderRadius: globalParams.borderRadius,
+  boxShadow: `none`,
   "@media": {
     "(hover: hover)": {
       ":hover": {
@@ -60,6 +68,9 @@ export const ButtonPushIn = style({
         boxShadow: globalParams.shadowLightSmallInDeep,
         transform: globalParams.sink,
       },
+    },
+    "(hover: none)": {
+      boxShadow: globalParams.shadowLightFloat,
     },
   },
   color: `inherit`,
@@ -75,12 +86,18 @@ export const Active = style({
   "@media": {
     "(hover: hover)": {
       ":hover": {
-        boxShadow: globalParams.shadowLightSmallIn,
-        transform: `none`,
+        boxShadow: globalParams.shadowLightSmallInDeep,
       },
       ":active": {
         boxShadow: globalParams.shadowLightSmallInDeep,
         transform: globalParams.sink,
+      },
+    },
+    "(hover: none)": {
+      boxShadow: globalParams.shadowLightSmallIn,
+      ":active": {
+        boxShadow: globalParams.shadowLightSmallInDeep,
+        transition: `box-shadow ${globalParams.time}`,
       },
     },
   },

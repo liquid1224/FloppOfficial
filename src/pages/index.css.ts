@@ -27,7 +27,7 @@ export const HeroContents = style({
   //style
   width: `100%`,
   height: `100%`,
-  gap: `0.5rem`,
+  gap: `30px`,
   //Desktop
   "@media": {
     [`${globalParams.pc}`]: {

@@ -4,7 +4,7 @@ import { globalParams } from "../styles/global";
 export const MenuWrapper = style({
   //display
   width: `100%`,
-  padding: `1.0rem 5vw 0.5rem 5vw`,
+  padding: `30px 5vw 0.5rem 5vw`,
   boxSizing: `border-box`,
   //alignment
   display: `grid`,
