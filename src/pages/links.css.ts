@@ -17,9 +17,10 @@ export const MenuWrapper = style({
 
 export const Menu = style({
   //dispaly
-  width: `65px`,
+  width: `100%`,
   //style
   textDecoration: `none`,
+  fontSize: `1.1rem`,
   color: globalParams.textColorLight,
   //alignment
   display: `flex`,
