@@ -9,6 +9,7 @@ import * as Vanilla from "./index.css";
 import { Layout } from "../templates/layout";
 import { Seo } from "../templates/seo";
 import { Button } from "../components/button";
+import { ScrollIndecator } from "../components/scrollIndicator";
 
 type IndexPageProps = {
   data: Queries.HeroInfoQuery;
@@ -67,15 +68,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
             <div className={Vanilla.Separator} />
             <HeroPoem />
           </div>
-          {isDesktop && (
-            <div className={Vanilla.HeroScrollWrapper}>
-              <svg className={Vanilla.ArrowsWrapper}>
-                <path className={Vanilla.Path1} d="M0 0 L20 21 L40 0"></path>
-                <path className={Vanilla.Path2} d="M0 15 L20 36 L40 15"></path>
-                <path className={Vanilla.Path3} d="M0 30 L20 51 L40 30"></path>
-              </svg>
-            </div>
-          )}
+          {isDesktop && <ScrollIndecator />}
         </div>
         <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
           <div className={Vanilla.MoviesWrapper}>
