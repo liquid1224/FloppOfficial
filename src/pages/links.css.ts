@@ -3,7 +3,7 @@ import { globalParams } from "../styles/global";
 
 export const MenuWrapper = style({
   //display
-  width: `100%`,
+  width: `80%`,
   padding: `30px 5vw 0.5rem 5vw`,
   boxSizing: `border-box`,
   //alignment

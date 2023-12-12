@@ -84,7 +84,7 @@ export const NavigationContents = ({ isOpen, setIsOpen }: NavigationContentsProp
           >
             Blog
           </Link>
-          <a href={globalLinks.trap} className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
+          <a href={globalLinks.trap} target="_blank" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             traP
           </a>
         </div>

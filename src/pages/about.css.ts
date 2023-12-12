@@ -53,13 +53,19 @@ export const IconSection = style({
   },
 });
 
-export const ArtistIconWrapper = style({
+export const ArtistSectionWrapper = style({
   width: `100%`,
   maxWidth: `300px`,
   display: `flex`,
   flexDirection: `column`,
   justifyContent: `center`,
   alignItems: `center`,
+});
+
+export const ArtistIconWrapper = style({
+  borderRadius: globalParams.borderRadius,
+  boxShadow: globalParams.shadowLight,
+  overflow: `hidden`,
 });
 
 export const ArtistIcon = style({

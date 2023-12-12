@@ -29,7 +29,7 @@ const LinksPage = () => {
             Contact
           </AnchorLink>
         </div>
-        <div className={Vanilla.Separator} />
+
         <div className={Vanilla.LinksSectionsWrapper}>
           <div className={Vanilla.LinksSection} id="music">
             <h2 className={Vanilla.LinkSectionH2}>Music</h2>

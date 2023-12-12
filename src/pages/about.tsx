@@ -29,8 +29,10 @@ const AboutPage = () => {
         <div className={Vanilla.AboutWrapper}>
           <div className={Vanilla.ProfileWrapper}>
             <div className={Vanilla.IconSection}>
-              <div className={Vanilla.ArtistIconWrapper}>
-                <StaticImage src="../images/artist.jpg" alt="liquid1224" className={Vanilla.ArtistIcon} />
+              <div className={Vanilla.ArtistSectionWrapper}>
+                <div className={Vanilla.ArtistIconWrapper}>
+                  <StaticImage src="../images/artist.jpg" alt="liquid1224" className={Vanilla.ArtistIcon} />
+                </div>
                 <h2>liquid1224</h2>
               </div>
               <div>

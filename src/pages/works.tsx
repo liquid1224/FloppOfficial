@@ -28,6 +28,7 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
   const uma = `${isUma ? "uma" : ""}`;
   const compilation = `${isCompilation ? "compilation" : ""}`;
   const otherProject = `${isOtherProject ? "other" : ""}`;
+  //Node Filtering
   const filteredNodes = data.allMarkdownRemark.edges.filter(
     (node) =>
       node.node.frontmatter?.jacket !== null &&
@@ -97,20 +98,20 @@ const WorksFunction = ({ data }: WorksFunctionProps) => {
     <>
       <div className={Vanilla.Buttons}>
         <div className={Vanilla.ButtonsSectionsWrapper}>
-          <ButtonsSection title="Format">
-            <>
-              <ButtonPushIn title="Album" isPushed={isAlbum} onClick={() => setIsAlbum(!isAlbum)} />
-              <ButtonPushIn title="Single" isPushed={isSingle} onClick={() => setIsSingle(!isSingle)} />
-              <ButtonPushIn title="Other" isPushed={isOtherFormat} onClick={() => setIsOtherFormat(!isOtherFormat)} />
-            </>
-          </ButtonsSection>
-          <span className={Vanilla.ButtonsSectionsSeparator} />
           <ButtonsSection title="Project">
             <>
               <ButtonPushIn title="華力発電所" isPushed={isFlopp} onClick={() => setIsFlopp(!isFlopp)} />
               <ButtonPushIn title="馬骨擬装網" isPushed={isUma} onClick={() => setIsUma(!isUma)} />
               <ButtonPushIn title="Compilation" isPushed={isCompilation} onClick={() => setIsCompilation(!isCompilation)} />
-              <ButtonPushIn title="Other" isPushed={isOtherProject} onClick={() => setIsOtherProject(!isOtherProject)} />
+              <ButtonPushIn title="Others" isPushed={isOtherProject} onClick={() => setIsOtherProject(!isOtherProject)} />
+            </>
+          </ButtonsSection>
+          <span className={Vanilla.ButtonsSectionsSeparator} />
+          <ButtonsSection title="Format">
+            <>
+              <ButtonPushIn title="Album" isPushed={isAlbum} onClick={() => setIsAlbum(!isAlbum)} />
+              <ButtonPushIn title="Single" isPushed={isSingle} onClick={() => setIsSingle(!isSingle)} />
+              <ButtonPushIn title="Others" isPushed={isOtherFormat} onClick={() => setIsOtherFormat(!isOtherFormat)} />
             </>
           </ButtonsSection>
         </div>
