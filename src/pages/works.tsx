@@ -8,6 +8,7 @@ import { Seo } from "../templates/seo";
 import { ButtonPushIn } from "../components/button";
 import * as Vanilla from "./works.css";
 
+//Works List
 type WorksListProps = {
   isAlbum: boolean;
   isSingle: boolean;
@@ -19,6 +20,7 @@ type WorksListProps = {
   data: Queries.WorksDataQuery;
 };
 const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompilation, isOtherProject, data }: WorksListProps) => {
+  //States
   const album = `${isAlbum ? "album" : ""}`;
   const single = `${isSingle ? "single" : ""}`;
   const otherFormat = `${isOtherFormat ? "other" : ""}`;
@@ -26,7 +28,7 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
   const uma = `${isUma ? "uma" : ""}`;
   const compilation = `${isCompilation ? "compilation" : ""}`;
   const otherProject = `${isOtherProject ? "other" : ""}`;
-
+  //Hover Detection
   const [hover, setHover] = useState(-1);
   const handleMouseEnter = (index: number) => {
     setHover(index);
@@ -61,10 +63,11 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
   );
 };
 
-type WorksPageProps = {
+//Works Function
+type WorksFunctionProps = {
   data: Queries.WorksDataQuery;
 };
-const WorksPage = ({ data }: WorksPageProps) => {
+const WorksFunction = ({ data }: WorksFunctionProps) => {
   // State for format of works (Single, Album...)
   const [isAlbum, setIsAlbum] = useState(true);
   const [isSingle, setIsSingle] = useState(true);
@@ -74,40 +77,62 @@ const WorksPage = ({ data }: WorksPageProps) => {
   const [isCompilation, setIsCompilation] = useState(true);
   const [isOtherProject, setIsOtherProject] = useState(true);
 
+  type ButtonSectionProps = {
+    title: string;
+    children: React.ReactElement;
+  };
+  const ButtonsSection = ({ title, children }: ButtonSectionProps) => {
+    return (
+      <div className={Vanilla.ButtonsSection}>
+        <div className={Vanilla.ButtonsSectionTitle}>{title}</div>
+        <div className={Vanilla.ButtonsWrapper}>{children}</div>
+      </div>
+    );
+  };
   return (
-    <Layout title="Works">
+    <>
       <div className={Vanilla.Buttons}>
         <div className={Vanilla.ButtonsSectionsWrapper}>
-          <div className={Vanilla.ButtonsSection}>
-            <div className={Vanilla.ButtonsSectionTitle}>Format</div>
-            <div className={Vanilla.ButtonsWrapper}>
+          <ButtonsSection title="Format">
+            <>
               <ButtonPushIn title="Album" isPushed={isAlbum} onClick={() => setIsAlbum(!isAlbum)} />
               <ButtonPushIn title="Single" isPushed={isSingle} onClick={() => setIsSingle(!isSingle)} />
               <ButtonPushIn title="Other" isPushed={isOtherFormat} onClick={() => setIsOtherFormat(!isOtherFormat)} />
-            </div>
-          </div>
+            </>
+          </ButtonsSection>
           <span className={Vanilla.ButtonsSectionsSeparator} />
-          <div className={Vanilla.ButtonsSection}>
-            <div className={Vanilla.ButtonsSectionTitle}>Project</div>
-            <div className={Vanilla.ButtonsWrapper}>
+          <ButtonsSection title="Project">
+            <>
               <ButtonPushIn title="華力発電所" isPushed={isFlopp} onClick={() => setIsFlopp(!isFlopp)} />
               <ButtonPushIn title="馬骨擬装網" isPushed={isUma} onClick={() => setIsUma(!isUma)} />
               <ButtonPushIn title="Compilation" isPushed={isCompilation} onClick={() => setIsCompilation(!isCompilation)} />
               <ButtonPushIn title="Other" isPushed={isOtherProject} onClick={() => setIsOtherProject(!isOtherProject)} />
-            </div>
-          </div>
+            </>
+          </ButtonsSection>
         </div>
       </div>
       <div className={Vanilla.WorksListWrapper}>
         <WorksList isAlbum={isAlbum} isSingle={isSingle} isOtherFormat={isOtherFormat} isFlopp={isFlopp} isUma={isUma} isCompilation={isCompilation} isOtherProject={isOtherProject} data={data} />
       </div>
+    </>
+  );
+};
+
+//Works
+type WorksPageProps = {
+  data: Queries.WorksDataQuery;
+};
+const WorksPage = ({ data }: WorksPageProps) => {
+  return (
+    <Layout title="Works">
+      <WorksFunction data={data} />
     </Layout>
   );
 };
 export default WorksPage;
-
 export const Head: HeadFC = () => <Seo title="Works"></Seo>;
 
+//Query
 export const query = graphql`
   query WorksData {
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {

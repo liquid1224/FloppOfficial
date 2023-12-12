@@ -7,7 +7,6 @@ import { globalLinks } from "../styles/global";
 import { LinkBox } from "../components/linkBox";
 import { Icons } from "../components/icons";
 import * as Vanilla from "./links.css";
-import { Link } from "gatsby";
 
 const LinksPage = () => {
   return (
