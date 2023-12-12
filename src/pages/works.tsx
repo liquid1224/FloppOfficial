@@ -28,6 +28,12 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
   const uma = `${isUma ? "uma" : ""}`;
   const compilation = `${isCompilation ? "compilation" : ""}`;
   const otherProject = `${isOtherProject ? "other" : ""}`;
+  const filteredNodes = data.allMarkdownRemark.edges.filter(
+    (node) =>
+      node.node.frontmatter?.jacket !== null &&
+      (node.node.frontmatter?.format === album || node.node.frontmatter?.format === single || node.node.frontmatter?.format === otherFormat) &&
+      (node.node.frontmatter.project === flopp || node.node.frontmatter.project === uma || node.node.frontmatter.project === compilation || node.node.frontmatter.project === otherProject)
+  );
   //Hover Detection
   const [hover, setHover] = useState(-1);
   const handleMouseEnter = (index: number) => {
@@ -39,16 +45,14 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
 
   return (
     <div className={Vanilla.WorksWrapper}>
-      {data.allMarkdownRemark.edges.map((node, index) => {
-        if (
-          node.node.frontmatter?.jacket !== null &&
-          (node.node.frontmatter?.format === album || node.node.frontmatter?.format === single || node.node.frontmatter?.format === otherFormat) &&
-          (node.node.frontmatter.project === flopp || node.node.frontmatter.project === uma || node.node.frontmatter.project === compilation || node.node.frontmatter.project === otherProject)
-        ) {
+      {filteredNodes.length === 0 ? (
+        <p>Nothing Found</p>
+      ) : (
+        filteredNodes.map((node, index) => {
           const image = getImage(node.node.frontmatter?.jacket as ImageDataLike);
           return (
             <Link className={Vanilla.Link} to={node.node.frontmatter?.slug as string} key={index}>
-              <div className={`${Vanilla.WorkBox} ${index == hover ? Vanilla.WorkBoxHover : ""}`}>
+              <div className={`${Vanilla.WorkBox} ${index === hover ? Vanilla.WorkBoxHover : ""}`}>
                 <GatsbyImage className={Vanilla.Image} image={image as IGatsbyImageData} alt={node.node.frontmatter?.title as string} />
                 <div className={Vanilla.WorkBoxDescription} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave}>
                   <h3 className={`${Vanilla.ResetH} ${Vanilla.h3}`}>{!node.node.frontmatter?.compilationTitle ? null : `${node.node.frontmatter.compilationTitle}収録`}</h3>
@@ -57,8 +61,8 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
               </div>
             </Link>
           );
-        }
-      })}
+        })
+      )}
     </div>
   );
 };
