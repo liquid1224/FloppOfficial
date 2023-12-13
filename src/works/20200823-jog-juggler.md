@@ -1,5 +1,5 @@
 ---
-slug: "/works/jog-juggler"
+slug: "jog-juggler"
 title: "Jog Juggler"
 compilationTitle: "T.Workz vol.3"
 description: ""

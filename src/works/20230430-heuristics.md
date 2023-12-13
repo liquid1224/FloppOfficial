@@ -1,5 +1,5 @@
 ---
-slug: "/works/heuristic"
+slug: "heuristic"
 title: "HEURISTICS"
 compilationTitle: ""
 description: "馬骨擬装網 2nd EP"

@@ -1,5 +1,5 @@
 ---
-slug: "/works/jonbar-firmament-v-refined-locations"
+slug: "jonbar-firmament-v-refined-locations"
 title: "Jonbar Firmament (v.Refined Locations)"
 compilationTitle: "自己紹介コンピ「ぼくの一番得意な曲」"
 description: ""

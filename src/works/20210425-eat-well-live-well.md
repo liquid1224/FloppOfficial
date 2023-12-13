@@ -1,5 +1,5 @@
 ---
-slug: "/works/eat-well-live-well"
+slug: "eat-well-live-well"
 title: "Eat Well, Live Well"
 compilationTitle: "サッとひとふり おんだし"
 description: ""

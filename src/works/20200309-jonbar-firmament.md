@@ -1,5 +1,5 @@
 ---
-slug: "/works/jonbar-firmament"
+slug: "jonbar-firmament"
 title: "Jonbar Firmament"
 compilationTitle: "traP 新歓コンピ2020"
 description: ""

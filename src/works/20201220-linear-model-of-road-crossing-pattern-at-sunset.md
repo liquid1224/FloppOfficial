@@ -1,5 +1,5 @@
 ---
-slug: "/works/linear-model-of-road-crossing-pattern-at-sunset"
+slug: "linear-model-of-road-crossing-pattern-at-sunset"
 title: "日没時における道路横断態様の線形モデル"
 compilationTitle: "ONLINE"
 description: ""

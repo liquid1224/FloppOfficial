@@ -1,5 +1,5 @@
 ---
-slug: "/works/utopia-on-the-sand"
+slug: "utopia-on-the-sand"
 title: "砂上のユートピア"
 compilationTitle: "traP 新歓コンピ2021"
 description: ""

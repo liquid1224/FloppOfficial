@@ -1,5 +1,5 @@
 ---
-slug: "/works/telegraphic-ship"
+slug: "telegraphic-ship"
 title: "電送船"
 compilationTitle: "今年もtraPと戦っテクネ"
 description: ""

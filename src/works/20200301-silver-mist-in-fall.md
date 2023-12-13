@@ -1,5 +1,5 @@
 ---
-slug: "/works/silver-mist-in-fall"
+slug: "silver-mist-in-fall"
 title: "狭霧の円転自在たればこそ"
 compilationTitle: "Fragrance"
 description: ""

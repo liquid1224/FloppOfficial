@@ -1,5 +1,5 @@
 ---
-slug: "/works/shared-light"
+slug: "shared-light"
 title: "Shared Light"
 compilationTitle: "traP 新歓コンピ2022"
 description: ""

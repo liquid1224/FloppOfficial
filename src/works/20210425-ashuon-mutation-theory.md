@@ -1,5 +1,5 @@
 ---
-slug: "/works/ashuon-mutation-theory"
+slug: "ashuon-mutation-theory"
 title: "亞種音変異説"
 compilationTitle: ""
 description: "馬骨擬装網 1st EP"

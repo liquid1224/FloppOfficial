@@ -1,5 +1,5 @@
 ---
-slug: "/works/responding-forest"
+slug: "responding-forest"
 title: "呼応する【森】"
 compilationTitle: "T.Workz vol.2"
 description: ""

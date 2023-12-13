@@ -1,5 +1,5 @@
 ---
-slug: "/works/star-in-the-backwash"
+slug: "star-in-the-backwash"
 title: "引波に沈む星"
 compilationTitle: ""
 description: "華力発電所 2nd Album"

@@ -52,7 +52,7 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
         filteredNodes.map((node, index) => {
           const image = getImage(node.node.frontmatter?.jacket as ImageDataLike);
           return (
-            <Link className={Vanilla.Link} to={node.node.frontmatter?.slug as string} key={index}>
+            <Link className={Vanilla.Link} to={`/works/${node.node.frontmatter?.slug as string}`} key={index}>
               <div className={`${Vanilla.WorkBox} ${index === hover ? Vanilla.WorkBoxHover : ""}`}>
                 <GatsbyImage className={Vanilla.Image} image={image as IGatsbyImageData} alt={node.node.frontmatter?.title as string} />
                 <div className={Vanilla.WorkBoxDescription} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave}>

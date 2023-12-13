@@ -1,5 +1,5 @@
 ---
-slug: "/works/time-begins-at-the-end-of-the-space"
+slug: "time-begins-at-the-end-of-the-space"
 title: "空間終端の時間始端 (Short ver)"
 compilationTitle: "traP Original Sounds Vol.4"
 description: ""

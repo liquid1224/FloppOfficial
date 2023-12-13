@@ -1,5 +1,5 @@
 ---
-slug: "/works/cant-you-see"
+slug: "cant-you-see"
 title: "Can't you see (Retrowave mix)"
 compilationTitle: "絵空事"
 description: ""

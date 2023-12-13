@@ -1,5 +1,5 @@
 ---
-slug: "/works/atonement"
+slug: "atonement"
 title: "Atonement"
 compilationTitle: "traPと戦っテクネ"
 description: ""

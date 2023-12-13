@@ -12,17 +12,17 @@ export const LinkBox = style({
   textDecoration: `none`,
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
-  boxShadow: globalParams.shadowLight,
+  boxShadow: globalParams.shadowLightSmall,
   //transition
   "@media": {
     "(hover: hover)": {
       ":hover": {
         transform: globalParams.float,
-        boxShadow: globalParams.shadowLightFloat,
+        boxShadow: globalParams.shadowLightSmallFloat,
       },
       ":active": {
         transform: globalParams.sink,
-        boxShadow: globalParams.shadowLight,
+        boxShadow: globalParams.shadowLightSmall,
       },
     },
   },

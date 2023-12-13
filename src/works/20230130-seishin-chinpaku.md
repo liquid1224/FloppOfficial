@@ -1,5 +1,5 @@
 ---
-slug: "/works/seishin-chinpaku"
+slug: "seishin-chinpaku"
 title: "星辰沉博"
 compilationTitle: "4*4 not found"
 description: ""

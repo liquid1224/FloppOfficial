@@ -1,5 +1,5 @@
 ---
-slug: "/works/zauberwald"
+slug: "zauberwald"
 title: "𝓩​𝓪​𝓾​𝓫​𝓮​𝓻​𝔀​𝓪​𝓵​𝓭"
 compilationTitle: ""
 description: ""

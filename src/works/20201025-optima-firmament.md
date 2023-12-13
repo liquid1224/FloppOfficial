@@ -1,5 +1,5 @@
 ---
-slug: "/works/optima-firmament"
+slug: "optima-firmament"
 title: "Optima Firmament"
 compilationTitle: ""
 description: "華力発電所 1st Album"

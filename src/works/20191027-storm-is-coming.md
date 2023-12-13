@@ -1,5 +1,5 @@
 ---
-slug: "/works/storm-is-coming"
+slug: "storm-is-coming"
 title: "山雨欲来風満楼"
 compilationTitle: "Droplets"
 description: ""

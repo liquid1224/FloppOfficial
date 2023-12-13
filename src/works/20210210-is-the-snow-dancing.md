@@ -1,5 +1,5 @@
 ---
-slug: "/works/is-the-snow-dancing"
+slug: "is-the-snow-dancing"
 title: "Is the snow dancing?"
 compilationTitle: "Techlassical Jouney vol.2"
 description: ""

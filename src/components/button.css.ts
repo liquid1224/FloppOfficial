@@ -97,3 +97,11 @@ export const Active = style({
     },
   },
 });
+
+export const PageSelectorWrapper = style({
+  width: `100%`,
+  //alignment
+  display: `flex`,
+  justifyContent: `center`,
+  alignItems: `center`,
+});

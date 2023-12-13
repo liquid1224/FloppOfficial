@@ -1,5 +1,5 @@
 ---
-slug: "/works/swamp-of-the-castle-ruins"
+slug: "swamp-of-the-castle-ruins"
 title: "Swamp of the Castle Ruins"
 compilationTitle: ""
 description: "華力発電所 Experimental Lineup"

@@ -1,5 +1,5 @@
 ---
-slug: "/works/telefield"
+slug: "telefield"
 title: "Telefield"
 compilationTitle: ""
 description: "華力発電所 1st Interlude Album"

@@ -1,5 +1,5 @@
 ---
-slug: "/works/in-the-shadow-of-the-bookshelf"
+slug: "in-the-shadow-of-the-bookshelf"
 title: "書架の翳（冷雨の予兆Remix）"
 compilationTitle: ""
 description: ""

@@ -1,5 +1,5 @@
 ---
-slug: "/works/blacks-ones-nightmare"
+slug: "blacks-ones-nightmare"
 title: "Blacks One's Nightmare"
 compilationTitle: "traP Original Sounds Vol.2"
 description: ""

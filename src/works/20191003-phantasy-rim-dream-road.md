@@ -1,5 +1,5 @@
 ---
-slug: "/works/phantasy-rim-dream-road"
+slug: "phantasy-rim-dream-road"
 title: "環幻想郷夢装道"
 compilationTitle: "Touhou Tech Musical Triangle	"
 description: ""

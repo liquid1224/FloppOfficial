@@ -1,5 +1,5 @@
 ---
-slug: "/works/thrive-tribe"
+slug: "thrive-tribe"
 title: "Thrive Tribe"
 compilationTitle: "TSUBAME2023"
 description: ""

@@ -1,5 +1,5 @@
 ---
-slug: "/works/better-than-nothing"
+slug: "better-than-nothing"
 title: "Better Than Nothing"
 compilationTitle: "traP Original Sounds Vol.7"
 description: ""

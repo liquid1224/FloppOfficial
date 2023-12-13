@@ -1,5 +1,5 @@
 ---
-slug: "/works/dot-net-forest"
+slug: "dot-net-forest"
 title: "点網の森"
 compilationTitle: "ONLINE"
 description: ""

@@ -1,5 +1,5 @@
 ---
-slug: "/works/semi-infinite-tramway"
+slug: "semi-infinite-tramway"
 title: "半無限を走る(T21 Mix)"
 compilationTitle: "TSUBAME 2021"
 description: ""

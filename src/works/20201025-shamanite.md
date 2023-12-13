@@ -1,5 +1,5 @@
 ---
-slug: "/works/shamanite"
+slug: "shamanite"
 title: "Shamanite"
 compilationTitle: "Reflect Refract"
 description: ""
