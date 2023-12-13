@@ -1,7 +1,7 @@
 //Default Components
 import React, { useState } from "react";
-import { graphql } from "gatsby";
-import { ImageDataLike, getImage } from "gatsby-plugin-image";
+import { Link, graphql } from "gatsby";
+import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-plugin-image";
 //Author Components
 import { Layout } from "../templates/layout";
 import { PageSelector } from "../components/button";
@@ -13,10 +13,21 @@ type ArticlesListProps = {
 const ArticlesList = ({ data }: ArticlesListProps) => {
   const [numPage, setNumPage] = useState(1);
   return (
-    <div>
+    <div className={Vanilla.ArticlesWrapper}>
       {data.allMarkdownRemark.edges.map((node, index) => {
         const thumbnail = getImage(node.node.frontmatter?.thumbnail as ImageDataLike);
-        return <></>;
+        const postDate = node.node.frontmatter?.date;
+        const updateDate = node.node.frontmatter?.lastUpdate;
+        return (
+          <Link to={`/blog/${node.node.frontmatter?.slug}`} className={Vanilla.Link}>
+            <GatsbyImage image={thumbnail as IGatsbyImageData} alt={node.node.frontmatter?.title as string} className={Vanilla.Thumbnail} />
+            <div className={Vanilla.TextWrapper}>
+              {node.node.frontmatter?.title}
+              <br />
+              {`${postDate} ${postDate !== updateDate ? `最終更新：${updateDate}` : ""}`}
+            </div>
+          </Link>
+        );
       })}
     </div>
   );
