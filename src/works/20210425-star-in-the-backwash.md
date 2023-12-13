@@ -21,4 +21,5 @@ idYouTubeMusic: "OLAK5uy_mwv26Cg3qCOW3jHjNDOVM2r126Bli-buE"
 idYouTube: ""
 linkSpecial: "https://backwash.liquid1224.net"
 headerSpecial: ""
+index: "1"
 ---

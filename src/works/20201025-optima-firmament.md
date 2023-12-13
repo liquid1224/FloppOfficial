@@ -21,4 +21,5 @@ idYouTubeMusic: "OLAK5uy_nsjWUVEbchS9E7KIwV_DPuNkhg4fmwDkM"
 idYouTube: "y1qUuQHfN5k"
 linkSpecial: "https://optima.liquid1224.net"
 headerSpecial: ""
+index: "1"
 ---

@@ -19,4 +19,5 @@ idYouTubeMusic: ""
 idYouTube: ""
 linkSpecial: "https://2023daydream-skyscapes.tumblr.com"
 headerSpecial: ""
+index: "0"
 ---

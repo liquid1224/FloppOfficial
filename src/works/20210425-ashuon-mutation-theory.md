@@ -18,4 +18,5 @@ idYouTubeMusic: ""
 idYouTube: "oFNRIoorN68"
 linkSpecial: "https://mutation.liquid1224.net"
 headerSpecial: ""
+index: "1"
 ---

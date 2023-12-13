@@ -20,4 +20,5 @@ idYouTubeMusic: ""
 idYouTube: ""
 linkSpecial: "https://nkmrmuku.bandcamp.com/album/heuristics"
 headerSpecial: ""
+index: "1"
 ---

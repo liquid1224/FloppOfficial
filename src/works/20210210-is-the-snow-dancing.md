@@ -18,4 +18,5 @@ idYouTubeMusic: ""
 idYouTube: ""
 linkSpecial: "https://techlassicaljouney2.tumblr.com"
 headerSpecial: ""
+index: "0"
 ---

@@ -171,7 +171,7 @@ export const Head: HeadFC = () => <Seo title="TOP"></Seo>;
 
 export const query = graphql`
   query HeroInfo {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 4) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, filter: { fileAbsolutePath: { regex: "/works/" } }, limit: 4) {
       edges {
         node {
           frontmatter {

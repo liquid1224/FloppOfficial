@@ -140,7 +140,7 @@ export const Head: HeadFC = () => <Seo title="Works"></Seo>;
 //Query
 export const query = graphql`
   query WorksData {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, filter: { fileAbsolutePath: { regex: "/works/" } }) {
       edges {
         node {
           frontmatter {

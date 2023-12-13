@@ -18,4 +18,5 @@ idYouTubeMusic: ""
 idYouTube: ""
 linkSpecial: "https://trap.jp/post/1833/"
 headerSpecial: ""
+index: "0"
 ---

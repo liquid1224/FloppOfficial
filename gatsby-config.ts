@@ -31,6 +31,13 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/works`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "articles",
+        path: `${__dirname}/src/articles`,
+      },
+    },
   ],
 };
 

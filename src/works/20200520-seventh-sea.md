@@ -18,4 +18,5 @@ idYouTubeMusic: "OLAK5uy_nnS7JOePrGlFdHAZL7Kh9ly9_SjlM6xqg"
 idYouTube: ""
 linkSpecial: ""
 headerSpecial: ""
+index: "0"
 ---

@@ -18,4 +18,5 @@ idYouTubeMusic: ""
 idYouTube: ""
 linkSpecial: "https://t-workz2.tumblr.com"
 headerSpecial: ""
+index: "0"
 ---

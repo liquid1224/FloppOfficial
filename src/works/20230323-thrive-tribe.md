@@ -20,4 +20,5 @@ idYouTubeMusic: ""
 idYouTube: ""
 linkSpecial: "https://tsubame2023.tumblr.com"
 headerSpecial: ""
+index: "0"
 ---

@@ -18,4 +18,5 @@ idYouTubeMusic: ""
 idYouTube: ""
 linkSpecial: "https://tech-nationrecords-droplets.tumblr.com"
 headerSpecial: ""
+index: "0"
 ---

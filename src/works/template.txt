@@ -18,7 +18,9 @@ idYouTubeMusic: ""
 idYouTube: ""
 linkSpecial: ""
 headerSpecial: ""
+index: ""
 ---
 
 format: "album" "single" "other"
 project: "flopp" "uma" "compilation" "other"
+index: "0" "1"
