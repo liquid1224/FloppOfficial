@@ -25,21 +25,39 @@ export const Link = style({
   width: `100%`,
   //alignment
   display: `flex`,
-  gap: `5%`,
+  gap: `3%`,
   //style
   textDecoration: `none`,
   color: globalParams.textColorLight,
-  boxShadow: globalParams.shadowLightSmallFloat,
+  boxShadow: globalParams.shadowLightSmall,
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
+  //transition
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowLightSmallFloat,
+        transform: globalParams.float,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowLightSmall,
+        transform: globalParams.sink,
+      },
+    },
+  },
+  transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });
 
 export const Thumbnail = style({
-  width: `28%`,
+  width: `30%`,
   aspectRatio: `16 / 9`,
 });
 
 export const TextWrapper = style({
   width: `67%`,
-  marginBottom: `auto`,
+  margin: `0.5rem 0 auto 0`,
+});
+
+export const h2 = style({
+  marginBottom: `0`,
 });

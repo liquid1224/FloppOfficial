@@ -18,13 +18,14 @@ const ArticlesList = ({ data }: ArticlesListProps) => {
         const thumbnail = getImage(node.node.frontmatter?.thumbnail as ImageDataLike);
         const postDate = node.node.frontmatter?.date;
         const updateDate = node.node.frontmatter?.lastUpdate;
+        const series = node.node.frontmatter?.series;
         return (
           <Link to={`/blog/${node.node.frontmatter?.slug}`} className={Vanilla.Link}>
             <GatsbyImage image={thumbnail as IGatsbyImageData} alt={node.node.frontmatter?.title as string} className={Vanilla.Thumbnail} />
             <div className={Vanilla.TextWrapper}>
-              {node.node.frontmatter?.title}
-              <br />
-              {`${postDate} ${postDate !== updateDate ? `最終更新：${updateDate}` : ""}`}
+              <p className="Series">{series !== undefined || "" ? `${series}` : ""}</p>
+              <h2 className={Vanilla.h2}>{node.node.frontmatter?.title}</h2>
+              <p className="Date">{`${postDate}${postDate !== updateDate ? ` | Last Update : ${updateDate}` : ""}`}</p>
             </div>
           </Link>
         );
