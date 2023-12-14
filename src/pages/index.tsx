@@ -23,7 +23,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
           {data.allMarkdownRemark.edges.map((node, index) => {
             if (node.node.frontmatter?.jacket !== null) {
               const image = getImage(node.node.frontmatter?.jacket as ImageDataLike);
-              const link = `${node.node.frontmatter?.slug as string}`;
+              const link = `/works/${node.node.frontmatter?.slug as string}`;
               const title = node.node.frontmatter?.title as string;
               return (
                 <Link to={link} key={index}>

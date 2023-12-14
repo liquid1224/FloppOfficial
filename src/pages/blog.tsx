@@ -23,9 +23,11 @@ const ArticlesList = ({ data }: ArticlesListProps) => {
           <Link to={`/blog/${node.node.frontmatter?.slug}`} className={Vanilla.Link}>
             <GatsbyImage image={thumbnail as IGatsbyImageData} alt={node.node.frontmatter?.title as string} className={Vanilla.Thumbnail} />
             <div className={Vanilla.TextWrapper}>
-              <p className="Series">{series !== undefined || "" ? `${series}` : ""}</p>
+              <a href={`/blog/series/${series}`}>
+                <p className={Vanilla.Series}>{series !== undefined || "" ? `Series:${series}` : ""}</p>
+              </a>
               <h2 className={Vanilla.h2}>{node.node.frontmatter?.title}</h2>
-              <p className="Date">{`${postDate}${postDate !== updateDate ? ` | Last Update : ${updateDate}` : ""}`}</p>
+              <p className={Vanilla.Date}>{`${postDate}${postDate !== updateDate ? ` | Update:${updateDate}` : ""}`}</p>
             </div>
           </Link>
         );
