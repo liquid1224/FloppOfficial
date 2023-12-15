@@ -5,7 +5,8 @@ const config: GatsbyConfig = {
     title: `華力発電所 Official`,
     siteUrl: `https://liquid1224.net`,
     author: `@liquid1224`,
-    description: `Progressive Synthpop`,
+    description: `liquid1224's Music and Technology Project`,
+    image: `./src/images/ogpDefault.jpg`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -36,6 +37,12 @@ const config: GatsbyConfig = {
       options: {
         name: "articles",
         path: `${__dirname}/src/articles`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: "src/images/favicon.png",
       },
     },
   ],

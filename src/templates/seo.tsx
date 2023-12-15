@@ -5,9 +5,10 @@ type SeoProps = {
   description?: string;
   title: string;
   children?: React.ReactElement;
+  ogpImagePath?: string;
 };
 
-export const Seo = ({ description, title, children }: SeoProps) => {
+export const Seo = ({ description, title, children, ogpImagePath }: SeoProps) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -16,6 +17,8 @@ export const Seo = ({ description, title, children }: SeoProps) => {
             title
             description
             author
+            image
+            siteUrl
           }
         }
       }
@@ -24,6 +27,8 @@ export const Seo = ({ description, title, children }: SeoProps) => {
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
+  const siteUrl = site.siteMetadata?.siteUrl;
+  const image = `${siteUrl}/${site.siteMetadata?.image}`;
 
   return (
     <>
@@ -32,6 +37,7 @@ export const Seo = ({ description, title, children }: SeoProps) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content={image} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
