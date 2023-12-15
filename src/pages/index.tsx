@@ -51,7 +51,10 @@ const IndexPage = ({ data }: IndexPageProps) => {
         </h1>
         <p className={Vanilla.HeroPoemSentence}>
           華力発電所は，liquid1224による音楽関連プロジェクトです．
-          シンフォニックで壮大なオーケストレーションとテクノポップの融合，プログレッシブな楽曲展開，ハードウェア製作から始まるステージパフォーマンスなどにより，独自の音楽世界を展開しています．
+          <br />
+          シンフォニックとテクノポップの融合，ハードウェア製作，
+          <br />
+          ステージパフォーマンスなど独自の音楽世界を展開しています．
         </p>
         <div className={Vanilla.HeroPoemLink}>
           <Button link="about" title="about me →" />
@@ -73,28 +76,27 @@ const IndexPage = ({ data }: IndexPageProps) => {
         <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
           <div className={Vanilla.MoviesWrapper}>
             <div className={Vanilla.YouTubeWrapper}>
-              <iframe
-                src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                className={Vanilla.YouTube}
-              />
+              <iframe src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js" className={Vanilla.YouTube} />
             </div>
           </div>
           <div className={Vanilla.MusicTextWrapper}>
-            <h2>Musics</h2>
+            <h2 className={Vanilla.h2}>Musics</h2>
             <div className={Vanilla.MusicDescriptionsWrapper}>
               <p className={Vanilla.MusicDescription}>
-                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+                <h3 className={Vanilla.h2}>Synthetic/Symphonic</h3>
+                幻惑的なシンセサウンドに，壮大なオーケストラ・叙事的な打楽器が絡む独特のサウンド．鋭さと立体感が共存する，ドラマチックなサウンドが特徴です．
               </p>
               <p className={Vanilla.MusicDescription}>
-                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+                <h3 className={Vanilla.h2}>Twisted Voice Magic</h3>
+                震えるバスから鋭いファルセットまで，広い音域や多重録音をフル活用したボーカル．巨大なオーケストレーションの中でも燦然と輝く歌声を提供します．
               </p>
               <p className={Vanilla.MusicDescription}>
-                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+                <h3 className={Vanilla.h2}>Spellbound Lyrics</h3>
+                隠喩と造語を多用する，難解かつ深遠な歌詞．繰り返し聴き，読み解くことで見えてくる圧倒的情報量の世界観がリスナーを魅了します．
               </p>
               <p className={Vanilla.MusicDescription}>
-                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
+                <h3 className={Vanilla.h2}>Integrated Production</h3>
+                構想から作編曲，レコーディングやポストプロダクションまで，全工程を担当可能．一貫性のあるプロダクションで安定したクオリティを保証します．
               </p>
             </div>
           </div>
@@ -102,35 +104,20 @@ const IndexPage = ({ data }: IndexPageProps) => {
         <div className={Vanilla.SectionSeparator} />
         <div className={Vanilla.Section}>
           <div className={Vanilla.MusicTextWrapper}>
-            <h2>Hardwares</h2>
-            <div className={Vanilla.MusicDescriptionsWrapper}>
-              <p className={Vanilla.MusicDescription}>
-                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
-              </p>
-              <p className={Vanilla.MusicDescription}>
-                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
-              </p>
-              <p className={Vanilla.MusicDescription}>
-                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
-              </p>
-              <p className={Vanilla.MusicDescription}>
-                祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
-              </p>
-            </div>
+            <h2 className={Vanilla.h2}>Hardware & Software</h2>
+            <p className={Vanilla.MusicDescription}>
+              レーザーハープなど，電子楽器の設計・制作を行っています．また制作した電子楽器を用い，音響的なインパクトと視覚的な楽しさを両立したステージパフォーマンスも行います．
+              <br />
+              VSTプラグインなどの音響関連ソフトウェアの制作も進行中です．
+            </p>
           </div>
           <div className={Vanilla.MoviesWrapper}>
             <div className={Vanilla.YouTubeWrapper}>
-              <iframe
-                loading="lazy"
-                src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                className={Vanilla.YouTube}
-              />
+              <iframe src="https://www.youtube.com/embed/-Qg9586n0Qw?si=Giem2z1CWN8wwkKQ" className={Vanilla.YouTube}></iframe>
             </div>
           </div>
         </div>
-        <div className={Vanilla.SectionSeparator} />
+        {/*<div className={Vanilla.SectionSeparator} />
         <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
           <div className={Vanilla.MoviesWrapper}>
             <div className={Vanilla.YouTubeWrapper}>
@@ -144,7 +131,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
             </div>
           </div>
           <div className={Vanilla.MusicTextWrapper}>
-            <h2>VST Plugins</h2>
+            <h2 className={Vanilla.h2}>VST Plugins</h2>
             <div className={Vanilla.MusicDescriptionsWrapper}>
               <p className={Vanilla.MusicDescription}>
                 祇園精舎の鐘の声、諸行無常の響きあり。沙羅双樹の花の色、盛者必衰の理をあらはす。奢れる人も久からず、ただ春の夜の夢のごとし。猛き者も遂にはほろびぬ、偏に風の前の塵におなじ。
@@ -160,7 +147,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
               </p>
             </div>
           </div>
-        </div>
+        </div>*/}
       </>
     </Layout>
   );

@@ -87,11 +87,17 @@ export const ProfileSection = style({
       gridColumn: `2fr`,
     },
   },
+  textAlign: `justify`,
+});
+
+export const EnvironmentSection = style({
+  width: `100%`,
+  padding: `0 5vw`,
+  boxSizing: `border-box`,
 });
 
 export const EnvironmentWrapper = style({
   width: `100%`,
-  padding: `0 5vw`,
   boxSizing: `border-box`,
   display: `grid`,
   gridTemplateColumns: `1fr`,
@@ -103,8 +109,12 @@ export const EnvironmentWrapper = style({
   },
 });
 
-export const h3 = style({
+export const h2 = style({
   marginBottom: `0`,
+});
+
+export const h3 = style({
+  margin: `0`,
 });
 
 export const MiniSeparator = style({

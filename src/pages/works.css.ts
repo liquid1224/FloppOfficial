@@ -28,8 +28,17 @@ export const ButtonsSection = style({
   width: `100%`,
   //alignment
   display: `flex`,
+  flexDirection: `column`,
   justifyContent: `center`,
   gap: `20px`,
+  "@media": {
+    [`${globalParams.pc}`]: {
+      display: `flex`,
+      flexDirection: `row`,
+      justifyContent: `center`,
+      gap: `20px`,
+    },
+  },
 });
 
 export const ButtonsSectionTitle = style({

@@ -55,7 +55,10 @@ export const Thumbnail = style({
 
 export const TextWrapper = style({
   width: `67%`,
-  margin: `0.5rem 0 auto 0`,
+  margin: `0.5rem 0`,
+  display: `flex`,
+  flexDirection: `column`,
+  justifyContent: `center`,
 });
 
 export const SeriesLink = style({
@@ -64,7 +67,7 @@ export const SeriesLink = style({
 });
 
 export const Series = style({
-  marginBottom: `0`,
+  margin: `0`,
 });
 
 export const h2 = style({

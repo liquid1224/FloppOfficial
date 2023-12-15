@@ -167,13 +167,17 @@ export const YouTube = style({
   border: `none`,
 });
 
+export const h2 = style({
+  margin: `0`,
+});
+
 export const MusicTextWrapper = style({
   width: `100%`,
   display: `flex`,
   flexDirection: `column`,
   "@media": {
     [`${globalParams.pc}`]: {
-      width: `58%`,
+      width: `60%`,
     },
   },
 });
@@ -181,26 +185,33 @@ export const MusicTextWrapper = style({
 export const MusicDescriptionsWrapper = style({
   width: `100%`,
   display: `grid`,
-  gridTemplateColumns: `repeat(auto-fill, minmax(250px, 1fr))`,
-  gap: `10px`,
+  gridTemplateColumns: `repeat(auto-fill, minmax(240px, 1fr))`,
+  gap: `20px`,
+  "@media": {
+    [`${globalParams.pc}`]: {
+      gridTemplateColumns: `repeat(auto-fill, minmax(270px, 1fr))`,
+    },
+  },
 });
 
 export const MusicDescription = style({
   textAlign: `justify`,
+  margin: `0`,
 });
 
 export const Section = style({
   //display
   width: `100%`,
-  padding: `0.5rem 5vw`,
+  padding: `1.0rem 5vw`,
   boxSizing: `border-box`,
   //alignment
   display: `flex`,
   flexDirection: `column`,
-  gap: `5%`,
+  gap: `30px`,
   "@media": {
     [`${globalParams.pc}`]: {
       flexDirection: `row`,
+      gap: `3%`,
     },
   },
 });
