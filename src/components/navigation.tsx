@@ -1,7 +1,6 @@
 //Default Components
 import React from "react";
 //Author Components
-import { Button } from "./button";
 import * as Vanilla from "./navigation.css";
 import { Link } from "gatsby";
 import { globalLinks } from "../styles/global";

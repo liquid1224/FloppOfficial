@@ -1,7 +1,6 @@
 import React from "react";
 import { IconType } from "react-icons/lib";
 import { LIconType } from "./icons";
-import { globalLinks } from "../styles/global";
 import * as Vanilla from "./linkBox.css";
 
 type LinkBoxProps = {
