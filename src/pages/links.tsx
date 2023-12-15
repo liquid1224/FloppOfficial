@@ -8,6 +8,8 @@ import { LinkBox } from "../components/linkBox";
 import { Icons } from "../components/icons";
 import * as Vanilla from "./links.css";
 import * as VanillaLinkBoxAssets from "../components/linkBoxAssets.css";
+import { HeadFC } from "gatsby";
+import { Seo } from "../templates/seo";
 
 const LinksPage = () => {
   return (
@@ -103,3 +105,5 @@ const LinksPage = () => {
   );
 };
 export default LinksPage;
+
+export const Head: HeadFC = () => <Seo title="LINKS"></Seo>;

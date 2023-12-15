@@ -10,6 +10,19 @@ body {
   margin: 0px;
   color: #969595;
   letter-spacing: 0.1rem;
+  font-family: "Zen Antique", sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 500;
 }
 
 #defaultCanvas0 {

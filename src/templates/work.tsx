@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { HeadFC, graphql } from "gatsby";
 import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-plugin-image";
 //Author Components
 import { Layout } from "./layout";
@@ -8,6 +8,7 @@ import { Icons } from "../components/icons";
 import * as Vanilla from "./work.css";
 import * as VanillaLinkBoxAssets from "../components/linkBoxAssets.css";
 import { useIsDarkModeContext } from "../styles/context";
+import { Seo } from "./seo";
 
 type WorksPageTemplateProps = {
   data: Queries.WorkMetaDataQuery;
@@ -143,6 +144,8 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
   );
 };
 export default WorkPageTemplate;
+
+export const Head: HeadFC<Queries.WorkMetaDataQuery> = ({ data }) => <Seo title={data.allMarkdownRemark.nodes[0].frontmatter?.title as string}></Seo>;
 
 export const query = graphql`
   query WorkMetaData($id: String!) {

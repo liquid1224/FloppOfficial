@@ -1,12 +1,13 @@
 //Default Components
 import React, { useState } from "react";
-import { Link, graphql } from "gatsby";
+import { HeadFC, Link, graphql } from "gatsby";
 import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-plugin-image";
 //Author Components
 import { Layout } from "../templates/layout";
 import { PageSelector } from "../components/button";
 import * as Vanilla from "./blog.css";
 import { useIsDarkModeContext } from "../styles/context";
+import { Seo } from "../templates/seo";
 
 type ArticlesListProps = {
   data: Queries.ArticlesDataQuery;
@@ -72,3 +73,5 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head: HeadFC = () => <Seo title="BLOG"></Seo>;

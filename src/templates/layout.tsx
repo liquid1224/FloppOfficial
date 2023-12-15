@@ -10,6 +10,7 @@ import Footer from "../components/footer";
 import headerImage1 from "../images/headerImage1.jpg";
 import headerImage2 from "../images/headerImage2.jpg";
 import headerImage3 from "../images/headerImage3.jpg";
+import { ImageDataLike } from "gatsby-plugin-image";
 
 //Layout
 type layoutProps = {
