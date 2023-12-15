@@ -31,7 +31,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
               return (
                 <Link to={link} key={index}>
                   <div className={`${Vanilla.HeroWorkImg} ${isDarkMode ? Vanilla.HeroWorkImgDark : ""}`}>
-                    <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" loading="eager" />
+                    <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" />
                   </div>
                 </Link>
               );
@@ -73,7 +73,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
     return (
       <div className={Vanilla.MoviesWrapper}>
         <div className={`${Vanilla.YouTubeWrapper} ${isDarkMode ? Vanilla.YouTubeWrapperDark : ""}`}>
-          <iframe src={src} className={Vanilla.YouTube}></iframe>
+          <iframe src={src} className={Vanilla.YouTube} loading="lazy"></iframe>
         </div>
       </div>
     );
