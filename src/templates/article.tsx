@@ -1,31 +1,44 @@
 import React from "react";
 import { Layout } from "./layout";
 import { graphql } from "gatsby";
+import * as Vanilla from "./articles.css";
 
 type ArticlesPageTemplateProps = {
-  data: Queries.ArticleMetaDataQuery;
+  data: Queries.BlogPostQuery;
 };
 export const ArticlesPageTemplate = ({ data }: ArticlesPageTemplateProps) => {
-  const articles = data.allMarkdownRemark.nodes;
-  const title = articles[0].frontmatter?.title;
+  const articles = data.allMarkdownRemark.edges;
+  const title = articles[0].node.frontmatter?.title as string;
   return (
-    <Layout>
-      <div>{title}</div>
+    <Layout title={title}>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: articles[0].node.html as TrustedHTML,
+        }}
+        className={Vanilla.Body}
+      ></div>
     </Layout>
   );
 };
 export default ArticlesPageTemplate;
 
 export const query = graphql`
-  query ArticleMetaData($id: String!) {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/articles/" }, id: { eq: $id } }) {
-      nodes {
-        frontmatter {
-          slug
-          title
-          series
+  query BlogPost {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/articles/" } }) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            slug
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+          id
         }
-        id
       }
     }
   }

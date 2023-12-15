@@ -58,6 +58,11 @@ export const TextWrapper = style({
   margin: `0.5rem 0 auto 0`,
 });
 
+export const SeriesLink = style({
+  //textDecoration: ``,
+  color: globalParams.textColorLight,
+});
+
 export const Series = style({
   marginBottom: `0`,
 });

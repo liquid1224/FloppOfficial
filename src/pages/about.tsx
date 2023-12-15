@@ -38,7 +38,7 @@ const AboutPage = () => {
               <div>
                 1999/12/24生
                 <br />
-                華力発電所 主催
+                華力発電所 主宰
                 <br />
                 東京工業大学デジタル創作同好会traP，Tech-nation Records 所属
                 <br />

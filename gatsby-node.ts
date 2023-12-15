@@ -45,26 +45,4 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions:
       context: { id: node.id },
     });
   });
-
-  //Generate Series Pages
-  const AllSeriesSlug = await graphql<Queries.AllSeriesSlugQuery>(`
-    query AllSeriesSlug {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/articles/" } }) {
-        nodes {
-          frontmatter {
-            series
-          }
-          id
-        }
-      }
-    }
-  `);
-  if (AllSeriesSlug.errors) throw AllSeriesSlug.errors;
-  AllSeriesSlug.data?.allMarkdownRemark.nodes.forEach((node) => {
-    createPage({
-      path: `/blog/series/${node.frontmatter?.series}`,
-      component: path.resolve(`./src/templates/blogSeries.tsx`),
-      context: { id: node.id },
-    });
-  });
 };
