@@ -5,7 +5,7 @@ import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-p
 import { Layout } from "./layout";
 import { LinkBox } from "../components/linkBox";
 import { Icons } from "../components/icons";
-import * as Vanilla from "./work.css";
+import * as Vanilla from "../styles/work.css";
 import * as VanillaLinkBoxAssets from "../components/linkBoxAssets.css";
 import { useIsDarkModeContext } from "../styles/context";
 import { Seo } from "./seo";

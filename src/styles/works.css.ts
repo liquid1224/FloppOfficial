@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { globalParams } from "../styles/global";
+import { globalParams } from "./global";
 
 export const Buttons = style({
   //display

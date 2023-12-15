@@ -46,3 +46,4 @@ export const Seo = ({ description, title, children, ogpImagePath }: SeoProps) =>
     </>
   );
 };
+export default Seo;

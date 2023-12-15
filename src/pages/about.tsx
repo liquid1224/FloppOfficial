@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Seo } from "../templates/seo";
 import type { HeadFC } from "gatsby";
 //Author Components
-import * as Vanilla from "./about.css";
+import * as Vanilla from "../styles/about.css";
 import { ScrollIndecator } from "../components/scrollIndicator";
 import { useIsDarkModeContext } from "../styles/context";
 

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { IconContext } from "react-icons/lib";
 //Author Components
 import { IsDarkModeProvider } from "../styles/context";
-import * as Vanilla from "./layout.css";
+import * as Vanilla from "../styles/layout.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import headerImage1 from "../images/headerImage1.jpg";
@@ -20,22 +20,31 @@ type layoutProps = {
 
 export const Layout = ({ children, title }: layoutProps) => {
   //darkmode state
-  const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const isDarkModeQuery = darkModeMediaQuery.matches;
-  const initialIsDarkMode = () => {
+  const darkModeMediaQuery = typeof window !== `undefined` ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  const isDarkModeQuery = darkModeMediaQuery !== null ? darkModeMediaQuery.matches : true;
+
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window === `undefined`) return isDarkModeQuery;
+
     if (localStorage.getItem("isDarkMode") === "true") return true;
     else if (localStorage.getItem("isDarkMode") === "false") return false;
     else {
       localStorage.setItem("isDarkMode", isDarkModeQuery.toString());
       return isDarkModeQuery;
     }
-  };
-  const [isDarkMode, setIsDarkMode] = useState(initialIsDarkMode());
+  });
 
   useEffect(() => {
-    const updatedIsDarkMode = initialIsDarkMode();
-    setIsDarkMode(updatedIsDarkMode);
-  }, []);
+    const handleDarkModeChange = (e: MediaQueryListEvent) => {
+      setIsDarkMode(e.matches);
+      localStorage.setItem("isDarkMode", e.matches.toString());
+    };
+
+    if (darkModeMediaQuery) {
+      darkModeMediaQuery.addEventListener("change", handleDarkModeChange);
+      return () => darkModeMediaQuery.removeEventListener("change", handleDarkModeChange);
+    }
+  }, [darkModeMediaQuery]);
   //random header image
   const headerImageArray = [headerImage1, headerImage2, headerImage3];
   const randomIndex = Math.floor(Math.random() * headerImageArray.length);
@@ -57,3 +66,4 @@ export const Layout = ({ children, title }: layoutProps) => {
     </IconContext.Provider>
   );
 };
+export default Layout;

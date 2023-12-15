@@ -6,7 +6,7 @@ import { ImageDataLike, getImage, GatsbyImage, IGatsbyImageData } from "gatsby-p
 import { Layout } from "../templates/layout";
 import { Seo } from "../templates/seo";
 import { ButtonPushIn } from "../components/button";
-import * as Vanilla from "./works.css";
+import * as Vanilla from "../styles/works.css";
 import { useIsDarkModeContext } from "../styles/context";
 
 //Works List

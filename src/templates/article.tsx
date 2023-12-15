@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "./layout";
 import { HeadFC, graphql } from "gatsby";
-import * as Vanilla from "./article.css";
+import * as Vanilla from "../styles/article.css";
 import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-plugin-image";
 import { Seo } from "./seo";
 

@@ -5,7 +5,7 @@ import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-p
 //Author Components
 import { Layout } from "../templates/layout";
 import { PageSelector } from "../components/button";
-import * as Vanilla from "./blog.css";
+import * as Vanilla from "../styles/blog.css";
 import { useIsDarkModeContext } from "../styles/context";
 import { Seo } from "../templates/seo";
 

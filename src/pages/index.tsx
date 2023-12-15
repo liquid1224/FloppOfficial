@@ -5,7 +5,7 @@ import { ImageDataLike, getImage } from "gatsby-plugin-image";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { useMediaQuery } from "react-responsive";
 //Author Components
-import * as Vanilla from "./index.css";
+import * as Vanilla from "../styles/index.css";
 import { Layout } from "../templates/layout";
 import { Seo } from "../templates/seo";
 import { Button } from "../components/button";

@@ -6,7 +6,7 @@ import { Layout } from "../templates/layout";
 import { globalLinks } from "../styles/global";
 import { LinkBox } from "../components/linkBox";
 import { Icons } from "../components/icons";
-import * as Vanilla from "./links.css";
+import * as Vanilla from "../styles/links.css";
 import * as VanillaLinkBoxAssets from "../components/linkBoxAssets.css";
 import { HeadFC } from "gatsby";
 import { Seo } from "../templates/seo";
