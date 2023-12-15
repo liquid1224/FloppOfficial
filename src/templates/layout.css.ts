@@ -10,6 +10,10 @@ export const Layout = style({
   minHeight: "100vh",
 });
 
+export const LayoutDark = style({
+  backgroundColor: globalParams.backgroundDark,
+});
+
 export const PageHeader = style({
   //display
   width: `100%`,

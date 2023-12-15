@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import Logo from "../images/logo";
 import { Navigation } from "./navigation";
 import * as Vanilla from "./header.css";
+import { useIsDarkModeContext, useSetIsDarkModeContext } from "../styles/context";
 
 //Burger Button
 type BurgerProps = {
@@ -28,11 +29,10 @@ const Burger = ({ isOpen, onClick }: BurgerProps) => {
 };
 
 //Toggle Switch
-type ToggleSwitchProps = {
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-};
-const ToggleSwitch = ({ isDarkMode, setIsDarkMode }: ToggleSwitchProps) => {
+type ToggleSwitchProps = {};
+const ToggleSwitch = ({}: ToggleSwitchProps) => {
+  const isDarkMode = useIsDarkModeContext();
+  const setIsDarkMode = useSetIsDarkModeContext();
   //Click Handler
   const handleClick = () => {
     setIsDarkMode(!isDarkMode);
@@ -50,11 +50,8 @@ const ToggleSwitch = ({ isDarkMode, setIsDarkMode }: ToggleSwitchProps) => {
 };
 
 //Header
-type HeaderProps = {
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-};
-export const Header = ({ isDarkMode, setIsDarkMode }: HeaderProps) => {
+type HeaderProps = {};
+export const Header = ({}: HeaderProps) => {
   //Scroll Detection
   const [isScrolled, setIsScrolled] = React.useState(false);
   const toggleStyleScrolled = () => {
@@ -83,7 +80,7 @@ export const Header = ({ isDarkMode, setIsDarkMode }: HeaderProps) => {
             <Logo />
           </Link>
         </div>
-        <ToggleSwitch isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+        <ToggleSwitch />
       </header>
       <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
     </>

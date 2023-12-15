@@ -1,18 +1,20 @@
-import React from "react";
-import { createContext, useContext, useState } from "react";
+import React, { useState } from "react";
 
-const IsDarkModeContext = createContext<boolean>(false);
-const SetIsDarkModeContext = createContext<React.Dispatch<React.SetStateAction<boolean>>>(() => {});
+const isDarkModeContext = React.createContext<boolean>(false);
+const setIsDarkModeContext = React.createContext<React.Dispatch<React.SetStateAction<boolean>>>(() => {});
 
-type DarkModeProviderProps = {
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-  children: React.ReactElement;
-};
-export const DarkModeProvider = ({ isDarkMode, setIsDarkMode, children }: DarkModeProviderProps) => {
+interface IsDarkModeContextProps {
+  children: React.ReactNode;
+}
+
+export const IsDarkModeProvider: React.FC<IsDarkModeContextProps> = ({ children }) => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
   return (
-    <IsDarkModeContext.Provider value={isDarkMode}>
-      <SetIsDarkModeContext.Provider value={setIsDarkMode}>{children}</SetIsDarkModeContext.Provider>
-    </IsDarkModeContext.Provider>
+    <isDarkModeContext.Provider value={isDarkMode}>
+      <setIsDarkModeContext.Provider value={setIsDarkMode}>{children}</setIsDarkModeContext.Provider>
+    </isDarkModeContext.Provider>
   );
 };
+
+export const useIsDarkModeContext = () => React.useContext(isDarkModeContext);
+export const useSetIsDarkModeContext = () => React.useContext(setIsDarkModeContext);
