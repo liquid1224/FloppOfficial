@@ -6,6 +6,7 @@ description: "華力発電所 1st Album"
 jacket: "./20201025-optima-firmament.jpg"
 format: "album"
 project: "flopp"
+projectCustom: ""
 date: "2020/10/25"
 copy: "オーケストラの亡霊✕テクノ・ポップの遺伝子✕ボーカロイドの干渉\n
 サークル「華力発電所」1stアルバム。\n
@@ -20,6 +21,6 @@ idAmazonMusic: "B098SS2JCM"
 idYouTubeMusic: "OLAK5uy_nsjWUVEbchS9E7KIwV_DPuNkhg4fmwDkM"
 idYouTube: "y1qUuQHfN5k"
 linkSpecial: "https://optima.liquid1224.net"
-headerSpecial: ""
+headerSpecial: 
 index: "1"
 ---

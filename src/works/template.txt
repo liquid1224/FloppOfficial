@@ -6,18 +6,19 @@ description: ""
 jacket: ""
 format: ""
 project: ""
+projectCustom: ""
 date: ""
 copy: ""
-linkBoothCD: ""
-linkBoothDL: ""
-linkBandcamp: ""
-idSpotify: ""
-idAppleMusic: ""
-idAmazonMusic: ""
-idYouTubeMusic: ""
-idYouTube: ""
-linkSpecial: ""
-headerSpecial: ""
+linkBoothCD: 
+linkBoothDL: 
+linkBandcamp: 
+idSpotify: 
+idAppleMusic: 
+idAmazonMusic: 
+idYouTubeMusic: 
+idYouTube: 
+linkSpecial: 
+headerSpecial: 
 index: ""
 ---
 

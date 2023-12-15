@@ -6,6 +6,7 @@ description: "華力発電所 2nd Album"
 jacket: "./20210425-star-in-the-backwash.jpg"
 format: "album"
 project: "flopp"
+projectCustom: ""
 date: "2021/04/25"
 copy: "3月のあの日、空は泣き、星は海へと沈んだ。\n
 リキッド十八番の似非オーケストラ、似非テクノ・ポップに加え、\n
@@ -18,8 +19,8 @@ idSpotify: "2fpYK4g4QE1aruBAshBxRb"
 idAppleMusic: "引波に沈む星/1575494166"
 idAmazonMusic: "B098SR3MV5"
 idYouTubeMusic: "OLAK5uy_mwv26Cg3qCOW3jHjNDOVM2r126Bli-buE"
-idYouTube: ""
+idYouTube: 
 linkSpecial: "https://backwash.liquid1224.net"
-headerSpecial: ""
+headerSpecial: 
 index: "1"
 ---

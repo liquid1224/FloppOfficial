@@ -6,6 +6,7 @@ description: "華力発電所 1st Interlude Album"
 jacket: "./20221030-telefield.jpg"
 format: "album"
 project: "flopp"
+projectCustom: ""
 date: "2022/10/30"
 copy: "華力発電所 1st セルフアレンジアルバム「Telefield」．\n
 レトロモダンなオーケストレーションと歪んだ声帯が\n
@@ -19,8 +20,8 @@ idSpotify: "05kmbfckzMP9421T8mCwTB"
 idAppleMusic: "telefield/1661080254"
 idAmazonMusic: "B0BQVVLJHR"
 idYouTubeMusic: "OLAK5uy_lll1GBNrMPM7-Mb23JtekMOU4abYwdvEA"
-idYouTube: ""
+idYouTube: 
 linkSpecial: "https://telefield.liquid1224.net"
-headerSpecial: ""
+headerSpecial: 
 index: "1"
 ---
