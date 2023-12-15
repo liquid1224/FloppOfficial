@@ -18,8 +18,8 @@ linkBandcamp: "https://liquid1224.bandcamp.com/album/star-in-the-backwash"
 idSpotify: "2fpYK4g4QE1aruBAshBxRb"
 idAppleMusic: "引波に沈む星/1575494166"
 idAmazonMusic: "B098SR3MV5"
-idYouTubeMusic: "OLAK5uy_mwv26Cg3qCOW3jHjNDOVM2r126Bli-buE"
-idYouTube: 
+idYouTube: "OLAK5uy_mwv26Cg3qCOW3jHjNDOVM2r126Bli-buE"
+idLineMusic: 
 linkSpecial: "https://backwash.liquid1224.net"
 headerSpecial: 
 index: "1"

@@ -19,8 +19,8 @@ linkBandcamp: "https://liquid1224.bandcamp.com/album/telefield"
 idSpotify: "05kmbfckzMP9421T8mCwTB"
 idAppleMusic: "telefield/1661080254"
 idAmazonMusic: "B0BQVVLJHR"
-idYouTubeMusic: "OLAK5uy_lll1GBNrMPM7-Mb23JtekMOU4abYwdvEA"
-idYouTube: 
+idYouTube: "OLAK5uy_lll1GBNrMPM7-Mb23JtekMOU4abYwdvEA"
+idLineMusic: "mb0000000002b11258"
 linkSpecial: "https://telefield.liquid1224.net"
 headerSpecial: 
 index: "1"

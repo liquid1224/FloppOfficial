@@ -19,6 +19,7 @@ idAppleMusic:
 idAmazonMusic: 
 idYouTubeMusic: 
 idYouTube: 
+idLineMusic: 
 linkSpecial: "https://swamp.liquid1224.net"
 headerSpecial: 
 index: "1"

@@ -8,7 +8,7 @@ format: "album"
 project: "compilation"
 projectCustom: "Tech-nation Records"
 date: "2019/09/22"
-copy: ""
+copy:
 linkBoothCD:
 linkBoothDL:
 linkBandcamp:
@@ -17,6 +17,7 @@ idAppleMusic:
 idAmazonMusic:
 idYouTubeMusic:
 idYouTube:
+idLineMusic:
 linkSpecial: "https://t-workz2.tumblr.com"
 headerSpecial:
 index: "0"

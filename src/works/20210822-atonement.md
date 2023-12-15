@@ -18,6 +18,7 @@ idAppleMusic:
 idAmazonMusic: 
 idYouTubeMusic: 
 idYouTube: 
+idLineMusic: 
 linkSpecial: "https://t-workz-trap.tumblr.com/"
 headerSpecial: 
 index: "0"

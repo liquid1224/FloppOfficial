@@ -13,13 +13,14 @@ copy: "電子の運動が魅せる旋律は、バイナリを帯びて変異す�
 デフロスト。リヴィジョン。90年代を代表する5つの手法。その発見的＜ヒューリスティック＞な用法集！"
 linkBoothCD: "https://nkmrmuku69.booth.pm/items/4707594"
 linkBoothDL: 
-linkBandcamp: "https://liquid1224.bandcamp.com/album/swamp-of-the-castle-ruins"
+linkBandcamp: "https://nkmrmuku.bandcamp.com/album/heuristics"
 idSpotify: 
 idAppleMusic: 
 idAmazonMusic: 
 idYouTubeMusic: 
 idYouTube: 
-linkSpecial: "https://nkmrmuku.bandcamp.com/album/heuristics"
+idLineMusic: 
+linkSpecial: 
 headerSpecial: 
 index: "1"
 ---

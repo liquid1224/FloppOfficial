@@ -18,6 +18,7 @@ idAppleMusic:
 idAmazonMusic: 
 idYouTubeMusic: 
 idYouTube: 
+idLineMusic: 
 linkSpecial: "https://2021m3springconcptfragments.tumblr.com"
 headerSpecial: 
 index: "0"

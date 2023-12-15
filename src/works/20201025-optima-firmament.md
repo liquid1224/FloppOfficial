@@ -18,8 +18,8 @@ linkBandcamp: "https://liquid1224.bandcamp.com/album/optima-firmament"
 idSpotify: "2FsQgnK244aGbM7KvDj2kY"
 idAppleMusic: "optima-firmament/1575493284"
 idAmazonMusic: "B098SS2JCM"
-idYouTubeMusic: "OLAK5uy_nsjWUVEbchS9E7KIwV_DPuNkhg4fmwDkM"
-idYouTube: "y1qUuQHfN5k"
+idYouTube: "OLAK5uy_m_upDYiSgcwzzqo3HzvCV2qReGePsEdwk"
+idLineMusic: 
 linkSpecial: "https://optima.liquid1224.net"
 headerSpecial: 
 index: "1"

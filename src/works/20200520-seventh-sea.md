@@ -8,15 +8,15 @@ format: "single"
 project: "flopp"
 projectCustom: ""
 date: "2020/05/20"
-copy: ""
+copy:
 linkBoothCD:
 linkBoothDL:
 linkBandcamp: "https://liquid1224.bandcamp.com/track/feat-kokone"
 idSpotify: "7gTC0VPDJUU9mRWf7MagNP"
 idAppleMusic: "7th-sea-feat-kokone-single/1510273689"
 idAmazonMusic: "B087PW71D6"
-idYouTubeMusic: "OLAK5uy_nnS7JOePrGlFdHAZL7Kh9ly9_SjlM6xqg"
-idYouTube:
+idYouTube: "OLAK5uy_nnS7JOePrGlFdHAZL7Kh9ly9_SjlM6xqg"
+idLineMusic:
 linkSpecial:
 headerSpecial:
 index: "0"

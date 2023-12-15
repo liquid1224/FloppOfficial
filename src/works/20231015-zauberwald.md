@@ -18,6 +18,7 @@ idAppleMusic:
 idAmazonMusic: 
 idYouTubeMusic: 
 idYouTube: 
+idLineMusic: 
 linkSpecial: 
 headerSpecial: 
 index: "1"

@@ -9,7 +9,8 @@ project: "compilation"
 projectCustom: "Tech-nation Records"
 date: "2022/09/06"
 copy: "ーそして今、焔はさらに燃え上がり、再度の闘争を告げる鐘が鳴るー\n
-Tech-nation RecordsとtraPによる作曲コンピ「T.workz」第5弾。装填された15の弾丸に戦慄せよ。"
+Tech-nation RecordsとtraPによる作曲コンピ「T.workz」第5弾。\n
+装填された15の弾丸に戦慄せよ。"
 linkBoothCD: 
 linkBoothDL: 
 linkBandcamp: 
@@ -18,6 +19,7 @@ idAppleMusic:
 idAmazonMusic: 
 idYouTubeMusic: 
 idYouTube: 
+idLineMusic: 
 linkSpecial: "https://tworkz2022.tumblr.com"
 headerSpecial: 
 index: "0"

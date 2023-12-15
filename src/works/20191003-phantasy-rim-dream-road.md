@@ -8,7 +8,7 @@ format: "album"
 project: "compilation"
 projectCustom: "Tech-nation Records, 東京工業大学デジタル創作同好会traP, 東工プロジェクト"
 date: "2019/10/03"
-copy: ""
+copy:
 linkBoothCD:
 linkBoothDL:
 linkBandcamp:
@@ -17,6 +17,7 @@ idAppleMusic:
 idAmazonMusic:
 idYouTubeMusic:
 idYouTube:
+idLineMusic:
 linkSpecial: "https://trap.jp/post/815/"
 headerSpecial:
 index: "0"

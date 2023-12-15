@@ -19,6 +19,7 @@ idAppleMusic:
 idAmazonMusic: 
 idYouTubeMusic: 
 idYouTube: 
+idLineMusic: 
 linkSpecial: "https://4x4-not-found.tumblr.com"
 headerSpecial: 
 index: "0"

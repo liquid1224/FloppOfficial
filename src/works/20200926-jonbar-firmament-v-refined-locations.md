@@ -8,7 +8,7 @@ format: "album"
 project: "compilation"
 projectCustom: "小紫花"
 date: "2020/09/26"
-copy: ""
+copy:
 linkBoothCD:
 linkBoothDL: "https://hydrangea87.booth.pm/items/2386767"
 linkBandcamp:
@@ -17,6 +17,7 @@ idAppleMusic:
 idAmazonMusic:
 idYouTubeMusic:
 idYouTube:
+idLineMusic:
 linkSpecial:
 headerSpecial:
 index: "0"

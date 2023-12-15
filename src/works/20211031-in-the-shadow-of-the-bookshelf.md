@@ -8,7 +8,7 @@ format: "other"
 project: "other"
 projectCustom: "ナカムラ書房"
 date: "2021/10/31"
-copy: ""
+copy:
 linkBoothCD: "https://nkmrmuku69.booth.pm/items/3379037"
 linkBoothDL:
 linkBandcamp: "https://nkmrmuku.bandcamp.com/album/blood-green"
@@ -17,6 +17,7 @@ idAppleMusic:
 idAmazonMusic:
 idYouTubeMusic:
 idYouTube:
+idLineMusic:
 linkSpecial:
 headerSpecial:
 index: "0"

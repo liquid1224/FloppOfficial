@@ -8,7 +8,7 @@ format: "album"
 project: "compilation"
 projectCustom: "Tech-nation Records"
 date: "2019/10/27"
-copy: ""
+copy:
 linkBoothCD:
 linkBoothDL: "https://tnationrec.booth.pm/items/1653115"
 linkBandcamp:
@@ -17,6 +17,7 @@ idAppleMusic:
 idAmazonMusic:
 idYouTubeMusic:
 idYouTube:
+idLineMusic:
 linkSpecial: "https://tech-nationrecords-droplets.tumblr.com"
 headerSpecial:
 index: "0"

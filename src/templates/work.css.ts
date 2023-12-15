@@ -3,7 +3,7 @@ import { globalParams } from "../styles/global";
 
 export const WorksPageTemplateWrapper = style({
   width: `100%`,
-  padding: `0 5vw`,
+  padding: `0.5rem 5vw`,
   boxSizing: `border-box`,
   display: `flex`,
   flexDirection: `column`,
@@ -40,7 +40,7 @@ export const DescriptionsWrapper = style({
   padding: `10px 0 0 0`,
 });
 
-export const item = style({
+export const Item = style({
   margin: `0 0 0.5rem 5%`,
 });
 
@@ -59,12 +59,43 @@ export const Copy = style({
 export const LinksWrapper = style({
   //display
   width: `100%`,
+  margin: `10px 0`,
+  padding: `0 0.5rem`,
+  boxSizing: `border-box`,
   //alignment
   display: `grid`,
   gridTemplateColumns: `repeat(auto-fill, minmax(250px, 1fr))`,
   gap: `30px`,
 });
 
-export const Spotify = style({
-  backgroundColor: `#1db26b`,
+export const Gallery = style({
+  width: `100%`,
+  display: `grid`,
+  gridTemplateColumns: `repeat(auto-fill, minmax(250px, 1fr))`,
+  gap: `10px`,
+});
+
+export const Embed = style({
+  width: `100%`,
+  height: `450px`,
+  border: `none`,
+  borderRadius: globalParams.borderRadius,
+});
+
+export const Section = style({
+  width: `100%`,
+});
+
+export const SeparatorBold = style({
+  width: `100%`,
+  height: `2px`,
+  backgroundColor: globalParams.textColorLight,
+});
+
+export const h1 = style({
+  margin: `0`,
+});
+
+export const h2 = style({
+  margin: `0`,
 });

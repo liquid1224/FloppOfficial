@@ -20,6 +20,7 @@ idAppleMusic:
 idAmazonMusic: 
 idYouTubeMusic: 
 idYouTube: 
+idLineMusic: 
 linkSpecial: "https://tsubame-2021.tumblr.com"
 headerSpecial: 
 index: "0"
