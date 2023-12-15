@@ -121,9 +121,6 @@ export const Image = style({
   width: `101%`,
   height: `101%`,
   position: `absolute`,
-  //top: `50%`,
-  //left: `50%`,
-  //transform: `translate(-50%, -50%)`,
 });
 
 export const Link = style({
@@ -135,9 +132,9 @@ export const WorkBoxDescription = style({
   width: `101%`,
   height: `101%`,
   position: `absolute`,
-  top: `0%`,
-  left: `0%`,
-  //transform: `translate(-50%, -50%)`,
+  top: `50%`,
+  left: `50%`,
+  transform: `translate(-50%, -50%)`,
   padding: `0.5rem`,
   boxSizing: `border-box`,
   //alignment
