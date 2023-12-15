@@ -31,7 +31,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
               return (
                 <Link to={link} key={index}>
                   <div className={`${Vanilla.HeroWorkImg} ${isDarkMode ? Vanilla.HeroWorkImgDark : ""}`}>
-                    <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" />
+                    <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" loading="eager" />
                   </div>
                 </Link>
               );
