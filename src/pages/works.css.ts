@@ -63,7 +63,7 @@ export const ButtonsWrapper = style({
 export const ButtonsSectionsSeparator = style({
   width: `100%`,
   height: `1px`,
-  backgroundColor: globalParams.textColorLight,
+  backgroundColor: `currentcolor`,
 });
 
 export const WorksListWrapper = style({
@@ -135,7 +135,7 @@ export const WorkBoxDescription = style({
   //alignment
   display: `flex`,
   flexDirection: `column`,
-  justifyContent: `end`,
+  justifyContent: `flex-end`,
   //style
   backgroundColor: "rgb(15,15,15,0)",
   opacity: `0`,

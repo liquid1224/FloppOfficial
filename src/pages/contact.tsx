@@ -1,9 +1,12 @@
+//Default Components
 import React from "react";
+//Author Components
 import { Layout } from "../templates/layout";
-import * as Vanilla from "./contact.css";
 import { LinkBox } from "../components/linkBox";
 import { Icons } from "../components/icons";
 import { globalLinks } from "../styles/global";
+import * as Vanilla from "./contact.css";
+import * as VanillaLinkBox from "../components/linkBoxAssets.css";
 
 const ContactPage = () => {
   return (
@@ -14,10 +17,10 @@ const ContactPage = () => {
           <div className={Vanilla.Separator} />
           <p>メール，TwitterなどのSNS，YouTubeやBandcampのコメントなどでご随意にお送りください．</p>
           <div className={Vanilla.LinksWrapper}>
-            <LinkBox icon={Icons.mail} text="Mail" link="" style={Vanilla.Mail} />
-            <LinkBox icon={Icons.twitter} text="Twitter" link={globalLinks.twitter} style={Vanilla.Twitter} />
-            <LinkBox icon={Icons.youtube} text="YouTube" link={globalLinks.youtubeChannel} style={Vanilla.YouTube} />
-            <LinkBox icon={Icons.bandcamp} text="Bandcamp" link={globalLinks.bandcamp} style={Vanilla.Bandcamp} />
+            <LinkBox icon={Icons.mail} text="Mail" link="" style={VanillaLinkBox.Mail} />
+            <LinkBox icon={Icons.twitter} text="Twitter" link={globalLinks.twitter} style={VanillaLinkBox.Twitter} />
+            <LinkBox icon={Icons.youtube} text="YouTube" link={globalLinks.youtubeChannel} style={VanillaLinkBox.YouTube} />
+            <LinkBox icon={Icons.bandcamp} text="Bandcamp" link={globalLinks.bandcamp} style={VanillaLinkBox.Bandcamp} />
           </div>
         </div>
         <div className={Vanilla.Section}>
@@ -31,7 +34,7 @@ const ContactPage = () => {
             をご確認ください．
           </p>
           <div className={Vanilla.LinksWrapper}>
-            <LinkBox icon={Icons.skeb} text="Skeb" link={globalLinks.skeb} style={Vanilla.Skeb} />
+            <LinkBox icon={Icons.skeb} text="Skeb" link={globalLinks.skeb} style={VanillaLinkBox.Skeb} />
           </div>
         </div>
         <div className={Vanilla.Section}>
@@ -105,7 +108,7 @@ const ContactPage = () => {
             </ul>
           </p>
           <div className={Vanilla.LinksWrapper}>
-            <LinkBox icon={Icons.mail} text="Mail" link="" style={Vanilla.Mail} />
+            <LinkBox icon={Icons.mail} text="Mail" link="" style={VanillaLinkBox.Mail} />
           </div>
         </div>
       </div>

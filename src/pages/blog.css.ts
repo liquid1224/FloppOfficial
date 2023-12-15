@@ -28,7 +28,7 @@ export const Link = style({
   gap: `3%`,
   //style
   textDecoration: `none`,
-  color: globalParams.textColorLight,
+  color: `currentcolor`,
   boxShadow: globalParams.shadowLightSmall,
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
@@ -59,11 +59,6 @@ export const TextWrapper = style({
   display: `flex`,
   flexDirection: `column`,
   justifyContent: `center`,
-});
-
-export const SeriesLink = style({
-  //textDecoration: ``,
-  color: globalParams.textColorLight,
 });
 
 export const Series = style({

@@ -75,7 +75,7 @@ export const ArtistIcon = style({
 export const Separator = style({
   width: `2px`,
   height: `100%`,
-  backgroundColor: globalParams.textColorLight,
+  backgroundColor: `currentcolor`,
 });
 
 export const ProfileSection = style({
@@ -120,7 +120,7 @@ export const h3 = style({
 export const MiniSeparator = style({
   width: `100%`,
   height: `1px`,
-  backgroundColor: globalParams.textColorLight,
+  backgroundColor: `currentcolor`,
 });
 
 export const ul = style({

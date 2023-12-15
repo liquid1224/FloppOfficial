@@ -88,7 +88,7 @@ export const h3 = style({
       content: ``,
       width: `100%`,
       height: `2px`,
-      backgroundColor: globalParams.textColorLight,
+      backgroundColor: `currentcolor`,
     },
   },
 });
@@ -107,7 +107,7 @@ export const NavigationMenusWrapper = style({
 
 export const Link = style({
   //style
-  color: globalParams.textColorLight,
+  color: `inherit`,
   textDecoration: `none`,
   display: `flex`,
   flexDirection: `column`,
@@ -120,8 +120,8 @@ export const HoverFX = style({
       content: ``,
       width: `0`,
       height: `1px`,
-      backgroundColor: globalParams.accentColor1,
-      transition: `width ${globalParams.time}`,
+      backgroundColor: `currentcolor`,
+      transition: `width ${globalParams.time}, color ${globalParams.time} `,
     },
     [`&:hover::after`]: {
       width: `100%`,

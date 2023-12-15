@@ -33,9 +33,9 @@ export const Burger = style({
   justifyContent: "center",
   alignItems: "center",
   //style
-  color: globalParams.textColorLight,
-  backgroundColor: "rgb(0,0,0,0)",
-  borderColor: "rgb(0,0,0,0)",
+  color: `inherit`,
+  backgroundColor: `inherit`,
+  border: `none`,
   cursor: `pointer`,
 });
 
@@ -124,7 +124,7 @@ export const ToggleSwitchLabel = style({
   width: "var(--ToggleSwitchWidth)",
   height: "var(--ToggleSwitchHeight)",
   borderRadius: "var(--ToggleSwitchHeight)",
-  background: globalParams.textColorLight,
+  background: `currentcolor`,
   transition: `background ${globalParams.time}, box-shadow ${globalParams.time}`,
   ":after": {
     cursor: "pointer",
@@ -148,14 +148,14 @@ export const ToggleSwitchLabelChecked = style({
   ":after": {
     left: "calc( var(--ToggleSwitchWidth) - var(--ToggleSwitchCircle) - var(--ToggleSwitchPadding))",
     borderRadius: "50%",
-    background: globalParams.textColorLight,
+    background: `currentcolor`,
   },
 });
 
 //Header
 export const Header = style({
   //style
-  backgroundColor: globalParams.backgroundLight, //beta
+  backgroundColor: `inherit`,
   padding: `8px 5vw`,
   boxSizing: `border-box`,
   //position

@@ -47,7 +47,7 @@ export const Item = style({
 export const Separator = style({
   width: `100%`,
   height: `1px`,
-  backgroundColor: globalParams.textColorLight,
+  backgroundColor: `currentcolor`,
 });
 
 export const Copy = style({
@@ -89,7 +89,7 @@ export const Section = style({
 export const SeparatorBold = style({
   width: `100%`,
   height: `2px`,
-  backgroundColor: globalParams.textColorLight,
+  backgroundColor: `currentcolor`,
 });
 
 export const h1 = style({

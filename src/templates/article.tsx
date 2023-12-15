@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "./layout";
 import { graphql } from "gatsby";
-import * as Vanilla from "./articles.css";
+import * as Vanilla from "./article.css";
 
 type ArticlesPageTemplateProps = {
   data: Queries.BlogPostQuery;

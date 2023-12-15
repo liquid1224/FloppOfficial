@@ -3,6 +3,7 @@ import { globalParams } from "../styles/global";
 
 export const Layout = style({
   backgroundColor: globalParams.backgroundLight,
+  color: globalParams.textColorLight,
   display: "flex",
   alignItems: "center",
   flexFlow: "column",
@@ -19,7 +20,7 @@ export const PageHeader = style({
   //alignment
   display: `flex`,
   flexDirection: `column`,
-  justifyContent: `end`,
+  justifyContent: `flex-end`,
 });
 
 export const h1 = style({

@@ -21,7 +21,7 @@ export const Menu = style({
   //style
   textDecoration: `none`,
   fontSize: `1.1rem`,
-  color: globalParams.textColorLight,
+  color: `inherit`,
   //alignment
   display: `flex`,
   flexDirection: `column`,
@@ -33,8 +33,8 @@ export const Menu = style({
       content: ``,
       width: `0`,
       height: `1px`,
-      backgroundColor: globalParams.accentColor1,
-      transition: `width ${globalParams.time}`,
+      backgroundColor: `currentcolor`,
+      transition: `width ${globalParams.time}, color ${globalParams.time}`,
     },
     [`&:hover::after`]: {
       width: `100%`,
@@ -48,7 +48,7 @@ export const Menu = style({
 export const Separator = style({
   width: `90vw`,
   height: `1px`,
-  backgroundColor: globalParams.textColorLight,
+  backgroundColor: `currentcolor`,
 });
 
 export const LinksSectionsWrapper = style({
@@ -88,7 +88,7 @@ export const LinkSectionH2 = style({
       content: ``,
       width: `100%`,
       height: `1px`,
-      backgroundColor: globalParams.textColorLight,
+      backgroundColor: `currentcolor`,
     },
   },
 });
@@ -109,7 +109,7 @@ export const LinkBox = style({
   display: `flex`,
   alignItems: `center`,
   //style
-  color: globalParams.textColorLight,
+  color: `inherit`,
   textDecoration: `none`,
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,

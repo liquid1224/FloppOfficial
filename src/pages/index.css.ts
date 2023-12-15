@@ -43,7 +43,7 @@ export const HeroInfo = style({
   display: `flex`,
   flexDirection: `column`,
   justifyContent: `center`,
-  alignItems: `end`,
+  alignItems: `flex-end`,
   //style
   width: `100%`,
   gap: `30px`,
@@ -74,7 +74,7 @@ export const HeroPoemLink = style({
   display: `flex`,
   flexDirection: `column`,
   justifyContent: `center`,
-  alignItems: `end`,
+  alignItems: `flex-end`,
   //style
   width: `100%`,
 });
