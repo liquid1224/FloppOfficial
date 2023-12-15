@@ -6,7 +6,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://liquid1224.net`,
     author: `@liquid1224`,
     description: `liquid1224's Music and Technology Project`,
-    image: `./src/images/ogpDefault.jpg`,
+    image: `src/images/ogpDefault.jpg`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
