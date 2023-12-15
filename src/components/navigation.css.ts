@@ -77,6 +77,17 @@ export const NavigationSection = style({
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });
 
+export const NavigationSectionDark = style({
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowDark,
+        transform: `translate(0, -5px)`,
+      },
+    },
+  },
+});
+
 export const h3 = style({
   //alignment
   display: `flex`,

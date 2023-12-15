@@ -36,6 +36,28 @@ export const Button = style({
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });
 
+export const ButtonDark = style({
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowDarkSmallFloat,
+        transform: globalParams.float,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowDarkSmall,
+        transform: `none`,
+      },
+    },
+    "(hover: none)": {
+      boxShadow: globalParams.shadowDarkSmallFloat,
+      ":active": {
+        boxShadow: globalParams.shadowDarkSmall,
+        transform: globalParams.sink,
+      },
+    },
+  },
+});
+
 export const Title = style({
   //alignment
   display: "flex",
@@ -57,7 +79,7 @@ export const ButtonPushIn = style({
   //style
   border: `none`,
   borderRadius: globalParams.borderRadius,
-  boxShadow: globalParams.shadowLightFloat,
+  boxShadow: globalParams.shadowLightSmallFloat,
   "@media": {
     "(hover: hover)": {
       boxShadow: `none`,
@@ -72,11 +94,28 @@ export const ButtonPushIn = style({
     },
   },
   color: `inherit`,
-  backgroundColor: globalParams.backgroundLight,
+  backgroundColor: `inherit`,
   textDecorationLine: "none",
   cursor: `pointer`,
   //transition
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
+});
+
+export const ButtonPushInDark = style({
+  boxShadow: globalParams.shadowDarkSmallFloat,
+  "@media": {
+    "(hover: hover)": {
+      boxShadow: `none`,
+      ":hover": {
+        boxShadow: globalParams.shadowDarkSmall,
+        transform: globalParams.float,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowDarkSmallInDeep,
+        transform: globalParams.sink,
+      },
+    },
+  },
 });
 
 export const Active = style({
@@ -92,6 +131,25 @@ export const Active = style({
       },
       ":active": {
         boxShadow: globalParams.shadowLightSmallInDeep,
+        transform: globalParams.sink,
+      },
+    },
+  },
+});
+
+export const ActiveDark = style({
+  boxShadow: globalParams.shadowDarkSmallIn,
+  ":active": {
+    boxShadow: globalParams.shadowDarkSmallInDeep,
+  },
+  "@media": {
+    "(hover: hover)": {
+      boxShadow: globalParams.shadowDarkSmallIn,
+      ":hover": {
+        boxShadow: globalParams.shadowDarkSmallInDeep,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowDarkSmallInDeep,
         transform: globalParams.sink,
       },
     },

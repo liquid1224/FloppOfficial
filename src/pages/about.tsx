@@ -7,8 +7,17 @@ import type { HeadFC } from "gatsby";
 //Author Components
 import * as Vanilla from "./about.css";
 import { ScrollIndecator } from "../components/scrollIndicator";
+import { useIsDarkModeContext } from "../styles/context";
 
 const AboutPage = () => {
+  const StaticIconSection = () => {
+    const isDarkMode = useIsDarkModeContext();
+    return (
+      <div className={`${Vanilla.ArtistIconWrapper} ${isDarkMode ? Vanilla.ArtistIconWrapperDark : ""}`}>
+        <StaticImage src="../images/artist.jpg" alt="liquid1224" className={Vanilla.ArtistIcon} />
+      </div>
+    );
+  };
   type PluginSectionProps = {
     title: string;
     children: React.ReactElement;
@@ -30,9 +39,7 @@ const AboutPage = () => {
           <div className={Vanilla.ProfileWrapper}>
             <div className={Vanilla.IconSection}>
               <div className={Vanilla.ArtistSectionWrapper}>
-                <div className={Vanilla.ArtistIconWrapper}>
-                  <StaticImage src="../images/artist.jpg" alt="liquid1224" className={Vanilla.ArtistIcon} />
-                </div>
+                <StaticIconSection />
                 <h2>liquid1224</h2>
               </div>
               <div>

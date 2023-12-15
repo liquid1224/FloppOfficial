@@ -7,6 +7,7 @@ import { LinkBox } from "../components/linkBox";
 import { Icons } from "../components/icons";
 import * as Vanilla from "./work.css";
 import * as VanillaLinkBoxAssets from "../components/linkBoxAssets.css";
+import { useIsDarkModeContext } from "../styles/context";
 
 type WorksPageTemplateProps = {
   data: Queries.WorkMetaDataQuery;
@@ -52,14 +53,20 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
     else return false;
   };
 
-  console.log(spotify);
+  const Jacket = () => {
+    const isDarkMode = useIsDarkModeContext();
+    return (
+      <div className={Vanilla.JacketWrapper}>
+        <GatsbyImage image={jacket as IGatsbyImageData} alt={title} className={`${Vanilla.Jacket} ${isDarkMode ? Vanilla.JacketDark : ""}`} />
+      </div>
+    );
+  };
+
   return (
     <Layout>
       <div className={Vanilla.WorksPageTemplateWrapper}>
         <div className={Vanilla.WorksDescriptionsWrapper}>
-          <div className={Vanilla.JacketWrapper}>
-            <GatsbyImage image={jacket as IGatsbyImageData} alt={title} className={Vanilla.Jacket} />
-          </div>
+          <Jacket />
           <div className={Vanilla.DescriptionsWrapper}>
             {/* title */}
             {(description !== "" || compilation !== "") && (

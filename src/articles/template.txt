@@ -1,0 +1,8 @@
+---
+slug: ""
+title: ""
+date: ""
+lastUpdate: ""
+thumbnail: ""
+series: ""
+---

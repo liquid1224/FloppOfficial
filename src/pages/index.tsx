@@ -10,13 +10,16 @@ import { Layout } from "../templates/layout";
 import { Seo } from "../templates/seo";
 import { Button } from "../components/button";
 import { ScrollIndecator } from "../components/scrollIndicator";
+import { useIsDarkModeContext } from "../styles/context";
 
 type IndexPageProps = {
   data: Queries.HeroInfoQuery;
 };
 const IndexPage = ({ data }: IndexPageProps) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDarkMode = useIsDarkModeContext();
   const HeroInfo = ({ data }: IndexPageProps) => {
+    const isDarkMode = useIsDarkModeContext();
     return (
       <div className={Vanilla.HeroInfo}>
         <div className={Vanilla.HeroWorks}>
@@ -27,7 +30,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
               const title = node.node.frontmatter?.title as string;
               return (
                 <Link to={link} key={index}>
-                  <div className={Vanilla.HeroWorkImg}>
+                  <div className={`${Vanilla.HeroWorkImg} ${isDarkMode ? Vanilla.HeroWorkImgDark : ""}`}>
                     <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" />
                   </div>
                 </Link>
@@ -62,6 +65,19 @@ const IndexPage = ({ data }: IndexPageProps) => {
       </div>
     );
   };
+  type YouTubeContentsProps = {
+    src: string;
+  };
+  const YouTubeContents = ({ src }: YouTubeContentsProps) => {
+    const isDarkMode = useIsDarkModeContext();
+    return (
+      <div className={Vanilla.MoviesWrapper}>
+        <div className={`${Vanilla.YouTubeWrapper} ${isDarkMode ? Vanilla.YouTubeWrapperDark : ""}`}>
+          <iframe src={src} className={Vanilla.YouTube}></iframe>
+        </div>
+      </div>
+    );
+  };
   return (
     <Layout>
       <>
@@ -74,11 +90,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
           {isDesktop && <ScrollIndecator />}
         </div>
         <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
-          <div className={Vanilla.MoviesWrapper}>
-            <div className={Vanilla.YouTubeWrapper}>
-              <iframe src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js" className={Vanilla.YouTube} />
-            </div>
-          </div>
+          <YouTubeContents src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js" />
           <div className={Vanilla.MusicTextWrapper}>
             <h2 className={Vanilla.h2}>Musics</h2>
             <div className={Vanilla.MusicDescriptionsWrapper}>
@@ -111,11 +123,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
               VSTプラグインなどの音響関連ソフトウェアの制作も進行中です．
             </p>
           </div>
-          <div className={Vanilla.MoviesWrapper}>
-            <div className={Vanilla.YouTubeWrapper}>
-              <iframe src="https://www.youtube.com/embed/-Qg9586n0Qw?si=Giem2z1CWN8wwkKQ" className={Vanilla.YouTube}></iframe>
-            </div>
-          </div>
+          <YouTubeContents src="https://www.youtube.com/embed/-Qg9586n0Qw?si=Giem2z1CWN8wwkKQ" />
         </div>
         {/*<div className={Vanilla.SectionSeparator} />
         <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>

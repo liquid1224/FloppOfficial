@@ -6,12 +6,13 @@ import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-p
 import { Layout } from "../templates/layout";
 import { PageSelector } from "../components/button";
 import * as Vanilla from "./blog.css";
+import { useIsDarkModeContext } from "../styles/context";
 
 type ArticlesListProps = {
   data: Queries.ArticlesDataQuery;
 };
 const ArticlesList = ({ data }: ArticlesListProps) => {
-  const [numPage, setNumPage] = useState(1);
+  const isDarkMode = useIsDarkModeContext();
   return (
     <div className={Vanilla.ArticlesWrapper}>
       {data.allMarkdownRemark.edges.map((node, index) => {
@@ -20,7 +21,7 @@ const ArticlesList = ({ data }: ArticlesListProps) => {
         const updateDate = node.node.frontmatter?.lastUpdate;
         const series = node.node.frontmatter?.series;
         return (
-          <Link to={`/blog/${node.node.frontmatter?.slug}`} className={Vanilla.Link}>
+          <Link to={`/blog/${node.node.frontmatter?.slug}`} className={`${Vanilla.Link} ${isDarkMode ? Vanilla.LinkDark : ""}`}>
             <GatsbyImage image={thumbnail as IGatsbyImageData} alt={node.node.frontmatter?.title as string} className={Vanilla.Thumbnail} />
             <div className={Vanilla.TextWrapper}>
               <p className={Vanilla.Series}>{series !== undefined || "" ? `${series}` : ""}</p>

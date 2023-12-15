@@ -1,9 +1,9 @@
 //Default Components
-import React, { ReactElement, createContext, useContext } from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { IconContext } from "react-icons/lib";
 //Author Components
-import { IsDarkModeProvider, useIsDarkModeContext, useSetIsDarkModeContext } from "../styles/context";
+import { IsDarkModeProvider } from "../styles/context";
 import * as Vanilla from "./layout.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -18,14 +18,30 @@ type layoutProps = {
 };
 
 export const Layout = ({ children, title }: layoutProps) => {
-  const isDarkMode = useIsDarkModeContext();
+  //darkmode state
+  const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const isDarkModeQuery = darkModeMediaQuery.matches;
+  const initialIsDarkMode = () => {
+    if (localStorage.getItem("isDarkMode") === "true") return true;
+    else if (localStorage.getItem("isDarkMode") === "false") return false;
+    else {
+      localStorage.setItem("isDarkMode", isDarkModeQuery.toString());
+      return isDarkModeQuery;
+    }
+  };
+  const [isDarkMode, setIsDarkMode] = useState(initialIsDarkMode());
+
+  useEffect(() => {
+    const updatedIsDarkMode = initialIsDarkMode();
+    setIsDarkMode(updatedIsDarkMode);
+  }, []);
   //random header image
   const headerImageArray = [headerImage1, headerImage2, headerImage3];
   const randomIndex = Math.floor(Math.random() * headerImageArray.length);
   const headerImage = headerImageArray[randomIndex];
   return (
     <IconContext.Provider value={{ size: `40px` }}>
-      <IsDarkModeProvider>
+      <IsDarkModeProvider isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}>
         <div className={`${Vanilla.Layout} ${isDarkMode ? Vanilla.LayoutDark : ""}`}>
           <Header />
           {title !== undefined && (

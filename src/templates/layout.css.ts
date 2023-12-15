@@ -8,6 +8,7 @@ export const Layout = style({
   alignItems: "center",
   flexFlow: "column",
   minHeight: "100vh",
+  transition: `background-color ${globalParams.time}`,
 });
 
 export const LayoutDark = style({

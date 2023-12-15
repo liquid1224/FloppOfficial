@@ -4,11 +4,12 @@ const isDarkModeContext = React.createContext<boolean>(false);
 const setIsDarkModeContext = React.createContext<React.Dispatch<React.SetStateAction<boolean>>>(() => {});
 
 interface IsDarkModeContextProps {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
   children: React.ReactNode;
 }
 
-export const IsDarkModeProvider: React.FC<IsDarkModeContextProps> = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+export const IsDarkModeProvider: React.FC<IsDarkModeContextProps> = ({ children, isDarkMode, setIsDarkMode }) => {
   return (
     <isDarkModeContext.Provider value={isDarkMode}>
       <setIsDarkModeContext.Provider value={setIsDarkMode}>{children}</setIsDarkModeContext.Provider>

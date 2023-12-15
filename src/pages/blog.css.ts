@@ -48,6 +48,23 @@ export const Link = style({
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });
 
+export const LinkDark = style({
+  boxShadow: globalParams.shadowDarkSmall,
+  //transition
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowDarkSmallFloat,
+        transform: globalParams.float,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowDarkSmall,
+        transform: globalParams.sink,
+      },
+    },
+  },
+});
+
 export const Thumbnail = style({
   width: `30%`,
   aspectRatio: `16 / 9`,

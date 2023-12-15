@@ -14,11 +14,12 @@ type BurgerProps = {
 };
 
 const Burger = ({ isOpen, onClick }: BurgerProps) => {
+  const isDarkMode = useIsDarkModeContext();
   const classLine1 = `${Vanilla.Line1} ${isOpen ? Vanilla.Trans1 : ""}`;
   const classLine2 = `${Vanilla.Line2} ${isOpen ? Vanilla.Trans2 : ""}`;
   const classLine3 = `${Vanilla.Line3} ${isOpen ? Vanilla.Trans3 : ""}`;
   return (
-    <div className={Vanilla.BurgerWrapper}>
+    <div className={`${Vanilla.BurgerWrapper} ${isDarkMode ? Vanilla.BurgerWrapperDark : ""}`}>
       <button type="button" onClick={onClick} className={Vanilla.Burger}>
         <span className={classLine1}></span>
         <span className={classLine2}></span>
@@ -36,6 +37,8 @@ const ToggleSwitch = ({}: ToggleSwitchProps) => {
   //Click Handler
   const handleClick = () => {
     setIsDarkMode(!isDarkMode);
+    const nextIsDarkMode = !isDarkMode;
+    localStorage.setItem("isDarkMode", nextIsDarkMode.toString());
   };
 
   //Class
@@ -68,15 +71,18 @@ export const Header = ({}: HeaderProps) => {
     setIsOpen(!isOpen);
   };
 
+  //Dark Mode State
+  const isDarkMode = useIsDarkModeContext();
+
   //Class
-  const classHeader = `${Vanilla.Header} ${isScrolled && !isOpen ? Vanilla.Scrolled : ""} ${isOpen ? Vanilla.MenuOn : ""} `;
+  const classHeader = `${Vanilla.Header} ${isScrolled && !isOpen ? Vanilla.Scrolled : ""} ${isScrolled && !isOpen && isDarkMode ? Vanilla.ScrolledDark : ""} ${isOpen ? Vanilla.MenuOn : ""}`;
 
   return (
     <>
       <header className={classHeader}>
         <Burger isOpen={isOpen} onClick={toggleOpen} />
         <div className={Vanilla.LogoWrapper}>
-          <Link to="/" className={Vanilla.LogoLink} onClick={isOpen ? () => setIsOpen(!isOpen) : () => {}}>
+          <Link to="/" className={`${Vanilla.LogoLink} ${isDarkMode ? Vanilla.LogoLinkDark : ""}`} onClick={isOpen ? () => setIsOpen(!isOpen) : () => {}}>
             <Logo />
           </Link>
         </div>

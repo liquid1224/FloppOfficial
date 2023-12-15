@@ -13,6 +13,12 @@ export const globalParams = {
   shadowLightSmallFloat: "5px 9px 8px #a4a4a4, -3px -3px 8px #ffffff",
   shadowLightSmallIn: "inset 5px 5px 8px #a4a4a4, inset -5px -5px 8px #ffffff",
   shadowLightSmallInDeep: "inset 8px 8px 16px #a4a4a4, inset -8px -8px 16px #ffffff",
+  shadowDark: "10px 10px 8px #252525, -10px -10px 8px #414141",
+  shadowDarkFloat: "10px 14px 8px #252525, -6px -6px 8px #414141",
+  shadowDarkSmall: "5px 5px 8px #252525, -5px -5px 8px #414141",
+  shadowDarkSmallFloat: "5px 9px 8px #252525, -3px -3px 8px #414141",
+  shadowDarkSmallIn: "inset 5px 5px 8px #252525, inset -5px -5px 8px #414141",
+  shadowDarkSmallInDeep: "inset 8px 8px 16px #252525, inset -8px -8px 16px #414141",
   //アイコン関係
   iconSize: "35px",
   iconAndPaddingSize: "calc( 35px + 16px * 2 )",

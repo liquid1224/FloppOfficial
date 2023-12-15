@@ -23,6 +23,21 @@ export const BurgerWrapper = style({
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
 });
 
+export const BurgerWrapperDark = style({
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowDarkSmallFloat,
+        transform: globalParams.float,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowDarkSmall,
+        transform: `none`,
+      },
+    },
+  },
+});
+
 export const Burger = style({
   //position
   width: "35px",
@@ -158,6 +173,7 @@ export const Header = style({
   backgroundColor: `inherit`,
   padding: `8px 5vw`,
   boxSizing: `border-box`,
+  boxShadow: `none`,
   //position
   position: `sticky`,
   top: `0`,
@@ -179,6 +195,10 @@ export const Scrolled = style({
   //change radius
   borderRadius: `0 0 ${globalParams.borderRadius} ${globalParams.borderRadius}`,
   boxShadow: globalParams.shadowLight,
+});
+
+export const ScrolledDark = style({
+  boxShadow: globalParams.shadowDark,
 });
 
 export const MenuOn = style({
@@ -217,4 +237,19 @@ export const LogoLink = style({
   },
   //transition
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time}`,
+});
+
+export const LogoLinkDark = style({
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowDarkSmallFloat,
+        transform: globalParams.float,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowDarkSmall,
+        transform: `none`,
+      },
+    },
+  },
 });

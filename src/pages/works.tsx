@@ -7,6 +7,7 @@ import { Layout } from "../templates/layout";
 import { Seo } from "../templates/seo";
 import { ButtonPushIn } from "../components/button";
 import * as Vanilla from "./works.css";
+import { useIsDarkModeContext } from "../styles/context";
 
 //Works List
 type WorksListProps = {
@@ -44,6 +45,8 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
     setHover(-1);
   };
 
+  const isDarkMode = useIsDarkModeContext();
+
   return (
     <div className={Vanilla.WorksWrapper}>
       {filteredNodes.length === 0 ? (
@@ -53,7 +56,7 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
           const image = getImage(node.node.frontmatter?.jacket as ImageDataLike);
           return (
             <Link className={Vanilla.Link} to={`/works/${node.node.frontmatter?.slug as string}`} key={index}>
-              <div className={`${Vanilla.WorkBox} ${index === hover ? Vanilla.WorkBoxHover : ""}`}>
+              <div className={`${Vanilla.WorkBox} ${isDarkMode ? Vanilla.WorkBoxDark : ""} ${index === hover ? Vanilla.WorkBoxHover : ""}`}>
                 <GatsbyImage className={Vanilla.Image} image={image as IGatsbyImageData} alt={node.node.frontmatter?.title as string} />
                 <div className={Vanilla.WorkBoxDescription} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave}>
                   <h3 className={`${Vanilla.ResetH} ${Vanilla.h3}`}>{!node.node.frontmatter?.compilationTitle ? null : `${node.node.frontmatter.compilationTitle}収録`}</h3>
@@ -82,6 +85,7 @@ const WorksFunction = ({ data }: WorksFunctionProps) => {
   const [isCompilation, setIsCompilation] = useState(true);
   const [isOtherProject, setIsOtherProject] = useState(true);
 
+  const isDarkMode = useIsDarkModeContext();
   type ButtonSectionProps = {
     title: string;
     children: React.ReactElement;
@@ -97,7 +101,7 @@ const WorksFunction = ({ data }: WorksFunctionProps) => {
   return (
     <>
       <div className={Vanilla.Buttons}>
-        <div className={Vanilla.ButtonsSectionsWrapper}>
+        <div className={`${Vanilla.ButtonsSectionsWrapper} ${isDarkMode ? Vanilla.ButtonsSectionsWrapperDark : ""}`}>
           <ButtonsSection title="Project">
             <>
               <ButtonPushIn title="華力発電所" isPushed={isFlopp} onClick={() => setIsFlopp(!isFlopp)} />

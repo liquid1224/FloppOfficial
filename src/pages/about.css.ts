@@ -68,6 +68,10 @@ export const ArtistIconWrapper = style({
   overflow: `hidden`,
 });
 
+export const ArtistIconWrapperDark = style({
+  boxShadow: globalParams.shadowDark,
+});
+
 export const ArtistIcon = style({
   width: `100%`,
 });

@@ -4,6 +4,7 @@ import React from "react";
 import * as Vanilla from "./navigation.css";
 import { Link } from "gatsby";
 import { globalLinks } from "../styles/global";
+import { useIsDarkModeContext } from "../styles/context";
 
 //Navigation Contents
 type NavigationContentsProps = {
@@ -11,11 +12,25 @@ type NavigationContentsProps = {
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 export const NavigationContents = ({ isOpen, setIsOpen }: NavigationContentsProps) => {
+  const isDarkMode = useIsDarkModeContext();
+
+  type NavigationSectionProps = {
+    title: string;
+    children: React.ReactElement;
+  };
+  const NavigationSection = ({ title, children }: NavigationSectionProps) => {
+    return (
+      <div className={`${Vanilla.NavigationSection} ${isDarkMode ? Vanilla.NavigationSectionDark : ""}`}>
+        <h3 className={Vanilla.h3}>{title}</h3>
+        <div className={Vanilla.NavigationMenusWrapper}>{children}</div>
+      </div>
+    );
+  };
+
   return (
     <>
-      <div className={Vanilla.NavigationSection}>
-        <h3 className={Vanilla.h3}>Know</h3>
-        <div className={Vanilla.NavigationMenusWrapper}>
+      <NavigationSection title="Know">
+        <>
           <Link
             to="/about"
             className={`${Vanilla.Link} ${Vanilla.HoverFX}`}
@@ -43,11 +58,10 @@ export const NavigationContents = ({ isOpen, setIsOpen }: NavigationContentsProp
           >
             Links
           </Link>
-        </div>
-      </div>
-      <div className={Vanilla.NavigationSection}>
-        <h3 className={Vanilla.h3}>Listen</h3>
-        <div className={Vanilla.NavigationMenusWrapper}>
+        </>
+      </NavigationSection>
+      <NavigationSection title="Listen">
+        <>
           <Link
             to="/links#music"
             className={`${Vanilla.Link} ${Vanilla.HoverFX}`}
@@ -69,11 +83,10 @@ export const NavigationContents = ({ isOpen, setIsOpen }: NavigationContentsProp
           <a href={globalLinks.youtubeChannel} className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             YouTube
           </a>
-        </div>
-      </div>
-      <div className={Vanilla.NavigationSection}>
-        <h3 className={Vanilla.h3}>Read</h3>
-        <div className={Vanilla.NavigationMenusWrapper}>
+        </>
+      </NavigationSection>
+      <NavigationSection title="Read">
+        <>
           <Link
             to="/blog"
             className={`${Vanilla.Link} ${Vanilla.HoverFX}`}
@@ -86,11 +99,10 @@ export const NavigationContents = ({ isOpen, setIsOpen }: NavigationContentsProp
           <a href={globalLinks.trap} target="_blank" className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             traP
           </a>
-        </div>
-      </div>
-      <div className={Vanilla.NavigationSection}>
-        <h3 className={Vanilla.h3}>Connect</h3>
-        <div className={Vanilla.NavigationMenusWrapper}>
+        </>
+      </NavigationSection>
+      <NavigationSection title="Connect">
+        <>
           <a href={globalLinks.twitter} className={`${Vanilla.Link} ${Vanilla.HoverFX}`}>
             Twitter(X)
           </a>
@@ -106,8 +118,8 @@ export const NavigationContents = ({ isOpen, setIsOpen }: NavigationContentsProp
           >
             Contact
           </Link>
-        </div>
-      </div>
+        </>
+      </NavigationSection>
     </>
   );
 };

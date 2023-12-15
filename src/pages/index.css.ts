@@ -109,21 +109,37 @@ export const HeroWorkImg = style({
   //style
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
-  boxShadow: globalParams.shadowLight,
+  boxShadow: globalParams.shadowLightSmall,
   "@media": {
     "(hover: hover)": {
       ":hover": {
         transform: globalParams.float,
-        boxShadow: globalParams.shadowLightFloat,
+        boxShadow: globalParams.shadowLightSmallFloat,
       },
       ":active": {
-        boxShadow: globalParams.shadowLight,
+        boxShadow: globalParams.shadowLightSmall,
         transform: `none`,
       },
     },
   },
   //transition
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time} `,
+});
+
+export const HeroWorkImgDark = style({
+  boxShadow: globalParams.shadowDarkSmall,
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        transform: globalParams.float,
+        boxShadow: globalParams.shadowDarkSmallFloat,
+      },
+      ":active": {
+        boxShadow: globalParams.shadowDarkSmall,
+        transform: `none`,
+      },
+    },
+  },
 });
 
 export const MoviesWrapper = style({
@@ -147,18 +163,30 @@ export const YouTubeWrapper = style({
   width: `101%`,
   aspectRatio: `16/9`,
   //styles
+  boxShadow: `none`,
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
   "@media": {
     "(hover: hover)": {
       ":hover": {
-        boxShadow: globalParams.shadowLight,
+        boxShadow: globalParams.shadowLightSmall,
         transform: globalParams.float,
       },
     },
   },
   //transition
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time} `,
+});
+
+export const YouTubeWrapperDark = style({
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        boxShadow: globalParams.shadowDark,
+        transform: globalParams.float,
+      },
+    },
+  },
 });
 
 export const YouTube = style({

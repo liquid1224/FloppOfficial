@@ -29,6 +29,23 @@ export const LinkBox = style({
   transition: `transform ${globalParams.time}, box-shadow ${globalParams.time} `,
 });
 
+export const LinkBoxDark = style({
+  boxShadow: globalParams.shadowDarkSmall,
+  //transition
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        transform: globalParams.float,
+        boxShadow: globalParams.shadowDarkSmallFloat,
+      },
+      ":active": {
+        transform: globalParams.sink,
+        boxShadow: globalParams.shadowDarkSmall,
+      },
+    },
+  },
+});
+
 export const LinkIconWrapper = style({
   //display
   width: `100px`,

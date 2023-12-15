@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
 import * as Vanilla from "./button.css";
+import { useIsDarkModeContext } from "../styles/context";
 
 type ButtonProps = {
   link: string;
@@ -8,8 +9,9 @@ type ButtonProps = {
   onClick?: () => void;
 };
 export const Button = ({ link, title, onClick }: ButtonProps) => {
+  const isDarkMode = useIsDarkModeContext();
   return (
-    <Link to={link} className={Vanilla.Button} onClick={onClick}>
+    <Link to={link} className={`${Vanilla.Button} ${isDarkMode ? Vanilla.ButtonDark : ""}`} onClick={onClick}>
       <div className={Vanilla.Title}>{title}</div>
     </Link>
   );
@@ -21,8 +23,12 @@ type ButtonPushInProps = {
   onClick?: () => void;
 };
 export const ButtonPushIn = ({ title, isPushed, onClick }: ButtonPushInProps) => {
+  const isDarkMode = useIsDarkModeContext();
   return (
-    <button className={`${Vanilla.ButtonPushIn} ${isPushed ? Vanilla.Active : ""}`} onClick={onClick}>
+    <button
+      className={`${Vanilla.ButtonPushIn} ${isDarkMode ? Vanilla.ButtonPushInDark : ""} ${isPushed && !isDarkMode ? Vanilla.Active : ""} ${isPushed && isDarkMode ? Vanilla.ActiveDark : ""}`}
+      onClick={onClick}
+    >
       <div className={Vanilla.Title}>{title}</div>
     </button>
   );

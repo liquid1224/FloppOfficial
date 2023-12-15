@@ -23,6 +23,11 @@ export const ButtonsSectionsWrapper = style({
   gap: `20px`,
 });
 
+export const ButtonsSectionsWrapperDark = style({
+  //style
+  boxShadow: globalParams.shadowDark,
+});
+
 export const ButtonsSection = style({
   //display
   width: `100%`,
@@ -93,6 +98,10 @@ export const WorkBox = style({
   //transition
   transform: `none`,
   transition: `transform ${globalParams.time}`,
+});
+
+export const WorkBoxDark = style({
+  boxShadow: globalParams.shadowDark,
 });
 
 export const WorkBoxHover = style({
