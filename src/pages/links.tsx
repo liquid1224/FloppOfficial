@@ -96,7 +96,7 @@ const LinksPage = () => {
               {/*Skeb*/}
               <LinkBox icon={Icons.skeb} text="Skeb" link={globalLinks.skeb} style={VanillaLinkBoxAssets.Skeb} />
               {/*Mail*/}
-              <LinkBox icon={Icons.mail} text="Mail" link="" style={VanillaLinkBoxAssets.Mail} />
+              <LinkBox icon={Icons.mail} text="Mail" link="mailto:liquid1224.flopp@gmail.com" style={VanillaLinkBoxAssets.Mail} />
             </div>
           </div>
         </div>
