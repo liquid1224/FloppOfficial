@@ -230,7 +230,6 @@ export const MusicDescriptionsWrapper = style({
 
 export const MusicDescription = style({
   textAlign: `justify`,
-  margin: `0`,
 });
 
 export const Section = style({

@@ -1,8 +1,7 @@
 //Default Components
 import React, { useEffect, useRef, useState } from "react";
-import { graphql, type HeadFC, PageProps, Link } from "gatsby";
-import { ImageDataLike, getImage } from "gatsby-plugin-image";
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import { graphql, type HeadFC, Link } from "gatsby";
+import { ImageDataLike, getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { useMediaQuery } from "react-responsive";
 //Author Components
 import * as Vanilla from "../styles/index.css";
@@ -120,22 +119,22 @@ const IndexPage = ({ data }: IndexPageProps) => {
           <div className={Vanilla.MusicTextWrapper}>
             <h2 className={Vanilla.h2}>Musics</h2>
             <div className={Vanilla.MusicDescriptionsWrapper}>
-              <p className={Vanilla.MusicDescription}>
+              <div className={Vanilla.MusicDescription}>
                 <h3 className={Vanilla.h2}>Synthetic/Symphonic</h3>
                 幻惑的なシンセサウンドに，壮大なオーケストラ・叙事的な打楽器が絡む独特のサウンド．鋭さと立体感が共存する，ドラマチックなサウンドが特徴です．
-              </p>
-              <p className={Vanilla.MusicDescription}>
+              </div>
+              <div className={Vanilla.MusicDescription}>
                 <h3 className={Vanilla.h2}>Twisted Voice Magic</h3>
                 震えるバスから鋭いファルセットまで，広い音域や多重録音をフル活用したボーカル．巨大なオーケストレーションの中でも燦然と輝く歌声を提供します．
-              </p>
-              <p className={Vanilla.MusicDescription}>
+              </div>
+              <div className={Vanilla.MusicDescription}>
                 <h3 className={Vanilla.h2}>Spellbound Lyrics</h3>
                 隠喩と造語を多用する，難解かつ深遠な歌詞．繰り返し聴き，読み解くことで見えてくる圧倒的情報量の世界観がリスナーを魅了します．
-              </p>
-              <p className={Vanilla.MusicDescription}>
+              </div>
+              <div className={Vanilla.MusicDescription}>
                 <h3 className={Vanilla.h2}>Integrated Production</h3>
                 構想から作編曲，レコーディングやポストプロダクションまで，全工程を担当可能．一貫性のあるプロダクションで安定したクオリティを保証します．
-              </p>
+              </div>
             </div>
           </div>
         </div>
