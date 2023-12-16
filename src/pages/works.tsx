@@ -151,7 +151,7 @@ export const query = graphql`
             title
             jacket {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImageData(placeholder: BLURRED, width: 500, height: 500)
               }
             }
             slug

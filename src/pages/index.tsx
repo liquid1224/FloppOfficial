@@ -16,7 +16,6 @@ type IndexPageProps = {
 };
 const IndexPage = ({ data }: IndexPageProps) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isDarkMode = useIsDarkModeContext();
   const HeroInfo = ({ data }: IndexPageProps) => {
     const isDarkMode = useIsDarkModeContext();
     return (
@@ -30,7 +29,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
               return (
                 <Link to={link} key={index}>
                   <div className={`${Vanilla.HeroWorkImg} ${isDarkMode ? Vanilla.HeroWorkImgDark : ""}`}>
-                    <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" />
+                    <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" loading="eager" />
                   </div>
                 </Link>
               );
@@ -167,7 +166,7 @@ export const query = graphql`
             title
             jacket {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImageData(placeholder: BLURRED, width: 500, height: 500)
               }
             }
             slug

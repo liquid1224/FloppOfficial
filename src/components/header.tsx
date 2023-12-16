@@ -20,7 +20,7 @@ const Burger = ({ isOpen, onClick }: BurgerProps) => {
   const classLine3 = `${Vanilla.Line3} ${isOpen ? Vanilla.Trans3 : ""}`;
   return (
     <div className={`${Vanilla.BurgerWrapper} ${isDarkMode ? Vanilla.BurgerWrapperDark : ""}`}>
-      <button type="button" onClick={onClick} className={Vanilla.Burger}>
+      <button type="button" name="Navigation" onClick={onClick} className={Vanilla.Burger}>
         <span className={classLine1} />
         <span className={classLine2} />
         <span className={classLine3} />
@@ -82,7 +82,7 @@ export const Header = ({}: HeaderProps) => {
       <header className={classHeader}>
         <Burger isOpen={isOpen} onClick={toggleOpen} />
         <div className={Vanilla.LogoWrapper}>
-          <Link to="/" className={`${Vanilla.LogoLink} ${isDarkMode ? Vanilla.LogoLinkDark : ""}`} onClick={isOpen ? () => setIsOpen(!isOpen) : () => {}}>
+          <Link to="/" aria-label="Back to index" className={`${Vanilla.LogoLink} ${isDarkMode ? Vanilla.LogoLinkDark : ""}`} onClick={isOpen ? () => setIsOpen(!isOpen) : () => {}}>
             <Logo />
           </Link>
         </div>
