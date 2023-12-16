@@ -21,9 +21,9 @@ const Burger = ({ isOpen, onClick }: BurgerProps) => {
   return (
     <div className={`${Vanilla.BurgerWrapper} ${isDarkMode ? Vanilla.BurgerWrapperDark : ""}`}>
       <button type="button" onClick={onClick} className={Vanilla.Burger}>
-        <span className={classLine1}></span>
-        <span className={classLine2}></span>
-        <span className={classLine3}></span>
+        <span className={classLine1} />
+        <span className={classLine2} />
+        <span className={classLine3} />
       </button>
     </div>
   );
