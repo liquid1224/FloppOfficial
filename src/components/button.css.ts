@@ -77,6 +77,7 @@ export const ButtonPushIn = style({
   width: "90%",
   height: "3.0rem",
   //style
+  fontFamily: `inherit`,
   border: `none`,
   borderRadius: globalParams.borderRadius,
   boxShadow: globalParams.shadowLightSmallFloat,
@@ -126,11 +127,8 @@ export const Active = style({
   "@media": {
     "(hover: hover)": {
       boxShadow: globalParams.shadowLightSmallIn,
-      ":hover": {
-        boxShadow: globalParams.shadowLightSmallInDeep,
-      },
       ":active": {
-        boxShadow: globalParams.shadowLightSmallInDeep,
+        boxShadow: globalParams.shadowLightSmallIn,
         transform: globalParams.sink,
       },
     },
@@ -146,7 +144,7 @@ export const ActiveDark = style({
     "(hover: hover)": {
       boxShadow: globalParams.shadowDarkSmallIn,
       ":hover": {
-        boxShadow: globalParams.shadowDarkSmallInDeep,
+        boxShadow: globalParams.shadowDarkSmallIn,
       },
       ":active": {
         boxShadow: globalParams.shadowDarkSmallInDeep,
