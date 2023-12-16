@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import ogpDefault from "../images/ogpDefault.jpg";
 
 type SeoProps = {
   description?: string;
@@ -28,7 +29,7 @@ export const Seo = ({ description, title, children, ogpImagePath }: SeoProps) =>
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
   const siteUrl = site.siteMetadata?.siteUrl;
-  const image = `${siteUrl}/${site.siteMetadata?.image}`;
+  const image = `${siteUrl}/${ogpDefault}`;
 
   return (
     <>
