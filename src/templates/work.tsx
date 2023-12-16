@@ -103,7 +103,7 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
             {spotify !== null && <iframe src={`https://open.spotify.com/embed/album/${spotify}`} loading="lazy" className={Vanilla.Embed} />}
             {appleMusic !== null && <iframe src={`https://embed.music.apple.com/jp/album/${appleMusic}`} loading="lazy" className={Vanilla.Embed} />}
             {amazonMusic !== null && <iframe src={`https://music.amazon.co.jp/embed/${amazonMusic}`} loading="lazy" className={Vanilla.Embed} />}
-            {youtube !== null && <iframe src={`https://www.youtube.com/embed/videoseries?list=${youtube}`} loading="lazy" className={Vanilla.Embed} />}
+            {youtube !== null && <iframe src={`https://www.youtube.com/embed?listType=playlist&list=${youtube}`} loading="lazy" className={Vanilla.Embed} />}
           </div>
         )}
         {IsStreamed() && (
