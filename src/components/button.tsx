@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React from "react";
 import * as Vanilla from "./button.css";
 import { useIsDarkModeContext } from "../styles/context";
 

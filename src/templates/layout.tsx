@@ -34,7 +34,7 @@ type layoutProps = {
 
 export const Layout = ({ children, title }: layoutProps) => {
   //darkmode state
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
