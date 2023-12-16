@@ -20,7 +20,7 @@ type layoutProps = {
 export const Layout = ({ children, title }: layoutProps) => {
   //darkmode state
   const darkModeMediaQuery = typeof window !== `undefined` ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-  const isDarkModeQuery = darkModeMediaQuery !== null ? darkModeMediaQuery.matches : true;
+  const isDarkModeQuery = darkModeMediaQuery !== null ? darkModeMediaQuery.matches : false;
 
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (typeof window === `undefined`) return isDarkModeQuery;
