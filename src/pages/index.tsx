@@ -1,5 +1,5 @@
 //Default Components
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { graphql, type HeadFC, PageProps, Link } from "gatsby";
 import { ImageDataLike, getImage } from "gatsby-plugin-image";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
@@ -69,11 +69,37 @@ const IndexPage = ({ data }: IndexPageProps) => {
     src: string;
   };
   const YouTubeContents = ({ src }: YouTubeContentsProps) => {
+    //darkmode state
     const isDarkMode = useIsDarkModeContext();
+
+    const [isIntersecting, setIsIntersecting] = useState(false);
+    const youtubeRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      const options = {
+        root: null,
+        rootMargin: `0px`,
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          setIsIntersecting(true);
+          observer.unobserve(entry.target);
+        }
+      }, options);
+
+      if (youtubeRef.current) observer.observe(youtubeRef.current);
+
+      return () => {
+        if (youtubeRef.current) observer.unobserve(youtubeRef.current);
+      };
+    }, []);
+
     return (
       <div className={Vanilla.MoviesWrapper}>
-        <div className={`${Vanilla.YouTubeWrapper} ${isDarkMode ? Vanilla.YouTubeWrapperDark : ""}`}>
-          <iframe src={src} className={Vanilla.YouTube} loading="lazy"></iframe>
+        <div ref={youtubeRef} className={`${Vanilla.YouTubeWrapper} ${isDarkMode ? Vanilla.YouTubeWrapperDark : ""}`}>
+          {isIntersecting ? <iframe src={src} className={Vanilla.YouTube} loading="lazy" /> : <div className={Vanilla.YouTubePlaceHolder} />}
         </div>
       </div>
     );

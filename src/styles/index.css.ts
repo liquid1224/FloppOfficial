@@ -195,6 +195,12 @@ export const YouTube = style({
   border: `none`,
 });
 
+export const YouTubePlaceHolder = style({
+  width: `100%`,
+  height: `100%`,
+  backgroundColor: globalParams.textColorLight,
+});
+
 export const h2 = style({
   margin: `0`,
 });

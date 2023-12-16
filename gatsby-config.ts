@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
     title: `華力発電所 Official`,
     siteUrl: `https://liquid1224.net`,
     author: `@liquid1224`,
-    description: `liquid1224's Music and Technology Project`,
+    description: `liquid1224 runs music and technology projects`,
     image: `src/images/ogpDefault.jpg`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
