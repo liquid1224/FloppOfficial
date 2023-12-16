@@ -198,6 +198,11 @@ export const Scrolled = style({
 });
 
 export const ScrolledDark = style({
+  //change size
+  height: `50px`,
+  padding: `8px 5vw`,
+  //change radius
+  borderRadius: `0 0 ${globalParams.borderRadius} ${globalParams.borderRadius}`,
   boxShadow: globalParams.shadowDark,
 });
 

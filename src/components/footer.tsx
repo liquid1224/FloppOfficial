@@ -6,11 +6,16 @@ export const Footer = () => {
   const Copyright = () => {
     const initialYear = 2023;
     const latestYear = new Date().getFullYear();
-    return <>©{initialYear !== latestYear ? `${initialYear}-${latestYear}` : `${latestYear}`} liquid1224 all rights reserved</>;
+    return (
+      <div className={Vanilla.Copyright}>
+        <div>©{initialYear !== latestYear ? `${initialYear}-${latestYear}` : `${latestYear}`} liquid1224</div>
+        <div>all rights reserved</div>
+      </div>
+    );
   };
   return (
     <footer className={Vanilla.Footer}>
-      <div className={Vanilla.Copyright}>
+      <div className={Vanilla.CopyrightWrapper}>
         <Copyright />
       </div>
     </footer>

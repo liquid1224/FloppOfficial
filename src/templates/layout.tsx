@@ -10,7 +10,6 @@ import Footer from "../components/footer";
 import headerImage1 from "../images/headerImage1.webp";
 import headerImage2 from "../images/headerImage2.webp";
 import headerImage3 from "../images/headerImage3.webp";
-import { ImageDataLike } from "gatsby-plugin-image";
 
 //Layout
 type layoutProps = {
@@ -33,6 +32,8 @@ export const Layout = ({ children, title }: layoutProps) => {
       return isDarkModeQuery;
     }
   });
+
+  console.log(isDarkMode);
 
   useEffect(() => {
     const handleDarkModeChange = (e: MediaQueryListEvent) => {
