@@ -77,7 +77,11 @@ export const Header = ({}: HeaderProps) => {
   //Class
   return (
     <>
-      <header className={`${Vanilla.Header} ${isScrolled && !isOpen ? Vanilla.Scrolled : ""} ${isScrolled && !isOpen && isDarkMode ? Vanilla.ScrolledDark : ""} ${isOpen ? Vanilla.MenuOn : ""}`}>
+      <header
+        className={`${Vanilla.Header} ${isScrolled && !isOpen && !isDarkMode ? Vanilla.Scrolled : ""} ${isScrolled && !isOpen && isDarkMode ? Vanilla.ScrolledDark : ""} ${
+          isOpen ? Vanilla.MenuOn : ""
+        }`}
+      >
         <Burger isOpen={isOpen} onClick={toggleOpen} />
         <div className={Vanilla.LogoWrapper}>
           <Link to="/" aria-label="Back to index" className={`${Vanilla.LogoLink} ${isDarkMode ? Vanilla.LogoLinkDark : ""}`} onClick={isOpen ? () => setIsOpen(!isOpen) : () => {}}>
