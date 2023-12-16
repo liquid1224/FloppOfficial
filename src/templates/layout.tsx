@@ -34,7 +34,16 @@ type layoutProps = {
 
 export const Layout = ({ children, title }: layoutProps) => {
   //darkmode state
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // ブラウザが利用可能かつlocalStorageに値があればlocalStorageの値を使用し、そうでなければブラウザの設定を使用する
+    if (typeof window !== "undefined") {
+      const localStorageValue = localStorage.getItem("isDarkMode");
+      if (localStorageValue === "true") return true;
+      else if (localStorageValue === "false") return false;
+    }
+    // ブラウザが利用不可の場合やlocalStorageに値がない場合はブラウザの設定（デフォルト）を使用する
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   useEffect(() => {
     const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
