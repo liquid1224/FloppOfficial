@@ -41,8 +41,8 @@ export const Layout = ({ children, title }: layoutProps) => {
       if (localStorageValue === "true") return true;
       else if (localStorageValue === "false") return false;
     }
-    // ブラウザが利用不可の場合やlocalStorageに値がない場合はブラウザの設定（デフォルト）を使用する
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    // ブラウザが利用不可の場合やlocalStorageに値がない場合は，仕方がないのでtrue
+    return true;
   });
 
   useEffect(() => {
