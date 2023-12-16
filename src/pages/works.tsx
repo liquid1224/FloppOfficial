@@ -8,6 +8,7 @@ import { Seo } from "../templates/seo";
 import { ButtonPushIn } from "../components/button";
 import * as Vanilla from "../styles/works.css";
 import { useIsDarkModeContext } from "../styles/context";
+import { useMediaQuery } from "react-responsive";
 
 //Works List
 type WorksListProps = {
@@ -86,6 +87,8 @@ const WorksFunction = ({ data }: WorksFunctionProps) => {
   const [isOtherProject, setIsOtherProject] = useState(true);
 
   const isDarkMode = useIsDarkModeContext();
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+
   type ButtonSectionProps = {
     title: string;
     children: React.ReactElement;
@@ -110,7 +113,7 @@ const WorksFunction = ({ data }: WorksFunctionProps) => {
               <ButtonPushIn title="Others" isPushed={isOtherProject} onClick={() => setIsOtherProject(!isOtherProject)} />
             </>
           </ButtonsSection>
-          <span className={Vanilla.ButtonsSectionsSeparator} />
+          {isDesktop && <span className={Vanilla.ButtonsSectionsSeparator} />}
           <ButtonsSection title="Format">
             <>
               <ButtonPushIn title="Album" isPushed={isAlbum} onClick={() => setIsAlbum(!isAlbum)} />

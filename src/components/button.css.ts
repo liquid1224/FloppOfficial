@@ -74,8 +74,8 @@ export const ButtonPushIn = style({
   justifyContent: "center",
   alignItems: "center",
   //position
-  width: "90%",
-  height: "3.0rem",
+  width: "100%",
+  height: "2.5rem",
   //style
   fontFamily: `inherit`,
   border: `none`,
@@ -127,6 +127,9 @@ export const Active = style({
   "@media": {
     "(hover: hover)": {
       boxShadow: globalParams.shadowLightSmallIn,
+      ":hover": {
+        boxShadow: globalParams.shadowLightSmallIn,
+      },
       ":active": {
         boxShadow: globalParams.shadowLightSmallIn,
         transform: globalParams.sink,

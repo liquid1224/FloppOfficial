@@ -18,7 +18,7 @@ export const LayoutDark = style({
 export const PageHeader = style({
   //display
   width: `100%`,
-  height: `150px`,
+  height: `90px`,
   padding: `0 6vw`,
   boxSizing: `border-box`,
   backgroundSize: `cover`,
@@ -26,6 +26,11 @@ export const PageHeader = style({
   display: `flex`,
   flexDirection: `column`,
   justifyContent: `flex-end`,
+  "@media": {
+    [`${globalParams.pc}`]: {
+      height: `150px`,
+    },
+  },
 });
 
 export const h1 = style({

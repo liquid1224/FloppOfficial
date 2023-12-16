@@ -11,22 +11,17 @@ export const Buttons = style({
 export const ButtonsSectionsWrapper = style({
   //display
   width: `100%`,
-  margin: `1.0rem 5vw`,
-  padding: `1rem`,
+  margin: `1.0rem 5vw 0 5vw`,
   boxSizing: `border-box`,
   //style
-  borderRadius: globalParams.borderRadius,
-  boxShadow: globalParams.shadowLight,
+
   //alignment
   display: `flex`,
   flexDirection: `column`,
-  gap: `20px`,
+  gap: `10px`,
 });
 
-export const ButtonsSectionsWrapperDark = style({
-  //style
-  boxShadow: globalParams.shadowDark,
-});
+export const ButtonsSectionsWrapperDark = style({});
 
 export const ButtonsSection = style({
   //display
@@ -35,7 +30,7 @@ export const ButtonsSection = style({
   display: `flex`,
   flexDirection: `column`,
   justifyContent: `center`,
-  gap: `20px`,
+  gap: `10px`,
   "@media": {
     [`${globalParams.pc}`]: {
       display: `flex`,
@@ -60,9 +55,15 @@ export const ButtonsWrapper = style({
   width: `100%`,
   //alignment
   display: `grid`,
-  gridTemplateColumns: `repeat(auto-fill, minmax(150px, 1fr))`,
+  gridTemplateColumns: `repeat(auto-fill, minmax(95px, 1fr))`,
   justifyItems: `center`,
-  gap: `30px`,
+  gap: `20px`,
+  "@media": {
+    [`${globalParams.pc}`]: {
+      gridTemplateColumns: `repeat(auto-fill, minmax(150px, 1fr))`,
+      gap: `30px`,
+    },
+  },
 });
 
 export const ButtonsSectionsSeparator = style({
@@ -83,8 +84,13 @@ export const WorksWrapper = style({
   width: `100%`,
   //alignment
   display: `grid`,
-  gridTemplateColumns: `repeat(auto-fill, minmax(250px, 1fr))`,
+  gridTemplateColumns: `repeat(auto-fill, minmax(150px, 1fr))`,
   gap: `30px`,
+  "@media": {
+    "(hover: hover)": {
+      gridTemplateColumns: `repeat(auto-fill, minmax(250px, 1fr))`,
+    },
+  },
 });
 
 export const WorkBox = style({
