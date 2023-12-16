@@ -20,7 +20,7 @@ const Burger = ({ isOpen, onClick }: BurgerProps) => {
   const classLine3 = `${Vanilla.Line3} ${isOpen ? Vanilla.Trans3 : ""}`;
   return (
     <div className={`${Vanilla.BurgerWrapper} ${isDarkMode ? Vanilla.BurgerWrapperDark : ""}`}>
-      <button type="button" name="Navigation" onClick={onClick} className={Vanilla.Burger}>
+      <button type="button" aria-label="Navigation button" onClick={onClick} className={Vanilla.Burger}>
         <span className={classLine1} />
         <span className={classLine2} />
         <span className={classLine3} />
