@@ -13,7 +13,7 @@ type LinkBoxProps = {
 export const LinkBox = ({ icon: Icon, link, text, style }: LinkBoxProps) => {
   const isDarkMode = useIsDarkModeContext();
   return (
-    <a href={link} className={`${Vanilla.LinkBox} ${isDarkMode ? Vanilla.LinkBoxDark : ""}`}>
+    <a href={link} target="_blank" className={`${Vanilla.LinkBox} ${isDarkMode ? Vanilla.LinkBoxDark : ""}`}>
       <div className={`${Vanilla.LinkIconWrapper} ${style}`}>
         <Icon />
       </div>
