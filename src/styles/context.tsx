@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const isDarkModeContext = React.createContext<boolean>(false);
+const isDarkModeContext = React.createContext<boolean>(true);
 const setIsDarkModeContext = React.createContext<React.Dispatch<React.SetStateAction<boolean>>>(() => {});
 
 interface IsDarkModeContextProps {
