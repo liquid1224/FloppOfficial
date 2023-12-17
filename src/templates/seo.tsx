@@ -34,6 +34,7 @@ export const Seo = ({ description, title, children, ogpImagePath }: SeoProps) =>
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <meta property="robots" content="index,follow" />
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={`${title} | ${defaultTitle}`} />
       <meta property="og:description" content={metaDescription} />
