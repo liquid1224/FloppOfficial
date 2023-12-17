@@ -159,7 +159,7 @@ export const ToggleSwitchLabel = style({
 });
 
 export const ToggleSwitchLabelChecked = style({
-  background: globalParams.accentColor1,
+  background: globalParams.accentColorLight,
   ":after": {
     left: "calc( var(--ToggleSwitchWidth) - var(--ToggleSwitchCircle) - var(--ToggleSwitchPadding))",
     borderRadius: "50%",
@@ -228,6 +228,7 @@ export const LogoLink = style({
   padding: `5px`,
   height: `100%`,
   borderRadius: globalParams.borderRadius,
+  color: `inherit`,
   "@media": {
     "(hover: hover)": {
       ":hover": {

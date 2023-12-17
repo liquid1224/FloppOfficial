@@ -48,7 +48,7 @@ export const Separator = style({
 export const InlineLink = style({
   textDecoration: `underline`,
   textDecorationColor: `rgb(0,0,0,0)`,
-  color: globalParams.accentColor1,
+  color: globalParams.accentColorLight,
   "@media": {
     "(hover: hover)": {
       ":hover": {

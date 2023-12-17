@@ -83,7 +83,7 @@ export const Separator = style({
   //style
   height: `2px`,
   width: `100%`,
-  backgroundColor: globalParams.textColorLight,
+  backgroundColor: `currentcolor`,
   //Desktop
   "@media": {
     [`${globalParams.pc}`]: {
@@ -198,7 +198,7 @@ export const YouTube = style({
 export const YouTubePlaceHolder = style({
   width: `100%`,
   height: `100%`,
-  backgroundColor: globalParams.textColorLight,
+  backgroundColor: `currentcolor`,
 });
 
 export const h2 = style({
@@ -256,5 +256,5 @@ export const SectionElementsInversion = style({
 export const SectionSeparator = style({
   height: `2px`,
   width: `90vw`,
-  backgroundColor: globalParams.textColorLight,
+  backgroundColor: `currentcolor`,
 });

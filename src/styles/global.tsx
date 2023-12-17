@@ -3,9 +3,11 @@ export const globalParams = {
   backgroundLight: "#e3e3e3",
   backgroundDark: "#333333",
   //アクセントカラー
-  accentColor1: "#a93838", //ロゴの赤色
+  accentColorLight: "#B03B3B",
+  accentColorDark: "#e37d7d",
   //テキストカラー
-  textColorLight: "#969595",
+  textColorLight: "#474747",
+  textColorDark: "#9c9c9c",
   //影
   shadowLight: "10px 10px 8px #a4a4a4, -10px -10px 8px #ffffff",
   shadowLightFloat: "10px 14px 8px #a4a4a4, -6px -6px 8px #ffffff",

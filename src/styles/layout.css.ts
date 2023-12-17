@@ -13,6 +13,7 @@ export const Layout = style({
 
 export const LayoutDark = style({
   backgroundColor: globalParams.backgroundDark,
+  color: globalParams.textColorDark,
 });
 
 export const PageHeader = style({

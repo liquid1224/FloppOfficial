@@ -62,5 +62,5 @@ export const Skeb = style({
 });
 
 export const Mail = style({
-  backgroundColor: globalParams.accentColor1,
+  backgroundColor: globalParams.accentColorLight,
 });

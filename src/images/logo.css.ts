@@ -11,26 +11,26 @@ export const Svg = style({
 });
 
 export const Sho = style({
-  fill: globalParams.textColorLight,
+  fill: `currentcolor`,
   fillRule: "nonzero",
 });
 
 export const Den = style({
-  fill: globalParams.textColorLight,
+  fill: `currentcolor`,
   fillRule: "nonzero",
 });
 
 export const Hatsu = style({
-  fill: globalParams.textColorLight,
+  fill: `currentcolor`,
   fillRule: "nonzero",
 });
 
 export const Ryoku = style({
-  fill: globalParams.textColorLight,
+  fill: `currentcolor`,
   fillRule: "nonzero",
 });
 
 export const Ka = style({
-  fill: globalParams.accentColor1,
+  fill: globalParams.accentColorLight,
   fillRule: "nonzero",
 });

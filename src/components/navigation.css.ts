@@ -138,7 +138,7 @@ export const HoverFX = style({
       width: `100%`,
     },
     [`&:hover`]: {
-      color: globalParams.accentColor1,
+      color: globalParams.accentColorLight,
     },
   },
 });

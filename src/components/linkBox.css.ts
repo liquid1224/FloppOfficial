@@ -8,7 +8,7 @@ export const LinkBox = style({
   display: `flex`,
   alignItems: `center`,
   //style
-  color: globalParams.textColorLight,
+  color: `inherit`,
   textDecoration: `none`,
   borderRadius: globalParams.borderRadius,
   overflow: `hidden`,
