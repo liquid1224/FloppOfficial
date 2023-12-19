@@ -20,8 +20,9 @@ type WorksListProps = {
   isCompilation: boolean;
   isOtherProject: boolean;
   data: Queries.WorksDataQuery;
+  isDarkMode: boolean;
 };
-const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompilation, isOtherProject, data }: WorksListProps) => {
+const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompilation, isOtherProject, data, isDarkMode }: WorksListProps) => {
   //States
   const album = `${isAlbum ? "album" : ""}`;
   const single = `${isSingle ? "single" : ""}`;
@@ -45,8 +46,6 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
   const handleMouseLeave = () => {
     setHover(-1);
   };
-
-  const isDarkMode = useIsDarkModeContext();
 
   return (
     <div className={Vanilla.WorksWrapper}>
@@ -125,7 +124,17 @@ const WorksFunction = ({ data }: WorksFunctionProps) => {
         </div>
       </div>
       <div className={Vanilla.WorksListWrapper}>
-        <WorksList isAlbum={isAlbum} isSingle={isSingle} isOtherFormat={isOtherFormat} isFlopp={isFlopp} isUma={isUma} isCompilation={isCompilation} isOtherProject={isOtherProject} data={data} />
+        <WorksList
+          isAlbum={isAlbum}
+          isSingle={isSingle}
+          isOtherFormat={isOtherFormat}
+          isFlopp={isFlopp}
+          isUma={isUma}
+          isCompilation={isCompilation}
+          isOtherProject={isOtherProject}
+          data={data}
+          isDarkMode={isDarkMode}
+        />
       </div>
     </>
   );
