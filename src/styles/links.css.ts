@@ -3,8 +3,8 @@ import { globalParams } from "./global";
 
 export const MenuWrapper = style({
   //display
-  width: `80%`,
-  padding: `30px 5vw 0.5rem 5vw`,
+  width: `100%`,
+  //padding: `30px 5vw 0.5rem 5vw`,
   boxSizing: `border-box`,
   //alignment
   display: `grid`,
@@ -54,19 +54,19 @@ export const Separator = style({
 export const LinksSectionsWrapper = style({
   //display
   width: `100%`,
-  padding: `60px 5vw 1.0rem 5vw`,
+  padding: `1.0rem 5vw 1.0rem 5vw`,
   boxSizing: `border-box`,
   //alignment
   display: `flex`,
   flexDirection: `column`,
-  gap: `60px`,
+  gap: `50px`,
 });
 
 export const LinksSection = style({
   //display
   width: `100%`,
-  padding: `60px 0.5rem 0.5rem 0.5rem`,
-  marginTop: `-60px`,
+  padding: `50px 0.5rem 0.5rem 0.5rem`,
+  marginTop: `-50px`,
   boxSizing: `border-box`,
   //alignment
   display: `flex`,
