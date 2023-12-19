@@ -66,6 +66,7 @@ export const ArtistIconWrapper = style({
   borderRadius: globalParams.borderRadius,
   boxShadow: globalParams.shadowLight,
   overflow: `hidden`,
+  transition: `box-shadow ${globalParams.time}`,
 });
 
 export const ArtistIconWrapperDark = style({

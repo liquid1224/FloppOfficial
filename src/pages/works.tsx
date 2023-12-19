@@ -73,6 +73,19 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
 };
 
 //Works Function
+type ButtonSectionProps = {
+  title: string;
+  children: React.ReactElement;
+};
+const ButtonsSection = ({ title, children }: ButtonSectionProps) => {
+  return (
+    <div className={Vanilla.ButtonsSection}>
+      <div className={Vanilla.ButtonsSectionTitle}>{title}</div>
+      <div className={Vanilla.ButtonsWrapper}>{children}</div>
+    </div>
+  );
+};
+
 type WorksFunctionProps = {
   data: Queries.WorksDataQuery;
 };
@@ -89,18 +102,6 @@ const WorksFunction = ({ data }: WorksFunctionProps) => {
   const isDarkMode = useIsDarkModeContext();
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
 
-  type ButtonSectionProps = {
-    title: string;
-    children: React.ReactElement;
-  };
-  const ButtonsSection = ({ title, children }: ButtonSectionProps) => {
-    return (
-      <div className={Vanilla.ButtonsSection}>
-        <div className={Vanilla.ButtonsSectionTitle}>{title}</div>
-        <div className={Vanilla.ButtonsWrapper}>{children}</div>
-      </div>
-    );
-  };
   return (
     <>
       <div className={Vanilla.Buttons}>
