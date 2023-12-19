@@ -102,7 +102,7 @@ export const WorkBox = style({
   boxShadow: globalParams.shadowLight,
   //transition
   transform: `none`,
-  transition: `transform ${globalParams.time}`,
+  transition: `transform ${globalParams.time}, box-shadow ${globalParams.time}`,
 });
 
 export const WorkBoxDark = style({

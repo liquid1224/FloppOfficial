@@ -32,6 +32,7 @@ export const Jacket = style({
   borderRadius: globalParams.borderRadius,
   boxShadow: globalParams.shadowLight,
   margin: `20px`,
+  transition: `box-shadow ${globalParams.time}`,
 });
 
 export const JacketDark = style({
