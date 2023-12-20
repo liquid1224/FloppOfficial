@@ -62,17 +62,6 @@ export const ArtistSectionWrapper = style({
   alignItems: `center`,
 });
 
-export const ArtistIconWrapper = style({
-  borderRadius: globalParams.borderRadius,
-  boxShadow: globalParams.shadowLight,
-  overflow: `hidden`,
-  transition: `box-shadow ${globalParams.time}`,
-});
-
-export const ArtistIconWrapperDark = style({
-  boxShadow: globalParams.shadowDark,
-});
-
 export const ArtistIcon = style({
   width: `100%`,
 });

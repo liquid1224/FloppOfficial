@@ -103,45 +103,6 @@ export const HeroWorks = style({
   gridGap: `30px`,
 });
 
-export const HeroWorkImg = style({
-  //position
-  width: `100%`,
-  //style
-  borderRadius: globalParams.borderRadius,
-  overflow: `hidden`,
-  boxShadow: globalParams.shadowLightSmall,
-  "@media": {
-    "(hover: hover)": {
-      ":hover": {
-        transform: globalParams.float,
-        boxShadow: globalParams.shadowLightSmallFloat,
-      },
-      ":active": {
-        boxShadow: globalParams.shadowLightSmall,
-        transform: `none`,
-      },
-    },
-  },
-  //transition
-  transition: `box-shadow ${globalParams.time}, transform ${globalParams.time} `,
-});
-
-export const HeroWorkImgDark = style({
-  boxShadow: globalParams.shadowDarkSmall,
-  "@media": {
-    "(hover: hover)": {
-      ":hover": {
-        transform: globalParams.float,
-        boxShadow: globalParams.shadowDarkSmallFloat,
-      },
-      ":active": {
-        boxShadow: globalParams.shadowDarkSmall,
-        transform: `none`,
-      },
-    },
-  },
-});
-
 export const MoviesWrapper = style({
   //display
   width: `100%`,
@@ -156,49 +117,6 @@ export const MoviesWrapper = style({
       width: `37%`,
     },
   },
-});
-
-export const YouTubeWrapper = style({
-  //display
-  width: `101%`,
-  aspectRatio: `16/9`,
-  //styles
-  boxShadow: `none`,
-  borderRadius: globalParams.borderRadius,
-  overflow: `hidden`,
-  "@media": {
-    "(hover: hover)": {
-      ":hover": {
-        boxShadow: globalParams.shadowLightSmall,
-        transform: globalParams.float,
-      },
-    },
-  },
-  //transition
-  transition: `box-shadow ${globalParams.time}, transform ${globalParams.time} `,
-});
-
-export const YouTubeWrapperDark = style({
-  "@media": {
-    "(hover: hover)": {
-      ":hover": {
-        boxShadow: globalParams.shadowDark,
-        transform: globalParams.float,
-      },
-    },
-  },
-});
-
-export const YouTube = style({
-  width: "100%",
-  height: "100%",
-  border: `none`,
-});
-
-export const YouTubePlaceHolder = style({
-  width: `100%`,
-  height: `100%`,
-  backgroundColor: `currentcolor`,
 });
 
 export const h2 = style({

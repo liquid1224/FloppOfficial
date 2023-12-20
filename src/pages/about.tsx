@@ -6,18 +6,10 @@ import { Seo } from "../templates/seo";
 import type { HeadFC } from "gatsby";
 //Author Components
 import * as Vanilla from "../styles/about.css";
-import { ScrollIndecator } from "../components/scrollIndicator";
-import { useIsDarkModeContext } from "../styles/context";
+import { ImageFrame } from "../components/imageFrame";
+import { ScrollIndicator } from "../components/scrollIndicator";
 
 const AboutPage = () => {
-  const StaticIconSection = () => {
-    const isDarkMode = useIsDarkModeContext();
-    return (
-      <div className={`${Vanilla.ArtistIconWrapper} ${isDarkMode ? Vanilla.ArtistIconWrapperDark : ""}`}>
-        <StaticImage src="../images/artist.jpg" alt="liquid1224" className={Vanilla.ArtistIcon} />
-      </div>
-    );
-  };
   type PluginSectionProps = {
     title: string;
     children: React.ReactElement;
@@ -39,7 +31,9 @@ const AboutPage = () => {
           <div className={Vanilla.ProfileWrapper}>
             <div className={Vanilla.IconSection}>
               <div className={Vanilla.ArtistSectionWrapper}>
-                <StaticIconSection />
+                <ImageFrame isSmall={false} isFloat={false}>
+                  <StaticImage src="../images/artist.jpg" alt="liquid1224" className={Vanilla.ArtistIcon} />
+                </ImageFrame>
                 <h2>liquid1224</h2>
               </div>
               <div>
@@ -64,7 +58,7 @@ const AboutPage = () => {
               2021年からは，中村椋および回造とともにプロジェクト・馬骨擬装網を開始．平沢進やP-MODELなどを強く意識したオマージュユニットとして，華力発電所とも異なる作品を展開している．
             </div>
           </div>
-          {isDesktop && <ScrollIndecator />}
+          {isDesktop && <ScrollIndicator />}
         </div>
         <div className={Vanilla.EnvironmentSection}>
           <h2 className={Vanilla.h2}>主たる制作設備</h2>

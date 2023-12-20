@@ -6,10 +6,11 @@ import { useMediaQuery } from "react-responsive";
 //Author Components
 import * as Vanilla from "../styles/index.css";
 import { Layout } from "../templates/layout";
-import { Seo } from "../templates/seo";
 import { Button } from "../components/button";
-import { ScrollIndecator } from "../components/scrollIndicator";
-import { useIsDarkModeContext } from "../styles/context";
+import { ImageFrame } from "../components/imageFrame";
+import { ScrollIndicator } from "../components/scrollIndicator";
+import { YouTubeLoader } from "../components/youtubeLoader";
+import { Seo } from "../templates/seo";
 
 type IndexPageProps = {
   data: Queries.HeroInfoQuery;
@@ -17,7 +18,6 @@ type IndexPageProps = {
 const IndexPage = ({ data }: IndexPageProps) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   const HeroInfo = ({ data }: IndexPageProps) => {
-    const isDarkMode = useIsDarkModeContext();
     return (
       <div className={Vanilla.HeroInfo}>
         <div className={Vanilla.HeroWorks}>
@@ -28,9 +28,9 @@ const IndexPage = ({ data }: IndexPageProps) => {
               const title = node.node.frontmatter?.title as string;
               return (
                 <Link to={link} key={index}>
-                  <div className={`${Vanilla.HeroWorkImg} ${isDarkMode ? Vanilla.HeroWorkImgDark : ""}`}>
+                  <ImageFrame isSmall={false} isFloat={true}>
                     <GatsbyImage image={image as IGatsbyImageData} alt={title} className="HeroInfoItemImg" loading="eager" />
-                  </div>
+                  </ImageFrame>
                 </Link>
               );
             }
@@ -63,45 +63,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
       </div>
     );
   };
-  type YouTubeContentsProps = {
-    src: string;
-  };
-  const YouTubeContents = ({ src }: YouTubeContentsProps) => {
-    //darkmode state
-    const isDarkMode = useIsDarkModeContext();
 
-    const [isIntersecting, setIsIntersecting] = useState(false);
-    const youtubeRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-      const options = {
-        root: null,
-        rootMargin: `0px`,
-        threshold: 0.5,
-      };
-
-      const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-          setIsIntersecting(true);
-          observer.unobserve(entry.target);
-        }
-      }, options);
-
-      if (youtubeRef.current) observer.observe(youtubeRef.current);
-
-      return () => {
-        if (youtubeRef.current) observer.unobserve(youtubeRef.current);
-      };
-    }, []);
-
-    return (
-      <div className={Vanilla.MoviesWrapper}>
-        <div ref={youtubeRef} className={`${Vanilla.YouTubeWrapper} ${isDarkMode ? Vanilla.YouTubeWrapperDark : ""}`}>
-          {isIntersecting ? <iframe src={src} className={Vanilla.YouTube} loading="lazy" /> : <div className={Vanilla.YouTubePlaceHolder} />}
-        </div>
-      </div>
-    );
-  };
   return (
     <Layout>
       <>
@@ -111,10 +73,12 @@ const IndexPage = ({ data }: IndexPageProps) => {
             <div className={Vanilla.Separator} />
             <HeroPoem />
           </div>
-          {isDesktop && <ScrollIndecator />}
+          {isDesktop && <ScrollIndicator />}
         </div>
         <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
-          <YouTubeContents src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js" />
+          <div className={Vanilla.MoviesWrapper}>
+            <YouTubeLoader src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js" />
+          </div>
           <div className={Vanilla.MusicTextWrapper}>
             <h2 className={Vanilla.h2}>Musics</h2>
             <div className={Vanilla.MusicDescriptionsWrapper}>
@@ -147,7 +111,9 @@ const IndexPage = ({ data }: IndexPageProps) => {
               VSTプラグインなどの音響関連ソフトウェアの制作も進行中です．
             </p>
           </div>
-          <YouTubeContents src="https://www.youtube.com/embed/-Qg9586n0Qw?si=Giem2z1CWN8wwkKQ" />
+          <div className={Vanilla.MoviesWrapper}>
+            <YouTubeLoader src="https://www.youtube.com/embed/-Qg9586n0Qw?si=Giem2z1CWN8wwkKQ" />
+          </div>
         </div>
       </>
     </Layout>

@@ -1,7 +1,7 @@
 import React from "react";
 import * as Vanilla from "./scrollIndicator.css";
 
-export const ScrollIndecator = () => {
+export const ScrollIndicator = () => {
   return (
     <div className={Vanilla.HeroScrollWrapper}>
       <svg className={Vanilla.ArrowsWrapper}>
