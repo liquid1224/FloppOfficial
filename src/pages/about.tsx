@@ -5,9 +5,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Seo } from "../templates/seo";
 import type { HeadFC } from "gatsby";
 //Author Components
-import * as Vanilla from "../styles/about.css";
 import { ImageFrame } from "../components/imageFrame";
 import { ScrollIndicator } from "../components/scrollIndicator";
+import { SeparatorVertical } from "../components/separators";
+import * as Vanilla from "../styles/about.css";
 
 const AboutPage = () => {
   type PluginSectionProps = {
@@ -18,7 +19,6 @@ const AboutPage = () => {
     return (
       <div>
         <h3 className={Vanilla.h3}>{title}</h3>
-        <div className={Vanilla.MiniSeparator} />
         {children}
       </div>
     );
@@ -45,7 +45,7 @@ const AboutPage = () => {
                 <br />
               </div>
             </div>
-            {isDesktop && <div className={Vanilla.Separator} />}
+            {isDesktop && <SeparatorVertical />}
             <div className={Vanilla.ProfileSection}>
               1999年12月24日生．
               <br />

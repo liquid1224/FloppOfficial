@@ -5,10 +5,10 @@ import { Layout } from "../templates/layout";
 import { LinkBox } from "../components/linkBox";
 import { Icons } from "../components/icons";
 import { globalLinks } from "../styles/global";
-import * as Vanilla from "../styles/contact.css";
-import * as VanillaLinkBox from "../components/linkBoxAssets.css";
 import { HeadFC } from "gatsby";
 import { Seo } from "../templates/seo";
+import * as Vanilla from "../styles/contact.css";
+import * as VanillaLinkBox from "../components/linkBoxAssets.css";
 
 const ContactPage = () => {
   return (
@@ -16,7 +16,6 @@ const ContactPage = () => {
       <div className={Vanilla.SectionsWrapper}>
         <div className={Vanilla.Section}>
           <h2 className={Vanilla.h2}>作品の感想を送りたい</h2>
-          <div className={Vanilla.Separator} />
           <p>メール，TwitterなどのSNS，YouTubeやBandcampのコメントなどでご随意にお送りください．</p>
           <div className={Vanilla.LinksWrapper}>
             <LinkBox
@@ -32,7 +31,6 @@ const ContactPage = () => {
         </div>
         <div className={Vanilla.Section}>
           <h2 className={Vanilla.h2}>ちょっとした依頼を出したい</h2>
-          <div className={Vanilla.Separator} />
           <p>
             個人利用目的の楽曲制作は，Skeb経由で受け付けております．詳しくは
             <a href="https://skeb.jp/client" className={Vanilla.InlineLink}>
@@ -46,7 +44,6 @@ const ContactPage = () => {
         </div>
         <div className={Vanilla.Section}>
           <h2 className={Vanilla.h2}>しっかりした依頼を出したい</h2>
-          <div className={Vanilla.Separator} />
           <p>
             以下の内容を含む，具体的な依頼内容をメールにてお送りください．通常1週間以内にご返信いたします．
             <ul className={Vanilla.ul}>

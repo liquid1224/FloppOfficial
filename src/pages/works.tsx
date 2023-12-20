@@ -113,7 +113,6 @@ const WorksFunction = ({ data }: WorksFunctionProps) => {
               <ButtonPushIn title="Others" isPushed={isOtherProject} onClick={() => setIsOtherProject(!isOtherProject)} />
             </>
           </ButtonsSection>
-          {isDesktop && <span className={Vanilla.ButtonsSectionsSeparator} />}
           <ButtonsSection title="Format">
             <>
               <ButtonPushIn title="Album" isPushed={isAlbum} onClick={() => setIsAlbum(!isAlbum)} />

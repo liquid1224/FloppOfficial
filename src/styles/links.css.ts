@@ -45,12 +45,6 @@ export const Menu = style({
   },
 });
 
-export const Separator = style({
-  width: `90vw`,
-  height: `1px`,
-  backgroundColor: `currentcolor`,
-});
-
 export const LinksSectionsWrapper = style({
   //display
   width: `100%`,

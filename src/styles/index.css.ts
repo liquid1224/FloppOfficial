@@ -1,4 +1,4 @@
-import { style, keyframes } from "@vanilla-extract/css";
+import { style } from "@vanilla-extract/css";
 import { globalParams } from "./global";
 
 export const HeroWrapper = style({
@@ -79,20 +79,6 @@ export const HeroPoemLink = style({
   width: `100%`,
 });
 
-export const Separator = style({
-  //style
-  height: `2px`,
-  width: `100%`,
-  backgroundColor: `currentcolor`,
-  //Desktop
-  "@media": {
-    [`${globalParams.pc}`]: {
-      width: `2px`,
-      height: `95%`,
-    },
-  },
-});
-
 export const HeroWorks = style({
   //style
   width: `100%`,
@@ -101,6 +87,33 @@ export const HeroWorks = style({
   gridTemplateColumns: `repeat(2, 1fr)`,
   gridTemplateRows: `repeat(2, 1fr)`,
   gridGap: `30px`,
+});
+
+export const IndexContentsWrapper = style({
+  //display
+  width: `100%`,
+  padding: `1.0rem 5vw`,
+  boxSizing: `border-box`,
+  //alignment
+  display: `flex`,
+  flexDirection: `column`,
+  justifyContent: `center`,
+  gap: `20px`,
+});
+
+export const Section = style({
+  //display
+  width: `100%`,
+  //alignment
+  display: `flex`,
+  flexDirection: `column`,
+  gap: `30px`,
+  "@media": {
+    [`${globalParams.pc}`]: {
+      flexDirection: `row`,
+      gap: `3%`,
+    },
+  },
 });
 
 export const MoviesWrapper = style({
@@ -150,29 +163,6 @@ export const MusicDescription = style({
   textAlign: `justify`,
 });
 
-export const Section = style({
-  //display
-  width: `100%`,
-  padding: `1.0rem 5vw`,
-  boxSizing: `border-box`,
-  //alignment
-  display: `flex`,
-  flexDirection: `column`,
-  gap: `30px`,
-  "@media": {
-    [`${globalParams.pc}`]: {
-      flexDirection: `row`,
-      gap: `3%`,
-    },
-  },
-});
-
 export const SectionElementsInversion = style({
   flexDirection: `column-reverse`,
-});
-
-export const SectionSeparator = style({
-  height: `2px`,
-  width: `90vw`,
-  backgroundColor: `currentcolor`,
 });

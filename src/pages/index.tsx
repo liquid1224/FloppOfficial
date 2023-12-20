@@ -11,6 +11,7 @@ import { ImageFrame } from "../components/imageFrame";
 import { ScrollIndicator } from "../components/scrollIndicator";
 import { YouTubeLoader } from "../components/youtubeLoader";
 import { Seo } from "../templates/seo";
+import { SeparatorHorizontal, SeparatorVertical } from "../components/separators";
 
 type IndexPageProps = {
   data: Queries.HeroInfoQuery;
@@ -70,49 +71,51 @@ const IndexPage = ({ data }: IndexPageProps) => {
         <div className={Vanilla.HeroWrapper}>
           <div className={Vanilla.HeroContents}>
             <HeroInfo data={data} />
-            <div className={Vanilla.Separator} />
+            {isDesktop ? <SeparatorVertical isBold={true} /> : <SeparatorHorizontal isBold={true} />}
             <HeroPoem />
           </div>
           {isDesktop && <ScrollIndicator />}
         </div>
-        <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
-          <div className={Vanilla.MoviesWrapper}>
-            <YouTubeLoader src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js" />
-          </div>
-          <div className={Vanilla.MusicTextWrapper}>
-            <h2 className={Vanilla.h2}>Musics</h2>
-            <div className={Vanilla.MusicDescriptionsWrapper}>
-              <div className={Vanilla.MusicDescription}>
-                <h3 className={Vanilla.h2}>Synthetic/Symphonic</h3>
-                幻惑的なシンセサウンドに，壮大なオーケストラ・叙事的な打楽器が絡む独特のサウンド．鋭さと立体感が共存する，ドラマチックなサウンドが特徴です．
-              </div>
-              <div className={Vanilla.MusicDescription}>
-                <h3 className={Vanilla.h2}>Twisted Voice Magic</h3>
-                震えるバスから鋭いファルセットまで，広い音域や多重録音をフル活用したボーカル．巨大なオーケストレーションの中でも燦然と輝く歌声を提供します．
-              </div>
-              <div className={Vanilla.MusicDescription}>
-                <h3 className={Vanilla.h2}>Spellbound Lyrics</h3>
-                隠喩と造語を多用する，難解かつ深遠な歌詞．繰り返し聴き，読み解くことで見えてくる圧倒的情報量の世界観がリスナーを魅了します．
-              </div>
-              <div className={Vanilla.MusicDescription}>
-                <h3 className={Vanilla.h2}>Integrated Production</h3>
-                構想から作編曲，レコーディングやポストプロダクションまで，全工程を担当可能．一貫性のあるプロダクションで安定したクオリティを保証します．
+        <div className={Vanilla.IndexContentsWrapper}>
+          <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
+            <div className={Vanilla.MoviesWrapper}>
+              <YouTubeLoader src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js" />
+            </div>
+            <div className={Vanilla.MusicTextWrapper}>
+              <h2 className={Vanilla.h2}>Musics</h2>
+              <div className={Vanilla.MusicDescriptionsWrapper}>
+                <div className={Vanilla.MusicDescription}>
+                  <h3 className={Vanilla.h2}>Synthetic/Symphonic</h3>
+                  幻惑的なシンセサウンドに，壮大なオーケストラ・叙事的な打楽器が絡む独特のサウンド．鋭さと立体感が共存する，ドラマチックなサウンドが特徴です．
+                </div>
+                <div className={Vanilla.MusicDescription}>
+                  <h3 className={Vanilla.h2}>Twisted Voice Magic</h3>
+                  震えるバスから鋭いファルセットまで，広い音域や多重録音をフル活用したボーカル．巨大なオーケストレーションの中でも燦然と輝く歌声を提供します．
+                </div>
+                <div className={Vanilla.MusicDescription}>
+                  <h3 className={Vanilla.h2}>Spellbound Lyrics</h3>
+                  隠喩と造語を多用する，難解かつ深遠な歌詞．繰り返し聴き，読み解くことで見えてくる圧倒的情報量の世界観がリスナーを魅了します．
+                </div>
+                <div className={Vanilla.MusicDescription}>
+                  <h3 className={Vanilla.h2}>Integrated Production</h3>
+                  構想から作編曲，レコーディングやポストプロダクションまで，全工程を担当可能．一貫性のあるプロダクションで安定したクオリティを保証します．
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className={Vanilla.SectionSeparator} />
-        <div className={Vanilla.Section}>
-          <div className={Vanilla.MusicTextWrapper}>
-            <h2 className={Vanilla.h2}>Hardware & Software</h2>
-            <p className={Vanilla.MusicDescription}>
-              レーザーハープなど，電子楽器の設計・制作を行っています．また制作した電子楽器を用い，音響的なインパクトと視覚的な楽しさを両立したステージパフォーマンスも行います．
-              <br />
-              VSTプラグインなどの音響関連ソフトウェアの制作も進行中です．
-            </p>
-          </div>
-          <div className={Vanilla.MoviesWrapper}>
-            <YouTubeLoader src="https://www.youtube.com/embed/-Qg9586n0Qw?si=Giem2z1CWN8wwkKQ" />
+          <SeparatorHorizontal />
+          <div className={Vanilla.Section}>
+            <div className={Vanilla.MusicTextWrapper}>
+              <h2 className={Vanilla.h2}>Hardware & Software</h2>
+              <p className={Vanilla.MusicDescription}>
+                レーザーハープなど，電子楽器の設計・制作を行っています．また制作した電子楽器を用い，音響的なインパクトと視覚的な楽しさを両立したステージパフォーマンスも行います．
+                <br />
+                VSTプラグインなどの音響関連ソフトウェアの制作も進行中です．
+              </p>
+            </div>
+            <div className={Vanilla.MoviesWrapper}>
+              <YouTubeLoader src="https://www.youtube.com/embed/-Qg9586n0Qw?si=Giem2z1CWN8wwkKQ" />
+            </div>
           </div>
         </div>
       </>

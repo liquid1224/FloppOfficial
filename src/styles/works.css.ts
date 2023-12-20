@@ -66,12 +66,6 @@ export const ButtonsWrapper = style({
   },
 });
 
-export const ButtonsSectionsSeparator = style({
-  width: `100%`,
-  height: `1px`,
-  backgroundColor: `currentcolor`,
-});
-
 export const WorksListWrapper = style({
   //display
   width: `100%`,

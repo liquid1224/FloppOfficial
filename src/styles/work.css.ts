@@ -3,7 +3,7 @@ import { globalParams } from "./global";
 
 export const WorksPageTemplateWrapper = style({
   width: `100%`,
-  padding: `0.5rem 5vw`,
+  padding: `20px 5vw`,
   boxSizing: `border-box`,
   display: `flex`,
   flexDirection: `column`,
@@ -16,27 +16,12 @@ export const WorksDescriptionsWrapper = style({
   width: `100%`,
   display: `flex`,
   flexDirection: `column`,
-  gap: `10px`,
+  gap: `20px`,
   "@media": {
     [`${globalParams.pc}`]: {
       flexDirection: `row`,
     },
   },
-});
-
-export const JacketWrapper = style({
-  width: `100%`,
-});
-
-export const Jacket = style({
-  borderRadius: globalParams.borderRadius,
-  boxShadow: globalParams.shadowLight,
-  margin: `20px`,
-  transition: `box-shadow ${globalParams.time}`,
-});
-
-export const JacketDark = style({
-  boxShadow: globalParams.shadowDark,
 });
 
 export const DescriptionsWrapper = style({
@@ -49,12 +34,6 @@ export const Item = style({
   margin: `0 0 0.5rem 5%`,
 });
 
-export const Separator = style({
-  width: `100%`,
-  height: `1px`,
-  backgroundColor: `currentcolor`,
-});
-
 export const Copy = style({
   display: `flex`,
   flexDirection: `column`,
@@ -64,7 +43,7 @@ export const Copy = style({
 export const LinksWrapper = style({
   //display
   width: `100%`,
-  margin: `10px 0`,
+  margin: `20px 0`,
   padding: `0 0.5rem`,
   boxSizing: `border-box`,
   //alignment
@@ -91,16 +70,21 @@ export const Section = style({
   width: `100%`,
 });
 
-export const SeparatorBold = style({
-  width: `100%`,
-  height: `2px`,
-  backgroundColor: `currentcolor`,
-});
-
-export const h1 = style({
+export const NoMargin = style({
   margin: `0`,
 });
 
-export const h2 = style({
-  margin: `0`,
+export const Underline = style({
+  //alignment
+  display: `flex`,
+  flexDirection: `column`,
+  //underline
+  selectors: {
+    [`&::after`]: {
+      content: ``,
+      width: `100%`,
+      height: `1px`,
+      backgroundColor: `currentcolor`,
+    },
+  },
 });

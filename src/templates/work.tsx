@@ -5,10 +5,11 @@ import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-p
 import { Layout } from "./layout";
 import { LinkBox } from "../components/linkBox";
 import { Icons } from "../components/icons";
+import { ImageFrame } from "../components/imageFrame";
+import { SeparatorHorizontal } from "../components/separators";
+import { Seo } from "./seo";
 import * as Vanilla from "../styles/work.css";
 import * as VanillaLinkBoxAssets from "../components/linkBoxAssets.css";
-import { useIsDarkModeContext } from "../styles/context";
-import { Seo } from "./seo";
 
 type WorksPageTemplateProps = {
   data: Queries.WorkMetaDataQuery;
@@ -55,11 +56,10 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
   };
 
   const Jacket = () => {
-    const isDarkMode = useIsDarkModeContext();
     return (
-      <div className={Vanilla.JacketWrapper}>
-        <GatsbyImage image={jacket as IGatsbyImageData} alt={title} className={`${Vanilla.Jacket} ${isDarkMode ? Vanilla.JacketDark : ""}`} />
-      </div>
+      <ImageFrame isSmall={false} isFloat={false}>
+        <GatsbyImage image={jacket as IGatsbyImageData} alt={title} />
+      </ImageFrame>
     );
   };
 
@@ -75,20 +75,17 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
                 {description !== "" && description} {compilation !== "" && `"${compilation}"`}
               </div>
             )}
-            <h1 className={Vanilla.h1}>{title}</h1>
+            <h1 className={`${Vanilla.NoMargin}`}>{title}</h1>
             {/* date */}
-            <div>Release</div>
-            <div className={Vanilla.Separator} />
+            <div className={Vanilla.Underline}>Release</div>
             <p className={Vanilla.Item}>{date}</p>
             {/* project */}
-            <div>Project</div>
-            <div className={Vanilla.Separator} />
+            <div className={Vanilla.Underline}>Project</div>
             <p className={Vanilla.Item}>{project !== null ? project : projectCustom}</p>
             {/* copy */}
             {copy !== null && (
               <>
-                <div>Description</div>
-                <div className={Vanilla.Separator} />
+                <div className={Vanilla.Underline}>Description</div>
                 <p className={`${Vanilla.Copy} ${Vanilla.Item}`}>
                   {copySplited?.map((line, index) => (
                     <div key={index}>{line}</div>
@@ -108,8 +105,7 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
         )}
         {IsStreamed() && (
           <div className={Vanilla.Section}>
-            <h2 className={Vanilla.h2}>Streaming</h2>
-            <div className={Vanilla.SeparatorBold} />
+            <h2 className={`${Vanilla.NoMargin} ${Vanilla.Underline}`}>Streaming</h2>
             <div className={Vanilla.LinksWrapper}>
               {(spotify !== null || undefined) && <LinkBox icon={Icons.spotify} text="Spotify" link={`https://open.spotify.com/intl-ja/album/${spotify}`} style={VanillaLinkBoxAssets.Spotify} />}
               {(appleMusic !== null || undefined) && (
@@ -130,8 +126,7 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
         )}
         {IsSold() && (
           <div className={Vanilla.Section}>
-            <h2 className={Vanilla.h2}>Store</h2>
-            <div className={Vanilla.SeparatorBold} />
+            <h2 className={`${Vanilla.NoMargin} ${Vanilla.Underline}`}>Store</h2>
             <div className={Vanilla.LinksWrapper}>
               {(boothCD !== null || undefined) && <LinkBox icon={Icons.booth} text="Booth(CD)" link={boothCD as string} style={VanillaLinkBoxAssets.Booth} />}
               {(boothDL !== null || undefined) && <LinkBox icon={Icons.booth} text="Booth(DL)" link={boothDL as string} style={VanillaLinkBoxAssets.Booth} />}

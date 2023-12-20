@@ -66,12 +66,6 @@ export const ArtistIcon = style({
   width: `100%`,
 });
 
-export const Separator = style({
-  width: `2px`,
-  height: `100%`,
-  backgroundColor: `currentcolor`,
-});
-
 export const ProfileSection = style({
   width: `100%`,
   gridColumn: `1fr`,
@@ -109,12 +103,17 @@ export const h2 = style({
 
 export const h3 = style({
   margin: `0`,
-});
-
-export const MiniSeparator = style({
-  width: `100%`,
-  height: `1px`,
-  backgroundColor: `currentcolor`,
+  display: `flex`,
+  flexDirection: `column`,
+  //underline
+  selectors: {
+    [`&::after`]: {
+      content: ``,
+      width: `100%`,
+      height: `1px`,
+      backgroundColor: `currentcolor`,
+    },
+  },
 });
 
 export const ul = style({

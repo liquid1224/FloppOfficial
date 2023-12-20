@@ -23,6 +23,17 @@ export const Section = style({
 export const h2 = style({
   //style
   marginBottom: `0`,
+  display: `flex`,
+  flexDirection: `column`,
+  //underline
+  selectors: {
+    [`&::after`]: {
+      content: ``,
+      width: `100%`,
+      height: `1px`,
+      backgroundColor: `currentcolor`,
+    },
+  },
 });
 
 export const LinksWrapper = style({
@@ -37,12 +48,6 @@ export const LinksWrapper = style({
 export const ul = style({
   padding: "0",
   margin: "0 0 0 1.5rem",
-});
-
-export const Separator = style({
-  width: `100%`,
-  height: `1px`,
-  backgroundColor: `currentcolor`,
 });
 
 export const InlineLink = style({
