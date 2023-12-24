@@ -108,9 +108,26 @@ export const WorkBoxHover = style({
     "(hover: hover)": {
       ":hover": {
         transform: globalParams.float,
+        boxShadow: globalParams.shadowLightFloat,
       },
       ":active": {
         transform: `none`,
+        boxShadow: globalParams.shadowLight,
+      },
+    },
+  },
+});
+
+export const WorkBoxHoverDark = style({
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        transform: globalParams.float,
+        boxShadow: globalParams.shadowDarkFloat,
+      },
+      ":active": {
+        transform: `none`,
+        boxShadow: globalParams.shadowDark,
       },
     },
   },

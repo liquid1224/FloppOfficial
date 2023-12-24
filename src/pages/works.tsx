@@ -8,7 +8,6 @@ import { Seo } from "../templates/seo";
 import { ButtonPushIn } from "../components/button";
 import * as Vanilla from "../styles/works.css";
 import { useIsDarkModeContext } from "../styles/context";
-import { useMediaQuery } from "react-responsive";
 
 //Works List
 type WorksListProps = {
@@ -56,7 +55,11 @@ const WorksList = ({ isAlbum, isSingle, isOtherFormat, isFlopp, isUma, isCompila
           const image = getImage(node.node.frontmatter?.jacket as ImageDataLike);
           return (
             <Link className={Vanilla.Link} to={`/works/${node.node.frontmatter?.slug as string}`} key={index}>
-              <div className={`${Vanilla.WorkBox} ${isDarkMode ? Vanilla.WorkBoxDark : ""} ${index === hover ? Vanilla.WorkBoxHover : ""}`}>
+              <div
+                className={`${Vanilla.WorkBox} ${isDarkMode ? Vanilla.WorkBoxDark : ""} ${index === hover && !isDarkMode ? Vanilla.WorkBoxHover : ""} ${
+                  index === hover && isDarkMode ? Vanilla.WorkBoxHoverDark : ""
+                }`}
+              >
                 <GatsbyImage className={Vanilla.Image} image={image as IGatsbyImageData} alt={node.node.frontmatter?.title as string} />
                 <div className={Vanilla.WorkBoxDescription} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave}>
                   <h3 className={`${Vanilla.ResetH} ${Vanilla.h3}`}>{!node.node.frontmatter?.compilationTitle ? null : `${node.node.frontmatter.compilationTitle}収録`}</h3>
@@ -99,7 +102,6 @@ const WorksFunction = ({ data }: WorksFunctionProps) => {
   const [isOtherProject, setIsOtherProject] = useState(true);
 
   const isDarkMode = useIsDarkModeContext();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
     <>
