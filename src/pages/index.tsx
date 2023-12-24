@@ -71,7 +71,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
         <div className={Vanilla.HeroWrapper}>
           <div className={Vanilla.HeroContents}>
             <HeroInfo data={data} />
-            {isDesktop ? <SeparatorVertical isBold={true} /> : <SeparatorHorizontal isBold={true} />}
+            {isDesktop ? <SeparatorVertical isBold={true} /> : null}
             <HeroPoem />
           </div>
           {isDesktop && <ScrollIndicator />}
