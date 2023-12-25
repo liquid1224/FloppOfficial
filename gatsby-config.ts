@@ -58,6 +58,15 @@ const config: GatsbyConfig = {
         crossOrigin: `use-credentials`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-ZHWCKYCLSG"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
 };
 
