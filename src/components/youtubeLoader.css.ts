@@ -3,7 +3,7 @@ import { globalParams } from "../styles/global";
 
 export const YouTubeWrapper = style({
   //display
-  width: `101%`,
+  width: `100%`,
   aspectRatio: `16/9`,
   //styles
   boxShadow: `none`,
@@ -21,7 +21,7 @@ export const YouTubeWrapper = style({
   transition: `box-shadow ${globalParams.time}, transform ${globalParams.time} `,
 });
 
-export const YouTubeWrapperDark = style({
+export const Dark = style({
   "@media": {
     "(hover: hover)": {
       ":hover": {
@@ -35,11 +35,12 @@ export const YouTubeWrapperDark = style({
 export const YouTube = style({
   width: "100%",
   height: "100%",
+});
+
+export const Contents = style({
   border: `none`,
 });
 
-export const YouTubePlaceHolder = style({
-  width: `100%`,
-  height: `100%`,
+export const PlaceHolder = style({
   backgroundColor: `currentcolor`,
 });

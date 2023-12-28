@@ -79,7 +79,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
         <div className={Vanilla.IndexContentsWrapper}>
           <div className={`${Vanilla.Section} ${Vanilla.SectionElementsInversion}`}>
             <div className={Vanilla.MoviesWrapper}>
-              <YouTubeLoader src="https://www.youtube.com/embed/E3r26D4u4CE?si=eq8dT0VURpyah0Js" />
+              <YouTubeLoader id="E3r26D4u4CE" />
             </div>
             <div className={Vanilla.MusicTextWrapper}>
               <h2 className={Vanilla.h2}>Musics</h2>
@@ -114,7 +114,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
               </p>
             </div>
             <div className={Vanilla.MoviesWrapper}>
-              <YouTubeLoader src="https://www.youtube.com/embed/-Qg9586n0Qw?si=Giem2z1CWN8wwkKQ" />
+              <YouTubeLoader id="-Qg9586n0Qw" />
             </div>
           </div>
         </div>
