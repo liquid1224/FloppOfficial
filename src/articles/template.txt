@@ -5,6 +5,7 @@ date: ""
 lastUpdate: ""
 thumbnail: "../images/ogpDefault.jpg"
 series: ""
+description: ""
 ---
 
 thumbnailは1200*630

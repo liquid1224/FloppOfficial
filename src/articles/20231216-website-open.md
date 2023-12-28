@@ -5,6 +5,7 @@ date: "2023/12/15"
 lastUpdate: "2023/12/16"
 thumbnail: "../images/ogpDefault.jpg"
 series: "News"
+description: "「華力発電所 Official Site」が、リニューアルオープンいたしました。"
 ---
 
 本サイト，「華力発電所 Official Site」が，リニューアルオープンいたしました．

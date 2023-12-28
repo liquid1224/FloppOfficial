@@ -43,6 +43,7 @@ export const Head: HeadFC<Queries.BlogPostQuery> = ({ data }) => (
     path="/blog"
     slug={`/${data.allMarkdownRemark.edges[0].node.frontmatter?.slug as string}`}
     ogpImagePath={data.allMarkdownRemark.edges[0].node.frontmatter?.thumbnail?.childImageSharp?.fixed?.src as string}
+    description={data.allMarkdownRemark.edges[0].node.frontmatter?.description as string}
   ></Seo>
 );
 
@@ -53,6 +54,7 @@ export const query = graphql`
         node {
           html
           frontmatter {
+            description
             title
             series
             slug
