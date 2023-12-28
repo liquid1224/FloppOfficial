@@ -5,6 +5,8 @@ import { globalParams } from "../styles/global";
 export const ImageFrame = style({
   //display
   position: `relative`,
+  width: `100%`,
+  height: `100%`,
   //style
   borderRadius: globalParams.borderRadius,
   boxShadow: globalParams.shadowLight,

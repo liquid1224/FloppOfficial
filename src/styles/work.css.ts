@@ -16,6 +16,7 @@ export const WorksDescriptionsWrapper = style({
   width: `100%`,
   display: `flex`,
   flexDirection: `column`,
+  alignItems: `center`,
   gap: `20px`,
   "@media": {
     [`${globalParams.pc}`]: {
