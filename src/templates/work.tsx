@@ -27,24 +27,24 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
         return null;
     }
   };
-  const works = data.allMarkdownRemark.nodes;
-  const jacket = getImage(works[0].frontmatter?.jacket as ImageDataLike);
-  const description = works[0].frontmatter?.description as string;
-  const compilation = works[0].frontmatter?.compilationTitle as string;
-  const title = works[0].frontmatter?.title as string;
-  const date = works[0].frontmatter?.date as string;
-  const copy = works[0].frontmatter?.copy;
-  const copySplited = works[0].frontmatter?.copy?.split("\n");
-  const project = Project(works[0].frontmatter?.project as string);
-  const projectCustom = works[0].frontmatter?.projectCustom as string;
-  const spotify = works[0].frontmatter?.idSpotify;
-  const appleMusic = works[0].frontmatter?.idAppleMusic;
-  const amazonMusic = works[0].frontmatter?.idAmazonMusic;
-  const youtube = works[0].frontmatter?.idYouTube;
-  const lineMusic = works[0].frontmatter?.idLineMusic;
-  const boothCD = works[0].frontmatter?.linkBoothCD;
-  const boothDL = works[0].frontmatter?.linkBoothDL;
-  const bandcamp = works[0].frontmatter?.linkBandcamp;
+  const works = data.allMarkdownRemark.nodes[0];
+  const jacket = getImage(works.frontmatter?.jacket as ImageDataLike);
+  const description = works.frontmatter?.description as string;
+  const compilation = works.frontmatter?.compilationTitle as string;
+  const title = works.frontmatter?.title as string;
+  const date = works.frontmatter?.date as string;
+  const copy = works.frontmatter?.copy;
+  const copySplited = works.frontmatter?.copy?.split("\n");
+  const project = Project(works.frontmatter?.project as string);
+  const projectCustom = works.frontmatter?.projectCustom as string;
+  const spotify = works.frontmatter?.idSpotify;
+  const appleMusic = works.frontmatter?.idAppleMusic;
+  const amazonMusic = works.frontmatter?.idAmazonMusic;
+  const youtube = works.frontmatter?.idYouTube;
+  const lineMusic = works.frontmatter?.idLineMusic;
+  const boothCD = works.frontmatter?.linkBoothCD;
+  const boothDL = works.frontmatter?.linkBoothDL;
+  const bandcamp = works.frontmatter?.linkBandcamp;
 
   const IsStreamed = () => {
     if (spotify !== null || appleMusic !== null || amazonMusic !== null || youtube !== null || lineMusic !== null) return true;
