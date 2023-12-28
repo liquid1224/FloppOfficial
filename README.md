@@ -25,12 +25,15 @@
 ## Works
 
 `gatsby-node.ts`で生成．各作品データは`/src/works/`以下．
+
 各データはデフォルトで`null`にすること．
+
 テンプレートは`/src/works/template.txt`．
 
 ## Blog
 
 `gatsby-node.ts`で生成．各記事データは`/src/articles/`以下．
+
 テンプレートは`/src/articles/template.txt`．
 
 ## Design
@@ -40,5 +43,7 @@
 ## Others
 
 `gatsby-browser.tsx`：リセット CSS とウェブフォントのロード
+
 `gatsby-config.ts`：メタデータの記載，plugins の設定
+
 `gatsby-ssr.ts`：`setHtmlAttributes({ lang: "ja" })`のみ
