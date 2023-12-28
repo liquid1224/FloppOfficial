@@ -37,7 +37,12 @@ export const ArticlesPageTemplate = ({ data }: ArticlesPageTemplateProps) => {
 };
 export default ArticlesPageTemplate;
 
-export const Head: HeadFC<Queries.BlogPostQuery> = ({ data }) => <Seo title={data.allMarkdownRemark.edges[0].node.frontmatter?.title as string}></Seo>;
+export const Head: HeadFC<Queries.BlogPostQuery> = ({ data }) => (
+  <Seo
+    title={data.allMarkdownRemark.edges[0].node.frontmatter?.title as string}
+    ogpImagePath={data.allMarkdownRemark.edges[0].node.frontmatter?.thumbnail?.childImageSharp?.fixed?.src as string}
+  ></Seo>
+);
 
 export const query = graphql`
   query BlogPost($id: String!) {
@@ -52,6 +57,9 @@ export const query = graphql`
             thumbnail {
               childImageSharp {
                 gatsbyImageData
+                fixed {
+                  src
+                }
               }
             }
           }
