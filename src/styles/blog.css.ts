@@ -72,7 +72,7 @@ export const Thumbnail = style({
 
 export const TextWrapper = style({
   width: `67%`,
-  margin: `0.5rem 0`,
+  margin: `0.5rem 0.5rem 0.5rem 0`,
   display: `flex`,
   flexDirection: `column`,
   justifyContent: `center`,

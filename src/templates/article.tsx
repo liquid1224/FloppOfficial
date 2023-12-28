@@ -9,10 +9,10 @@ type ArticlesPageTemplateProps = {
   data: Queries.BlogPostQuery;
 };
 export const ArticlesPageTemplate = ({ data }: ArticlesPageTemplateProps) => {
-  const articles = data.allMarkdownRemark.edges;
-  const series = articles[0].node.frontmatter?.series as string;
-  const title = articles[0].node.frontmatter?.title as string;
-  const thumbnail = getImage(articles[0].node.frontmatter?.thumbnail as ImageDataLike);
+  const articles = data.allMarkdownRemark.edges[0];
+  const series = articles.node.frontmatter?.series as string;
+  const title = articles.node.frontmatter?.title as string;
+  const thumbnail = getImage(articles.node.frontmatter?.thumbnail as ImageDataLike);
   return (
     <Layout>
       <div className={Vanilla.BlogHeader}>
@@ -24,7 +24,7 @@ export const ArticlesPageTemplate = ({ data }: ArticlesPageTemplateProps) => {
       </div>
       <div
         dangerouslySetInnerHTML={{
-          __html: articles[0].node.html as TrustedHTML,
+          __html: articles.node.html as TrustedHTML,
         }}
         className={Vanilla.Body}
       ></div>
@@ -36,8 +36,8 @@ export default ArticlesPageTemplate;
 export const Head: HeadFC<Queries.BlogPostQuery> = ({ data }) => <Seo title={data.allMarkdownRemark.edges[0].node.frontmatter?.title as string}></Seo>;
 
 export const query = graphql`
-  query BlogPost {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/articles/" } }) {
+  query BlogPost($id: String!) {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/articles/" }, id: { eq: $id } }) {
       edges {
         node {
           html
