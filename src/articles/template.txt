@@ -3,6 +3,8 @@ slug: ""
 title: ""
 date: ""
 lastUpdate: ""
-thumbnail: ""
+thumbnail: "../images/ogpDefault.jpg"
 series: ""
 ---
+
+thumbnailは1200*630
