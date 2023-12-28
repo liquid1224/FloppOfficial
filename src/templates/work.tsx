@@ -6,7 +6,6 @@ import { Layout } from "./layout";
 import { LinkBox } from "../components/linkBox";
 import { Icons } from "../components/icons";
 import { ImageFrame } from "../components/imageFrame";
-import { SeparatorHorizontal } from "../components/separators";
 import { Seo } from "./seo";
 import * as Vanilla from "../styles/work.css";
 import * as VanillaLinkBoxAssets from "../components/linkBoxAssets.css";
