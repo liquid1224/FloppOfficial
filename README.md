@@ -36,3 +36,9 @@
 ## Design
 
 `/src/styles/global.tsx`に，各スタイルの値を定義．
+
+## Others
+
+`gatsby-browser.tsx`：リセット CSS とウェブフォントのロード
+`gatsby-config.ts`：メタデータの記載，plugins の設定
+`gatsby-ssr.ts`：`setHtmlAttributes({ lang: "ja" })`のみ
