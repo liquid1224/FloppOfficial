@@ -29,7 +29,7 @@ export const Seo = ({ description, title, children, ogpImagePath }: SeoProps) =>
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
   const siteUrl = site.siteMetadata?.siteUrl;
-  const image = ogpImagePath ? `${siteUrl}/${ogpImagePath}` : `${siteUrl}/${ogpDefault}`;
+  const image = ogpImagePath ? `${siteUrl}${ogpImagePath}` : `${siteUrl}/${ogpDefault}`;
 
   return (
     <>
