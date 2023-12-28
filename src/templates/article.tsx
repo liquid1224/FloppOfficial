@@ -1,9 +1,11 @@
+//import default components
 import React from "react";
-import { Layout } from "./layout";
 import { HeadFC, graphql } from "gatsby";
-import * as Vanilla from "../styles/article.css";
 import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-plugin-image";
+//import author components
+import { Layout } from "./layout";
 import { Seo } from "./seo";
+import * as Vanilla from "../styles/article.css";
 
 type ArticlesPageTemplateProps = {
   data: Queries.BlogPostQuery;
@@ -22,12 +24,14 @@ export const ArticlesPageTemplate = ({ data }: ArticlesPageTemplateProps) => {
           <h1 className={Vanilla.BlogTitle}>{title}</h1>
         </div>
       </div>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: articles.node.html as TrustedHTML,
-        }}
-        className={Vanilla.Body}
-      ></div>
+      <article className="">
+        <div
+          dangerouslySetInnerHTML={{
+            __html: articles.node.html as TrustedHTML,
+          }}
+          className={Vanilla.Body}
+        ></div>
+      </article>
     </Layout>
   );
 };
