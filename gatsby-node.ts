@@ -24,7 +24,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions:
     });
   });
 
-  //Generate Articles Pages
+  //Generate Article Pages
   const AllArticlesSlug = await graphql<Queries.AllArticlesSlugQuery>(`
     query AllArticlesSlug {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/articles/" } }) {
