@@ -2,10 +2,11 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `華力発電所 Official`,
+    title: `華力発電所 | Progressive Synthpop Engineer`,
+    siteName: `華力発電所 Official`,
     siteUrl: `https://liquid1224.net`,
     author: `@liquid1224`,
-    description: `華力発電所(FLOwer Power Plant, FLOPP)は，liquid1224による音楽関連プロジェクトです．プログレッシブ・テクノポップ，シンフォニック・テクノポップを中心とした様々なスタイルの楽曲を制作しています．`,
+    description: `華力発電所(FLOPP, Flower Power Plant)は、liquid1224による音楽関連プロジェクトです。プログレッシブ・テクノポップ、シンフォニック・テクノポップを中心とした様々なスタイルの楽曲を制作しています。`,
     image: `src/images/ogpDefault.jpg`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.

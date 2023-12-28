@@ -103,4 +103,4 @@ const LinksPage = () => {
 };
 export default LinksPage;
 
-export const Head: HeadFC = () => <Seo title="LINKS" path="/links"></Seo>;
+export const Head: HeadFC = () => <Seo title="LINKS" path="/links" description="サークル華力発電所の配信サイトやSNSなど、関連リンクを掲載しています。"></Seo>;

@@ -248,4 +248,4 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-export const Head: HeadFC = () => <Seo title="ABOUT" path="/about" />;
+export const Head: HeadFC = () => <Seo title="ABOUT" path="/about" description="サークル華力発電所主宰@liquid1224の経歴、制作環境などを掲載しています。" />;

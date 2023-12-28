@@ -153,7 +153,7 @@ const WorksPage = ({ data }: WorksPageProps) => {
   );
 };
 export default WorksPage;
-export const Head: HeadFC = () => <Seo title="WORKS" path="/works" />;
+export const Head: HeadFC = () => <Seo title="WORKS" path="/works" description="サークル華力発電所、ユニット馬骨擬装網、その他@liquid1224が参加した作品の一覧です。" />;
 
 //Query
 export const query = graphql`

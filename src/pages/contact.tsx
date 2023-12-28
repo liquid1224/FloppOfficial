@@ -126,4 +126,4 @@ const ContactPage = () => {
 };
 export default ContactPage;
 
-export const Head: HeadFC = () => <Seo title="CONTACT" path="/contact" />;
+export const Head: HeadFC = () => <Seo title="CONTACT" path="/contact" description="サークル華力発電所の連絡先情報などを掲載しています。" />;

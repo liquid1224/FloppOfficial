@@ -73,4 +73,4 @@ export const query = graphql`
   }
 `;
 
-export const Head: HeadFC = () => <Seo title="BLOG" path="/blog" />;
+export const Head: HeadFC = () => <Seo title="BLOG" path="/blog" description="サークル華力発電所公式ブログです。新着情報や、主宰@liquid1224の日々のつぶやきなどを掲載しています。" />;
