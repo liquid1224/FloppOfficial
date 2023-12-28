@@ -1,8 +1,8 @@
 {
-  "name": "official",
+  "name": "flopp_official",
   "version": "1.0.0",
-  "private": true,
-  "description": "official",
+  "private": false,
+  "description": "華力発電所(Flopp) Official Web Site",
   "author": "liquid1224",
   "keywords": [
     "gatsby"
