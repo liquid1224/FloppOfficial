@@ -82,6 +82,17 @@ export const Series = style({
   margin: `0`,
 });
 
+export const ArticleTitleWrapper = style({
+  width: `100%`,
+  height: `100%`,
+  lineHeight: `1.5em`,
+  maxHeight: `3.0em`,
+  //alignment
+  display: `flex`,
+  flexDirection: `column`,
+  overflow: `hidden`,
+});
+
 export const h2 = style({
   margin: `0`,
 });
