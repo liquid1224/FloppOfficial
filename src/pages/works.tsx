@@ -153,7 +153,7 @@ const WorksPage = ({ data }: WorksPageProps) => {
   );
 };
 export default WorksPage;
-export const Head: HeadFC = () => <Seo title="WORKS"></Seo>;
+export const Head: HeadFC = () => <Seo title="WORKS" path="/works" />;
 
 //Query
 export const query = graphql`

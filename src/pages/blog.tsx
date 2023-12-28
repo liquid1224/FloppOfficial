@@ -4,7 +4,6 @@ import { HeadFC, Link, graphql } from "gatsby";
 import { GatsbyImage, IGatsbyImageData, ImageDataLike, getImage } from "gatsby-plugin-image";
 //Author Components
 import { Layout } from "../templates/layout";
-import { PageSelector } from "../components/button";
 import * as Vanilla from "../styles/blog.css";
 import { useIsDarkModeContext } from "../styles/context";
 import { Seo } from "../templates/seo";
@@ -74,4 +73,4 @@ export const query = graphql`
   }
 `;
 
-export const Head: HeadFC = () => <Seo title="BLOG"></Seo>;
+export const Head: HeadFC = () => <Seo title="BLOG" path="/blog" />;

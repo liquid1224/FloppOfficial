@@ -5,11 +5,12 @@ import ogpDefault from "../images/ogpDefault.jpg";
 type SeoProps = {
   description?: string;
   title: string;
-  children?: React.ReactElement;
+  path?: string;
+  slug?: string;
   ogpImagePath?: string;
 };
 
-export const Seo = ({ description, title, children, ogpImagePath }: SeoProps) => {
+export const Seo = ({ description, title, path, slug, ogpImagePath }: SeoProps) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -36,6 +37,7 @@ export const Seo = ({ description, title, children, ogpImagePath }: SeoProps) =>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta property="robots" content="index,follow" />
       <meta name="description" content={metaDescription} />
+      <meta property="og:url" content={`${siteUrl}${path ? path : ""}${slug ? slug : ""}`} />
       <meta property="og:title" content={`${title} | ${defaultTitle}`} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
@@ -44,7 +46,6 @@ export const Seo = ({ description, title, children, ogpImagePath }: SeoProps) =>
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={`${title} | ${defaultTitle}`} />
       <meta name="twitter:description" content={metaDescription} />
-      {children}
     </>
   );
 };

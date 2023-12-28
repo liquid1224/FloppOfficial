@@ -40,6 +40,8 @@ export default ArticlesPageTemplate;
 export const Head: HeadFC<Queries.BlogPostQuery> = ({ data }) => (
   <Seo
     title={data.allMarkdownRemark.edges[0].node.frontmatter?.title as string}
+    path="/blog"
+    slug={`/${data.allMarkdownRemark.edges[0].node.frontmatter?.slug as string}`}
     ogpImagePath={data.allMarkdownRemark.edges[0].node.frontmatter?.thumbnail?.childImageSharp?.fixed?.src as string}
   ></Seo>
 );

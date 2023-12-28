@@ -248,4 +248,4 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-export const Head: HeadFC = () => <Seo title="ABOUT"></Seo>;
+export const Head: HeadFC = () => <Seo title="ABOUT" path="/about" />;

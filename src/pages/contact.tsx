@@ -126,4 +126,4 @@ const ContactPage = () => {
 };
 export default ContactPage;
 
-export const Head: HeadFC = () => <Seo title="CONTACT"></Seo>;
+export const Head: HeadFC = () => <Seo title="CONTACT" path="/contact" />;

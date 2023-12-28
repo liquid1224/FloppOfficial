@@ -140,7 +140,12 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
 export default WorkPageTemplate;
 
 export const Head: HeadFC<Queries.WorkMetaDataQuery> = ({ data }) => (
-  <Seo title={data.allMarkdownRemark.nodes[0].frontmatter?.title as string} ogpImagePath={data.allMarkdownRemark.nodes[0].frontmatter?.jacket?.childImageSharp?.fixed?.src}></Seo>
+  <Seo
+    title={data.allMarkdownRemark.nodes[0].frontmatter?.title as string}
+    path="/works"
+    slug={`/${data.allMarkdownRemark.nodes[0].frontmatter?.slug as string}`}
+    ogpImagePath={data.allMarkdownRemark.nodes[0].frontmatter?.jacket?.childImageSharp?.fixed?.src}
+  ></Seo>
 );
 
 export const query = graphql`

@@ -103,4 +103,4 @@ const LinksPage = () => {
 };
 export default LinksPage;
 
-export const Head: HeadFC = () => <Seo title="LINKS"></Seo>;
+export const Head: HeadFC = () => <Seo title="LINKS" path="/links"></Seo>;

@@ -124,7 +124,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
 };
 export default IndexPage;
 
-export const Head: HeadFC = () => <Seo title="TOP"></Seo>;
+export const Head: HeadFC = () => <Seo title="TOP" />;
 
 export const query = graphql`
   query HeroInfo {
