@@ -64,7 +64,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
           <Button link="about" title="ABOUT →" />
         </div>
         <div className={Vanilla.BlogPosts}>
-          <h3 className={Vanilla.Header}>Latest Info</h3>
+          <h2 className={Vanilla.Header}>Latest Info</h2>
           <ul className={Vanilla.BlogPostsUl}>
             {data.articles.edges.map((node, index) => {
               const slug = node.node.frontmatter?.slug as string;
