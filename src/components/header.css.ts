@@ -159,7 +159,7 @@ export const ToggleSwitchLabel = style({
 });
 
 export const ToggleSwitchLabelChecked = style({
-  background: globalParams.accentColorLight,
+  background: globalParams.accentColor,
   ":after": {
     left: "calc( var(--ToggleSwitchWidth) - var(--ToggleSwitchCircle) - var(--ToggleSwitchPadding))",
     borderRadius: "50%",

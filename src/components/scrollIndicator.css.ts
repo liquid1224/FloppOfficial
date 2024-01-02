@@ -24,7 +24,7 @@ const ArrowsAnimation = keyframes({
 });
 
 export const Path1 = style({
-  stroke: globalParams.accentColorLight,
+  stroke: globalParams.accentColor,
   fill: `transparent`,
   strokeWidth: `1px`,
   animation: `${ArrowsAnimation} 2s infinite`,
@@ -32,7 +32,7 @@ export const Path1 = style({
 });
 
 export const Path2 = style({
-  stroke: globalParams.accentColorLight,
+  stroke: globalParams.accentColor,
   fill: `transparent`,
   strokeWidth: `1px`,
   animation: `${ArrowsAnimation} 2s infinite`,
@@ -40,7 +40,7 @@ export const Path2 = style({
 });
 
 export const Path3 = style({
-  stroke: globalParams.accentColorLight,
+  stroke: globalParams.accentColor,
   fill: `transparent`,
   strokeWidth: `1px`,
   animation: `${ArrowsAnimation} 2s infinite`,

@@ -3,8 +3,7 @@ export const globalParams = {
   backgroundLight: "#e3e3e3",
   backgroundDark: "#333333",
   //アクセントカラー
-  accentColorLight: "#B03B3B",
-  accentColorDark: "#e37d7d",
+  accentColor: "#B03B3B",
   //テキストカラー
   textColorLight: "#474747",
   textColorDark: "#9c9c9c",

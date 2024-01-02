@@ -53,7 +53,7 @@ export const ul = style({
 export const InlineLink = style({
   textDecoration: `underline`,
   textDecorationColor: `rgb(0,0,0,0)`,
-  color: globalParams.accentColorLight,
+  color: globalParams.accentColor,
   "@media": {
     "(hover: hover)": {
       ":hover": {

@@ -31,6 +31,6 @@ export const Ryoku = style({
 });
 
 export const Ka = style({
-  fill: globalParams.accentColorLight,
+  fill: globalParams.accentColor,
   fillRule: "nonzero",
 });
