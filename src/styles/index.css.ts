@@ -77,6 +77,45 @@ export const HeroPoemLink = style({
   alignItems: `flex-end`,
   //style
   width: `100%`,
+  margin: `1.0rem 0`,
+});
+
+export const BlogPosts = style({
+  display: `flex`,
+  flexDirection: `column`,
+  width: `100%`,
+  boxSizing: `border-box`,
+  "@media": {
+    [`${globalParams.pc}`]: {
+      padding: `0 1.0rem 0 0 `,
+    },
+  },
+});
+
+export const BlogPostsUl = style({
+  margin: `0`,
+  paddingInlineStart: `20px`,
+});
+
+export const BlogPostLi = style({
+  textAlign: `justify`,
+});
+
+export const BlogPostLink = style({
+  textDecoration: `underline`,
+  color: globalParams.textColorLight,
+  "@media": {
+    "(hover: hover)": {
+      ":hover": {
+        color: globalParams.accentColor,
+      },
+    },
+  },
+  transition: `color ${globalParams.time}`,
+});
+
+export const BlogPostLinkDark = style({
+  color: globalParams.textColorDark,
 });
 
 export const HeroWorks = style({
@@ -132,7 +171,7 @@ export const MoviesWrapper = style({
   },
 });
 
-export const h2 = style({
+export const Header = style({
   margin: `0`,
 });
 
