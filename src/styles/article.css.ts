@@ -1,10 +1,5 @@
-import { style } from "@vanilla-extract/css";
-
-export const Body = style({
-  width: `100%`,
-  padding: `0.5rem 5vw`,
-  boxSizing: `border-box`,
-});
+import { style, globalStyle } from "@vanilla-extract/css";
+import { globalParams } from "./global";
 
 export const BlogHeader = style({
   //display
@@ -34,4 +29,23 @@ export const BlogHeaderOverlay = style({
 export const BlogTitle = style({
   color: `white`,
   margin: `0`,
+});
+
+export const Body = style({
+  width: `100%`,
+  padding: `0.5rem 5vw`,
+  boxSizing: `border-box`,
+});
+
+globalStyle(`${Body} a[href]`, {
+  color: globalParams.accentColor,
+});
+
+globalStyle(`${Body} blockquote`, {
+  position: "relative",
+  borderTop: `1px solid currentcolor`,
+  borderBottom: "1px solid currentcolor",
+  padding: "5px",
+  margin: `0.5rem 20px`,
+  fontStyle: `italic`,
 });

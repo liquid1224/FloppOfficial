@@ -24,7 +24,7 @@ export const ArticlesPageTemplate = ({ data }: ArticlesPageTemplateProps) => {
           <h1 className={Vanilla.BlogTitle}>{title}</h1>
         </div>
       </div>
-      <article className="">
+      <article>
         <div
           dangerouslySetInnerHTML={{
             __html: articles.node.html as TrustedHTML,
