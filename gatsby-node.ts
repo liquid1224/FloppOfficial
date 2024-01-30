@@ -1,4 +1,4 @@
-import type { GatsbyNode } from "gatsby";
+import { graphql, type GatsbyNode } from "gatsby";
 import path from "path";
 
 export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions: { createPage } }) => {
@@ -41,6 +41,28 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions:
   AllArticlesSlug.data?.allMarkdownRemark.nodes.forEach((node) => {
     createPage({
       path: `/blog/${node.frontmatter?.slug}`,
+      component: path.resolve(`./src/templates/article.tsx`),
+      context: { id: node.id },
+    });
+  });
+
+  //Generate Article Pages with MDX
+  const AllArticlesSlugMdx = await graphql<Queries.AllArticlesSlugMdxQuery>(`
+    query AllArticlesSlugMdx {
+      allMdx(filter: { internal: { contentFilePath: { regex: "/articlesMdx/" } } }) {
+        nodes {
+          frontmatter {
+            slug
+          }
+          id
+        }
+      }
+    }
+  `);
+  if (AllArticlesSlugMdx.errors) throw AllArticlesSlugMdx.errors;
+  AllArticlesSlugMdx.data?.allMdx.nodes.forEach((node) => {
+    createPage({
+      path: `/blogMdx/${node.frontmatter?.slug}`,
       component: path.resolve(`./src/templates/article.tsx`),
       context: { id: node.id },
     });

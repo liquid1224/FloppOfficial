@@ -16,6 +16,12 @@ const config: GatsbyConfig = {
   plugins: [
     "gatsby-plugin-vanilla-extract",
     "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [`.mdx`],
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -39,6 +45,13 @@ const config: GatsbyConfig = {
       options: {
         name: "articles",
         path: `${__dirname}/src/articles`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "articlesMdx",
+        path: `${__dirname}/src/articlesMdx`,
       },
     },
     {
