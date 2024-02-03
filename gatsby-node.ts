@@ -63,7 +63,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions:
   AllArticlesSlugMdx.data?.allMdx.nodes.forEach((node) => {
     createPage({
       path: `/blogMdx/${node.frontmatter?.slug}`,
-      component: path.resolve(`./src/templates/article.tsx`),
+      component: path.resolve(`./src/templates/articleMdx.tsx`),
       context: { id: node.id },
     });
   });
