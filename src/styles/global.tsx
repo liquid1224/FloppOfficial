@@ -37,7 +37,7 @@ export const globalLinks = {
   amazonMusic: "https://music.amazon.co.jp/artists/B087PXQRXP/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89",
   appleMusic: "https://music.apple.com/jp/artist/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89/1510273690",
   bandcamp: "https://liquid1224.bandcamp.com",
-  bilibili: "https://www.nicovideo.jp/user/28635327/video",
+  bilibili: "https://space.bilibili.com/3493258820847807",
   booth: "https://liquid1224.booth.pm",
   instagram: "https://www.instagram.com/liquid1224.flopp/",
   lineMusic: "https://lin.ee/u48MUFL",
