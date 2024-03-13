@@ -111,7 +111,7 @@ export const WorkPageTemplate = ({ data }: WorksPageTemplateProps) => {
                 <LinkBox icon={Icons.appleMusic} text="Apple Music" link={`https://music.apple.com/jp/album/${appleMusic}`} style={VanillaLinkBoxAssets.AppleMusic} />
               )}
               {(amazonMusic !== null || undefined) && (
-                <LinkBox icon={Icons.amazon} text="Amazon Music" link={`https://music.amazon.co.jp/albums${amazonMusic}`} style={VanillaLinkBoxAssets.AmazonMusic} />
+                <LinkBox icon={Icons.amazon} text="Amazon Music" link={`https://music.amazon.co.jp/albums/${amazonMusic}`} style={VanillaLinkBoxAssets.AmazonMusic} />
               )}
               {(youtube !== null || undefined) && (
                 <LinkBox icon={Icons.youtubeMusic} text="YouTube Music" link={`https://music.youtube.com/playlist?list=${youtube}`} style={VanillaLinkBoxAssets.YouTube} />
