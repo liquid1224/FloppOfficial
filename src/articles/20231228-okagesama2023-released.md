@@ -2,9 +2,9 @@
 slug: "20231228-okagesama2023-released"
 title: "ニューシングル「Time Begins at the End of the Space」をリリースしました"
 date: "2023/12/24"
-lastUpdate: "2023/12/28"
+lastUpdate: "2024/02/16"
 thumbnail: "./20231228-okagesama2023-released.jpg"
-series: "新譜情報"
+series: "告知"
 description: "おかげさまで今年も誕生日を迎えることができました。皆様への謝意を表明するとともに、この曲をお贈りいたします。"
 ---
 

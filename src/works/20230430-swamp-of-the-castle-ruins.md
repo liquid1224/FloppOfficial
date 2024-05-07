@@ -14,12 +14,11 @@ copy: "華力発電所 Experimental Lineup 第一弾のテーマは Dungeon Synt
 linkBoothCD: "https://liquid1224.booth.pm/items/4695188"
 linkBoothDL: "https://liquid1224.booth.pm/items/4695277"
 linkBandcamp: "https://liquid1224.bandcamp.com/album/swamp-of-the-castle-ruins"
-idSpotify: 
-idAppleMusic: 
-idAmazonMusic: 
-idYouTubeMusic: 
-idYouTube: 
-idLineMusic: 
+idSpotify: "3tlYzVb6wbg3ntvdiaWqqi"
+idAppleMusic: "swamp-of-the-castle-ruins-ep/1725075323"
+idAmazonMusic: "B0CRYFFTYB"
+idYouTube: "OLAK5uy_kLfFlAYZ7lV6H6uzuYlSN4GOWyzKDKuc8"
+idLineMusic: "mb0000000003534faa"
 linkSpecial: "https://swamp.liquid1224.net"
 headerSpecial: 
 index: "1"
